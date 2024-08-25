@@ -1,1 +1,450 @@
-eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('133 37=3.45(\'37\');37.189=\'190/129\';37.191=\'192\';37.26=\'188://187-183.184.185/186/137.129\';3.5(\'194\').39(37);3.7("16",()=>{10(!58.102){201.202(\'102 203 204. 200 182 199.130 195 196 197 198.130.\');83}2 76=58.102;2 127=3.19("#174 34");2 69=3.5(".173");2 99=3.5(".99");2 53=175 180();4 132(131){131.13((36)=>{10(!53.124(36)){53.17(36);2 65=3.45("34");65.21=36;65.178="177";69.39(65)}})}127.13((34)=>{2 36=34.21;10(!53.124(36)){53.17(36);2 126=34.181(179);69.39(126)}});132(76);133 72=0;4 87(){99.30.225=`232(\'${76[72]}\')`;72=(72+1)%76.32}87();233(87,234);4 140(){2 12=3.45("112");12.41="12";2 60=3.45("34");12.39(60);3.109.39(12);12.7("22",()=>{12.30.43="104"});83{12,60}}2{12,60}=140();69.7("22",(49)=>{10(49.138.206==="227"){60.21=49.138.21;12.30.43="115"}})});10(58.229!==58.236){2 84=3.5(".137");2 81=3.5(".242");10(84){84.8.17("82")}10(81){81.8.17("82");3.109.8.17("82")}}3.7("16",4(){2 24=3.5(".25");2 73=3.5(".121");2 20=3.23("20");2 15=24.5(".15").6.14();2 18=24.5(".18").6.14();2 26=24.5(".135").27("26");20.6=`85 92 ${15}-64ó68 ${18}`;73.108("26",26)});3.7("16",4(){2 25=3.19(".25");2 20=3.23("20");2 38=3.23("38");4 113(74,93){57.144(74,93)}4 96(74){83 57.148(74)}2 98=96("20");2 95=96("38");10(98){20.6=98}10(95){38.6=95}25.13(4(62,54){62.7("22",4(){2 15=62.5(".15").6.14();2 18=62.5(".18").6.14();2 26=62.5(".135").27("26");38.6=`92 ${15}-64ó68 ${18}`;113("38",38.6);2 136=58.213("(214-157: 211)").210;10(136){10(54<25.32-1){2 47=25[54+1];2 75=47.5(".15").6.14();2 71=47.5(".18").6.14();20.6=`85 92 ${75}-64ó68 ${71}`}29{2 24=25[0];2 88=24.5(".15").6.14();2 101=24.5(".18").6.14();20.6=`122 118-143${88}64ó68 ${101}`}}29{10(54<25.32-1){2 47=25[54+1];2 75=47.5(".15").6.14();2 71=47.5(".18").6.14();20.6=`85 143${75}215${71}`}29{2 24=25[0];2 88=24.5(".15").6.14();2 101=24.5(".18").6.14();20.6=`122 118`}}113("20",20.6);2 73=3.5(".121");73.108("26",26)})})});3.7("16",4(){9 89=3.5(".219-170");9 12=3.45("112");12.41="12";9 105=3.45("34");105.21=89.21;12.39(105);3.109.39(12);89.7("22",4(){12.30.43="230"});12.7("22",4(){12.30.43="104"})});3.7("16",4(){9 165=3.19(".52-50");165.13(4(163){9 50=3.19(".86").32;163.6=50})});3.7("16",4(){9 162=3.19(".33");162.13(4(33){9 77=33.27("56-41");9 35=3.19(".86");9 156=33.5(".218-217");9 40=33.5("#220");9 153=33.5(".221 224");9 149=33.5(".51-50");9 158=33.5(".52-50");158.6=35.32;4 154(){35.13(4(11){9 48=11.27("56-41");9 147=57.148(77+"-"+48);10(147==="28"){11.8.17("28")}});63()}4 70(11){9 48=11.27("56-41");10(11.8.79("28")){57.144(77+"-"+48,"28")}29{57.208(77+"-"+48)}}4 63(){9 52=35.32;9 51=3.19(".86.28").32;9 97=(51/52)*100;156.30.157=97+"%";153.6="235 "+239.238(97)+"%";149.6=51;10(51===52){40.8.17("55")}29{40.8.46("55")}}35.13(4(11){11.7("22",4(){11.8.134("28");70(11);63()})});40.7("22",4(){9 152=241.243(35).244((11)=>11.8.79("28"));10(40.8.79("55")&&152){35.13(4(11){11.8.46("28");70(11)});40.8.46("55")}29{35.13(4(11){11.8.17("28");70(11)});40.8.17("55")}63()});154()})});3.7("16",4(){9 167=3.19(".67");167.13(4(67){10(67.27("21")===""){67.108("21",3.5(".170 34").27("21"))}})});3.7("16",4(){2 103=3.19(".59 44");2 66=3.19(".66");103.13((44)=>{44.7("22",4(){103.13((146)=>146.8.46("151"));44.8.17("151");66.13((61)=>61.8.46("107"));2 155=`111-${44.27("56-111")}`;2 106=3.23(155);10(106){106.8.17("107")}})});3.23("111-176").8.17("107");66.13((61)=>{2 119=61.41.193("-")[1];2 123=61.19(".42 .15");123.13((128)=>{128.6=`${119}`})})});3.7("16",4(){2 159=3.23("209");2 166=3.23("205");2 110=3.5(".59 112");159.7("22",4(){110.160({171:-169,168:"150",})});166.7("22",4(){110.160({171:169,168:"150",})})});3.7("16",4(){2 90=3.5(".228-240");2 145=3.19(".42");90.7("237",4(){2 164=90.93.14().161();145.13((42)=>{2 18=42.5(".18").6.14().161();10(18.223(164)){42.30.43="115"}29{42.30.43="104"}})})});3.7("16",4(){2 15=3.23("15");2 59=3.5(".59");2 116=59.19("44").32;2 120=116-1;15.6=120});3.7("16",4(){2 80=3.23("222");2 117=80.6.14();10(117==="216"){80.8.17("114")}29{80.8.46("114")}});3.7("16",4(){2 94=3.5(".94");2 31=3.23("31");2 142=94.27("56-37-207");31.21=142});3.7("16",4(){2 125=3.5(".212");2 78=3.5(".226");2 31=3.23("31");2 139=31.21;4 91(){78.8.134("141");10(!78.8.79("141")){31.21="";231(()=>{31.21=139},0)}}125.7("22",4(49){49.172();91()});78.7("22",4(){91()})});',10,245,'||const|document|function|querySelector|textContent|addEventListener|classList|var|if|button|modal|forEach|trim|seasonN|DOMContentLoaded|add|epNN|querySelectorAll|nextviewep|src|click|getElementById|primeiroEpisodio|items|href|getAttribute|visto|else|style|trailerVideo|length|container|img|buttons|imgUrl|link|lastepview|appendChild|secepButton|id|episodio|display|span|createElement|remove|nextItem|buttonId|event|count|marked|total|addedImageUrls|index|studo|data|localStorage|window|listtemporadas|modalImg|list|item|updateProgressBar|Epis|imgElement|listeps|imgC|dio|listImagens|saveButtonState|nextEp|currentIndex|playLink|key|nextSeason|imagescontainer|containerId|trailerContent|contains|statusElement|paginaAnimeep|iframepg|return|paginaAnime|Assistir|vieweP|changeBackgroundImage|primeiroSeason|imagemCapa|searchBar|toggleActive|Temporada|value|youtubeContainer|savedLastepview|loadFromLocalStorage|percentage|savedNextviewep|wid01||primeiroEp|imageUrls|spans|none|imagemModal|seasonElement|active|setAttribute|body|listTemporadas|season|div|saveToLocalStorage|completo|flex|spanCount|statusText|Anime|seasonNumber|finalValue|Play|Reassistir|episodes|has|trailerLink|clonedImg|images|episode|css|js|imagesArray|addImages|let|toggle|linkep|isWideScreen|pageanime|target|originalSrc|createModal|ativo|embedLink|T|setItem|episodios|s|state|getItem|markedCountText|smooth|clicked|allMarked|progressText|loadButtonState|seasonId|progressBar|width|totalCountText|scrollLeftButton|scrollBy|toLowerCase|containers|totalCount|searchTerm|totalCounts|scrollRightButton|imgCs|behavior|400|capa|left|preventDefault|listimagens|postBody|new|01|Imagem|alt|true|Set|cloneNode|sure|codes|github|io|Projetosite|site|https|type|text|rel|stylesheet|split|head|is|loaded|before|main|links|Make|console|error|not|found|scrollRight|tagName|embed|removeItem|scrollLeft|matches|1100px|trailer|matchMedia|min|Ep|Completo|fill|progress|imagem|secep|porceps|status|includes|h3|backgroundImage|trailerA|IMG|search|self|block|setTimeout|url|setInterval|20000|Assistido|top|input|round|Math|bar|Array|pageanimeep|from|every'.split('|'),0,{}))
+
+let link = document.createElement('link');
+link.type = 'text/css';
+link.rel = 'stylesheet';
+link.href = 'https://site-codes.github.io/Projetosite/pageanime.css';
+
+document.querySelector('head').appendChild(link);
+
+// IMAGENS DO ANIME
+document.addEventListener("DOMContentLoaded", () => {
+    // Ensure imageUrls is available
+    if (!window.imageUrls) {
+      console.error('imageUrls not found. Make sure links.js is loaded before main.js.');
+      return;
+    }
+  
+    const imagescontainer = window.imageUrls;
+    const images = document.querySelectorAll("#postBody img");
+    const listImagens = document.querySelector(".listimagens");
+    const wid01 = document.querySelector(".wid01");
+  
+    const addedImageUrls = new Set();
+  
+    function addImages(imagesArray) {
+      imagesArray.forEach((imgUrl) => {
+        if (!addedImageUrls.has(imgUrl)) {
+          addedImageUrls.add(imgUrl);
+          const imgElement = document.createElement("img");
+          imgElement.src = imgUrl;
+          imgElement.alt = "Imagem";
+          listImagens.appendChild(imgElement);
+        }
+      });
+    }
+  
+    images.forEach((img) => {
+      const imgUrl = img.src;
+      if (!addedImageUrls.has(imgUrl)) {
+        addedImageUrls.add(imgUrl);
+        const clonedImg = img.cloneNode(true);
+        listImagens.appendChild(clonedImg);
+      }
+    });
+  
+    addImages(imagescontainer);
+  
+    let currentIndex = 0;
+  
+    function changeBackgroundImage() {
+      wid01.style.backgroundImage = `url('${imagescontainer[currentIndex]}')`;
+      currentIndex = (currentIndex + 1) % imagescontainer.length;
+    }
+  
+    changeBackgroundImage();
+  
+    setInterval(changeBackgroundImage, 20000);
+  
+    function createModal() {
+      const modal = document.createElement("div");
+      modal.id = "modal";
+      const modalImg = document.createElement("img");
+      modal.appendChild(modalImg);
+      document.body.appendChild(modal);
+  
+      modal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+  
+      return { modal, modalImg };
+    }
+  
+    const { modal, modalImg } = createModal();
+  
+    listImagens.addEventListener("click", (event) => {
+      if (event.target.tagName === "IMG") {
+        modalImg.src = event.target.src;
+        modal.style.display = "flex";
+      }
+    });
+  });
+  
+
+
+  
+// CASO A PAGINA FIQUE DENTRO DA PAGE EPISODODIO
+if (window.self !== window.top) {
+    const paginaAnime = document.querySelector(".pageanime");
+    const paginaAnimeep = document.querySelector(".pageanimeep");
+    if (paginaAnime) {
+      paginaAnime.classList.add("iframepg");
+    }
+    if (paginaAnimeep) {
+      paginaAnimeep.classList.add("iframepg");
+  
+      document.body.classList.add("iframepg");
+    }
+  }
+  
+  // HISTORICO DE ASSSISTIDOS
+  document.addEventListener("DOMContentLoaded", function () {
+    const primeiroEpisodio = document.querySelector(".items");
+  
+    const playLink = document.querySelector(".Play");
+  
+    const nextviewep = document.getElementById("nextviewep");
+  
+    const seasonN = primeiroEpisodio.querySelector(".seasonN").textContent.trim();
+    const epNN = primeiroEpisodio.querySelector(".epNN").textContent.trim();
+    const href = primeiroEpisodio.querySelector(".linkep").getAttribute("href");
+  
+    nextviewep.textContent = `Assistir Temporada ${seasonN} - Episódio ${epNN}`;
+    playLink.setAttribute("href", href);
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".items");
+    const nextviewep = document.getElementById("nextviewep");
+    const lastepview = document.getElementById("lastepview");
+  
+    function saveToLocalStorage(key, value) {
+      localStorage.setItem(key, value);
+    }
+    function loadFromLocalStorage(key) {
+      return localStorage.getItem(key);
+    }
+  
+    const savedNextviewep = loadFromLocalStorage("nextviewep");
+    const savedLastepview = loadFromLocalStorage("lastepview");
+  
+    if (savedNextviewep) {
+      nextviewep.textContent = savedNextviewep;
+    }
+  
+    if (savedLastepview) {
+      lastepview.textContent = savedLastepview;
+    }
+  
+    items.forEach(function (item, index) {
+      item.addEventListener("click", function () {
+        const seasonN = item.querySelector(".seasonN").textContent.trim();
+        const epNN = item.querySelector(".epNN").textContent.trim();
+        const href = item.querySelector(".linkep").getAttribute("href");
+  
+        lastepview.textContent = `Temporada ${seasonN} - Episódio ${epNN}`;
+        saveToLocalStorage("lastepview", lastepview.textContent);
+  
+        const isWideScreen = window.matchMedia("(min-width: 1100px)").matches;
+  
+        if (isWideScreen) {
+          if (index < items.length - 1) {
+            const nextItem = items[index + 1];
+            const nextSeason = nextItem
+              .querySelector(".seasonN")
+              .textContent.trim();
+            const nextEp = nextItem.querySelector(".epNN").textContent.trim();
+            nextviewep.textContent = `Assistir Temporada ${nextSeason} - Episódio ${nextEp}`;
+          } else {
+            const primeiroEpisodio = items[0];
+            const primeiroSeason = primeiroEpisodio
+              .querySelector(".seasonN")
+              .textContent.trim();
+            const primeiroEp = primeiroEpisodio
+              .querySelector(".epNN")
+              .textContent.trim();
+            nextviewep.textContent = `Reassistir Anime - T${primeiroSeason} Episódio ${primeiroEp}`;
+          }
+        } else {
+          if (index < items.length - 1) {
+            const nextItem = items[index + 1];
+            const nextSeason = nextItem
+              .querySelector(".seasonN")
+              .textContent.trim();
+            const nextEp = nextItem.querySelector(".epNN").textContent.trim();
+            nextviewep.textContent = `Assistir T${nextSeason} Ep${nextEp}`;
+          } else {
+            const primeiroEpisodio = items[0];
+            const primeiroSeason = primeiroEpisodio
+              .querySelector(".seasonN")
+              .textContent.trim();
+            const primeiroEp = primeiroEpisodio
+              .querySelector(".epNN")
+              .textContent.trim();
+            nextviewep.textContent = `Reassistir Anime`;
+          }
+        }
+  
+        saveToLocalStorage("nextviewep", nextviewep.textContent);
+  
+        const playLink = document.querySelector(".Play");
+        playLink.setAttribute("href", href);
+      });
+    });
+  });
+  
+  // CAPA EM TELA CHEIA
+  document.addEventListener("DOMContentLoaded", function () {
+    var imagemCapa = document.querySelector(".imagem-capa");
+    var modal = document.createElement("div");
+    modal.id = "modal";
+    var imagemModal = document.createElement("img");
+    imagemModal.src = imagemCapa.src;
+    modal.appendChild(imagemModal);
+    document.body.appendChild(modal);
+  
+    imagemCapa.addEventListener("click", function () {
+      modal.style.display = "block";
+    });
+  
+    modal.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  });
+  
+  // LISTA DE EPISODIOS
+  document.addEventListener("DOMContentLoaded", function () {
+    var totalCounts = document.querySelectorAll(".total-count");
+  
+    totalCounts.forEach(function (totalCount) {
+      var count = document.querySelectorAll(".vieweP").length;
+      totalCount.textContent = count;
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    var containers = document.querySelectorAll(".container");
+  
+    containers.forEach(function (container) {
+      var containerId = container.getAttribute("data-id");
+      var buttons = document.querySelectorAll(".vieweP");
+      var progressBar = container.querySelector(".progress-fill");
+      var secepButton = container.querySelector("#secep");
+      var progressText = container.querySelector(".porceps h3");
+      var markedCountText = container.querySelector(".marked-count");
+      var totalCountText = container.querySelector(".total-count");
+  
+      totalCountText.textContent = buttons.length;
+  
+      function loadButtonState() {
+        buttons.forEach(function (button) {
+          var buttonId = button.getAttribute("data-id");
+          var state = localStorage.getItem(containerId + "-" + buttonId);
+          if (state === "visto") {
+            button.classList.add("visto");
+          }
+        });
+        updateProgressBar();
+      }
+      function saveButtonState(button) {
+        var buttonId = button.getAttribute("data-id");
+        if (button.classList.contains("visto")) {
+          localStorage.setItem(containerId + "-" + buttonId, "visto");
+        } else {
+          localStorage.removeItem(containerId + "-" + buttonId);
+        }
+      }
+  
+      function updateProgressBar() {
+        var total = buttons.length;
+        var marked = document.querySelectorAll(".vieweP.visto").length;
+        var percentage = (marked / total) * 100;
+        progressBar.style.width = percentage + "%";
+        progressText.textContent = "Assistido " + Math.round(percentage) + "%";
+        markedCountText.textContent = marked;
+  
+        if (marked === total) {
+          secepButton.classList.add("studo");
+        } else {
+          secepButton.classList.remove("studo");
+        }
+      }
+  
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          button.classList.toggle("visto");
+          saveButtonState(button);
+          updateProgressBar();
+        });
+      });
+  
+      secepButton.addEventListener("click", function () {
+        var allMarked = Array.from(buttons).every((button) =>
+          button.classList.contains("visto")
+        );
+        if (secepButton.classList.contains("studo") && allMarked) {
+          buttons.forEach(function (button) {
+            button.classList.remove("visto");
+            saveButtonState(button);
+          });
+          secepButton.classList.remove("studo");
+        } else {
+          buttons.forEach(function (button) {
+            button.classList.add("visto");
+            saveButtonState(button);
+          });
+          secepButton.classList.add("studo");
+        }
+        updateProgressBar();
+      });
+  
+      loadButtonState();
+    });
+  });
+  
+  // IMAGENS
+  document.addEventListener("DOMContentLoaded", function () {
+    var imgCs = document.querySelectorAll(".imgC");
+  
+    imgCs.forEach(function (imgC) {
+      if (imgC.getAttribute("src") === "") {
+        imgC.setAttribute(
+          "src",
+          document.querySelector(".capa img").getAttribute("src")
+        );
+      }
+    });
+  });
+  
+  // TEMPORADAS
+  document.addEventListener("DOMContentLoaded", function () {
+    const spans = document.querySelectorAll(".listtemporadas span");
+    const listeps = document.querySelectorAll(".listeps");
+  
+    spans.forEach((span) => {
+      span.addEventListener("click", function () {
+        spans.forEach((s) => s.classList.remove("clicked"));
+  
+        span.classList.add("clicked");
+  
+        listeps.forEach((list) => list.classList.remove("active"));
+  
+        const seasonId = `season-${span.getAttribute("data-season")}`;
+        const seasonElement = document.getElementById(seasonId);
+        if (seasonElement) {
+          seasonElement.classList.add("active");
+        }
+      });
+    });
+  
+    document.getElementById("season-01").classList.add("active");
+  
+    listeps.forEach((list) => {
+      const seasonNumber = list.id.split("-")[1];
+      const episodes = list.querySelectorAll(".episodio .seasonN");
+      episodes.forEach((episode) => {
+        episode.textContent = `${seasonNumber}`;
+      });
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollLeftButton = document.getElementById("scrollLeft");
+    const scrollRightButton = document.getElementById("scrollRight");
+    const listTemporadas = document.querySelector(".listtemporadas div");
+  
+    scrollLeftButton.addEventListener("click", function () {
+      listTemporadas.scrollBy({
+        left: -400,
+        behavior: "smooth",
+      });
+    });
+  
+    scrollRightButton.addEventListener("click", function () {
+      listTemporadas.scrollBy({
+        left: 400,
+        behavior: "smooth",
+      });
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchBar = document.querySelector(".search-bar");
+    const episodios = document.querySelectorAll(".episodio");
+  
+    searchBar.addEventListener("input", function () {
+      const searchTerm = searchBar.value.trim().toLowerCase();
+  
+      episodios.forEach((episodio) => {
+        const epNN = episodio
+          .querySelector(".epNN")
+          .textContent.trim()
+          .toLowerCase();
+  
+        if (epNN.includes(searchTerm)) {
+          episodio.style.display = "flex";
+        } else {
+          episodio.style.display = "none";
+        }
+      });
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const seasonN = document.getElementById("seasonN");
+    const listtemporadas = document.querySelector(".listtemporadas");
+    const spanCount = listtemporadas.querySelectorAll("span").length;
+  
+    const finalValue = spanCount - 1;
+  
+    seasonN.textContent = finalValue;
+  });
+  
+  // STATUS ANIME
+  document.addEventListener("DOMContentLoaded", function () {
+    const statusElement = document.getElementById("status");
+    const statusText = statusElement.textContent.trim();
+  
+    if (statusText === "Completo") {
+      statusElement.classList.add("completo");
+    } else {
+      statusElement.classList.remove("completo");
+    }
+  });
+  
+  // TRAILER
+  document.addEventListener("DOMContentLoaded", function () {
+    const youtubeContainer = document.querySelector(".youtubeContainer");
+    const trailerVideo = document.getElementById("trailerVideo");
+  
+    const embedLink = youtubeContainer.getAttribute("data-link-embed");
+  
+    trailerVideo.src = embedLink;
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const trailerLink = document.querySelector(".trailer");
+    const trailerContent = document.querySelector(".trailerA");
+    const trailerVideo = document.getElementById("trailerVideo");
+    const originalSrc = trailerVideo.src;
+  
+    function toggleActive() {
+      trailerContent.classList.toggle("ativo");
+  
+      if (!trailerContent.classList.contains("ativo")) {
+        trailerVideo.src = "";
+        setTimeout(() => {
+          trailerVideo.src = originalSrc;
+        }, 0);
+      }
+    }
+  
+    trailerLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      toggleActive();
+    });
+  
+    trailerContent.addEventListener("click", function () {
+      toggleActive();
+    });
+  });
+  
+      
