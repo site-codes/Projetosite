@@ -4,6 +4,7 @@ link.type = 'text/css';
 link.rel = 'stylesheet';
 link.href = 'https://site-codes.github.io/Projetosite/geral.css';
 
+document.querySelector('head').appendChild(link);
       
       
 
