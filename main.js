@@ -1,9 +1,1 @@
-
-// Adiciona o segundo arquivo CSS
-let linkmain = document.createElement('link');
-linkmain.type = 'text/css';
-linkmain.rel = 'stylesheet';
-linkmain.href = 'https://site-codes.github.io/Projetosite/geral.css';
-document.querySelector('head').appendChild(linkmain);
-      
-    
+eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('4 0=1.8(\'11\');0.10=\'7/2\';0.6=\'3\';0.5=\'9://20-12.18.19/17/16.2\';1.13(\'14\').15(0);',10,21,'linkmain|document|css|stylesheet|let|href|rel|text|createElement|https|type|link|codes|querySelector|head|appendChild|geral|Projetosite|github|io|site'.split('|'),0,{}))
