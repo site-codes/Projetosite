@@ -4323,7 +4323,8 @@ footer {
     height: 100%;
     background: var(--contentB);
     opacity: 0.6;
-    z-index: 2
+    z-index: 2;
+    pointer-events: none!important
 }
 
 .pShc>* {
