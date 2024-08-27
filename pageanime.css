@@ -337,7 +337,7 @@
     font-style: italic;
     margin-bottom: 10px;
     margin-top: 20px;
-    height: 150px;
+    height: auto;
     overflow-y: auto;
     direction: rtl;
     text-align: left;
