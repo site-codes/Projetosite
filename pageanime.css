@@ -324,11 +324,6 @@
     }
 }
 
-@media screen and (min-width:1800px) {
-    .descrition {
-        max-height: 140px;
-    }
-}
 
 .descrition {
     opacity: 0.6;
