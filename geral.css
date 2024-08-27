@@ -4768,7 +4768,7 @@ footer {
     
   @media screen and (min-width: 1100px) {
     .pInf {
-        top: calc(32em + 110px)!important;border:2px solid green
+        top: calc(32em + 110px)!important;
     }
 }
 
