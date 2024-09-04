@@ -415,15 +415,22 @@ document.addEventListener("DOMContentLoaded", function () {
   seasonN.textContent = finalValue;
 });
 
-// STATUS ANIME
+  
+  
+  // STATUS ANIME
 document.addEventListener("DOMContentLoaded", function () {
   const statusElement = document.getElementById("status");
   const statusText = statusElement.textContent.trim();
 
   if (statusText === "Completo") {
     statusElement.classList.add("completo");
+    statusElement.classList.remove("pausa"); // Remove .pausa caso esteja presente
+  } else if (statusText === "Em Pausa") {
+    statusElement.classList.add("pausa");
+    statusElement.classList.remove("completo"); // Remove .completo caso esteja presente
   } else {
     statusElement.classList.remove("completo");
+    statusElement.classList.remove("pausa"); // Remove ambas as classes se o status não for "Completo" ou "Em Pausa"
   }
 });
 
