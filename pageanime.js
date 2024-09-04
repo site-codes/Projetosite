@@ -1,5 +1,28 @@
+     
+      // SUBSTITUIR TERMOS
+const sinopseElements = document.querySelectorAll('.sinopseN');
+const description = document.getElementById('description');
 
-// GALERIA DE IMAGENS DUPLICADAS E WALLPAPER ALTERNANDO
+if (description) {
+  sinopseElements.forEach(sinopse => {
+    if (sinopse.innerHTML.trim() === '') {
+      sinopse.innerHTML = description.innerHTML;
+    }
+  });
+}
+
+      
+      const tituloElements = document.querySelectorAll('.tituloN');
+
+tituloElements.forEach(titulo => {
+  if (!titulo.getAttribute('data-name').trim()) {
+    titulo.setAttribute('data-name', 'Ep sem Título');
+  }
+});
+
+      
+      // O CONST DE IMAGENS ESTA NA POSTAGEM DO ANIME
+  // GALERIA DE IMAGENS DUPLICADAS E WALLPAPER ALTERNANDO
 document.addEventListener("DOMContentLoaded", () => {
   // Verifica se `imagescontainer` foi carregado
   if (typeof imagescontainer === "undefined") {
@@ -45,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   changeBackgroundImage();
 
-  setInterval(changeBackgroundImage, 10000);
+  setInterval(changeBackgroundImage, 5000);
 
   function createModal() {
     const modal = document.createElement("div");
@@ -70,6 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
   
   
   
@@ -439,3 +465,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
     
+  
