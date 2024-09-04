@@ -1052,7 +1052,7 @@
     transition: opacity 1s
  }
   
-  
+    .vieweP.visto .epNN{display:none}
   .vieweP.visto a:before{opacity:0.95}
   .vieweP.visto a:after{opacity:1}
   
@@ -1216,7 +1216,7 @@
 
   .vieweP.visto .view:after{content:"Visto"; margin-left:5px; font-size: 0.8em;font-weight:600}
   
-  
+   .vieweP.visto .epNN,
   .vieweP.visto .item h8{display:none}
   
     
@@ -1245,9 +1245,8 @@
 
 
 .pageanimeep.iframepg .episodio {
-    background: var(--bodyB)
-}
-
+    background: var(--bodyB);
+  height:130px!important}
 
 .pageanime.iframepg {
     display: none
@@ -1315,6 +1314,21 @@
     min-width: 80px;
     padding: 5px 10px
 }
+
+  
+  .pageanimeep.iframepg .vieweP{min-height:unset!important}
+  .pageanimeep.iframepg .sinopseN {
+    -webkit-line-clamp: 2;}
+  
+    .pageanimeep.iframepg .item{margin:0!important;margin-top:auto!important; padding-left:160px;}
+
+  .pageanimeep.iframepg .episodio:last-child:after,
+  .pageanimeep.iframepg .episodio:first-child:after {display:none}
+  
+  .pageanimeep.iframepg .epNN{font-size:14px!important;
+        font-weight: 700!important;}
+  
+  .pageanimeep.iframepg .epNN:before{display:none}
 
 .pageanimeep.iframepg .epNN:after {
     display: none
