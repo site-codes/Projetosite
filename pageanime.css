@@ -1,4 +1,8 @@
-/*------ WALLPAPER --------------------------------------------------------------------------------------------*/
+ #Campo-Ads04,
+  #HTML38{margin:0}
+  #Campo-Ads05,
+  #HTML45{display:none}
+  /*------ WALLPAPER --------------------------------------------------------------------------------------------*/
 #modal {
     display: none;
     position: fixed;
@@ -8,18 +12,18 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    text-align: center;
+    text-align: center!important;
 }
 
 #modal img {
-    width: 400px;
-    max-height: auto;
-    margin: auto;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto!important;
+  max-width:80%!important;
+  max-height:50%;
+  border-radius:5px
 }
 
 
@@ -217,7 +221,7 @@
 .subtitle {
     font-size: 1.1em;
     margin-top: 10px;
-    order: 1
+    order: 1;
 }
 
 
@@ -755,6 +759,20 @@
 .todasimgs button:before {
     content: "\f86f" !important;
 }
+  
+  .listimagens::-webkit-scrollbar {
+  height: 8px;
+}
+
+.listimagens::-webkit-scrollbar-track {
+  background: var(--headC);
+  border-radius: 10px!important;overflow:hidden
+}
+
+.listimagens::-webkit-scrollbar-thumb {
+  background: var(--linkD);
+  border-radius: 10px;
+}
 
 .listimagens {
     box-sizing: border-box;
@@ -765,14 +783,16 @@
     position: absolute;
     display: flex;
     gap: 20px;
-    overflow-x: auto
+    overflow-x: auto;
+  padding-bottom:10px
 }
 
 
 .listimagens img {
     width: auto;
     object-fit: cover;
-    height: 100%
+    height: 100%;
+  border-radius:10px
 }
 
 
@@ -791,8 +811,7 @@
 
 .trailerA:before {
     content: "";
-    background: var(--contentB);
-    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
     left: 0;
@@ -962,217 +981,249 @@
 #season-filmes .episodio:hover img {
     transform: unset
 }
+  
+  
+        .episodio {
+        background: var(--contentB);
+        color:var(--linkC);
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 20px;
+          position:relative
+      }
 
-.episodio {
-    border-radius: 15px;
-    width: auto;
-    text-align: center;
-    background: var(--contentB);
-    text-decoration: none;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    color: var(--linkC);
-    overflow: hidden;
-    position: relative;
-    padding: 10px;
-    height: auto;
-    user-select: none;
-    cursor: pointer
-}
+  
+      .episodio:last-child:after,
+      .episodio:first-child:after{
+        content:"Comece Por aqui";
+        background: rgba(255, 255, 255, 0.8);
+        color: var(--linkA);
+        font-weight:600;
+        padding:0px 10px!important;
+        height:unset!important;
+        line-height:unset!important;
+        border-radius:0 10px 0px 0px;
+        position: absolute;
+        top:5px;
+        left:-10px;
+        font-size:12px!important;
+        border-left:5px solid var(--linkB);
+        z-index:3
 
-.episodio:hover img {
-    transform: scale(1.2)
-}
+      }
+  
+  .episodio:last-child:after{content:"Último Ep.";right:-10px;left:unset;
+        border-right:5px solid var(--linkB);border-left:unset;
+        border-radius:10px 0px 0px 0px;}
 
-#season-filmes .episodio:hover {
-    padding: 10px
-}
+      .vieweP{
+        min-height:100%;
+        min-height:270px;
+        display:flex;
+        flex-direction:column
+      }
 
-#season-filmes .episodio:hover a {
-    border-radius: unset;
-    margin-bottom: unset
-}
+      .episodio a {
+        width: 100%;
+        height: 130px;
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+        margin-bottom:10px;
+      }
+  
+  
+  .vieweP a:after,
+  .vieweP a:before{
+  content:"";
+  position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:var(--bodyB);
+    z-index:1;
+    opacity:0;
+    pointer-events:none;
+    transition: opacity 1s
+ }
+  
+  
+  .vieweP.visto a:before{opacity:0.95}
+  .vieweP.visto a:after{opacity:1}
+  
+  
+  .episodio a:hover:after{opacity:1}
+  .episodio a:hover:before{opacity:0.85}
+  .episodio a:hover:after{
+    color: var(--cor1);}
+  
+  .vieweP.visto a h7{display:none}
 
+  
+  .episodio a:after{
+    background:transparent;
+    font-size:3em;
+    color: var(--linkB);
+  content:"\e037";
+  font-family:"Material Symbols Outlined"}
+      
+      .episodio a h7{
+        position:absolute;
+        top:10px;
+        right:10px;
+        background:rgba(0,0,0,0.5);
+        padding:2px 10px!important;
+        border-radius:10px;
+        font-size:10px
+      }
 
-.episodio a {
-    width: 100%;
-    height: 120px;
-    margin-bottom: 5px;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    border-radius: 10px;
-    align-items: center;
-    overflow: hidden;
-}
+      .episodio a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-.episodio a:before {
-    position: absolute;
-    font-family: 'Material Symbols Outlined';
-    content: "\e037";
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--linkC);
-    font-size: 1.5em;
-    z-index: 2
-}
+      .epNumbers {
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+        background: rgba(231, 90, 40,0.8);
+        padding:2px 10px;
+        border-radius:10px
+      }
 
-.episodio img {
-    width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s
-}
+      .epNN {
+        font-size: 15px;
+        color:var(--linkC);
+      font-weight:800;
+}   
+  .epNN:before {
+        content:'#';
+      }
+  
 
+      .sinopseN,
+      .tituloN{
+        font-size:16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom:10px
+      }
+  .tituloN{font-weight:600; margin-bottom:5px}
+  
+      .tituloN:after{
+        content:attr(data-name)
+      }
 
-.episodio a h8 {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background: var(--linkB);
-    color: var(--linkA);
-    font-weight: 800;
-    padding: 2px 10px;
-    line-height: normal;
-    border-radius: 4px;
-    font-size: 10px
-}
+      .tituloN:before{
+        font-size:14px;
+        content:attr(data-numberT) ".";
+        margin-right:5px;
+        font-weight:400;
+        opacity:0.7
+      }
 
-
-.epNN {
-    font-size: 20px;
-    color: var(--linkC);
-    position: relative;
-    width: calc(100% - 20px);
-    font-weight: 700
-}
-
-.epNN:before {
-    content: "Episódio";
-    margin-right: 5px
-}
-
-
-.epNN:after {
-    content: attr(data-text);
-    line-height: unset !important;
-    display: none;
-    opacity: 0.6;
-    font-weight: 500;
-    font-size: 12px;
-    height: 40px;
-}
-
-
-
-.seasonN {
-    display: block;
-    opacity: 0.6;
-    font-size: 12px;
-    padding: 0;
-    margin: 0;
-    line-height: normal;
-}
-
-.seasonN:before {
-    content: "Temporada";
-    margin-right: 5px
-}
-
-
-.episodio:hover .epNN,
-.episodio:hover .seasonN {
-    color: var(--cor2)
-}
-
-.item {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.item h8,
-.item button {
-    font-size: 12px;
-    color: var(--linkC);
-    opacity: 0.6;
-    line-height: normal;
-    display: inline-block;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 20px;
-    box-sizing: border-box;
-    margin: 0;
-}
-
-.item h8 {
-    padding: 5px 10px;
-    margin-left: auto;
-    background: rgb(116, 111, 111, 0.2);
-}
-
-
-
-
-
-.view {
-    display: flex !important;
-    align-items: center !important;
-    background: var(--linkD);
-    cursor: pointer
-}
-
+      .sinopseN{
+        font-size:13px;
+        opacity:0.6;
+        -webkit-line-clamp: 3;
+        font-style:italic;
+      }
+  
+  .sinopseN:before{
+    content:"\e244";font-family:'Material Icons Outlined';display:inline-flex; transform: rotate(180deg)}
+  
+      .item{
+        width:100%;
+        justify-content:space-between;
+        display:flex;
+        gap:5px;
+        margin-top:auto;
+        align-items:center;
+      }
+  
+  
+ .item span,
+.view{ 
+  display:flex;
+        align-items:center;
+        justify-content:center;
+        width:30px;
+        height:30px;
+        border-radius:50%;
+        border:none;
+        cursor:pointer;
+        background: var(--linkD);
+      }
+  .view{
+    margin-right:auto;}
+  
+  
 .view:before {
     content: "\e8f5";
     font-family: 'Material Symbols Outlined';
     font-size: 1.2em;
-    margin-right: 5px
 }
+  
+  
+  .item h8,
+  .item span{ 
+    background:rgba(255,255,255,0.05);  
+    opacity:0.6;
+  padding:5px;
+  box-sizing:border-box;}
+  
+  .item span:before{
+  content:"HD"; 
+}
+      .seasonN:before {display:none
+      }
+  
+ 
+      .item h8{
+        margin-right:0;
+        border-radius:50px;
+        padding:5px 10px
+      }
+  
+    .item span,
+      .item h8{
+        font-size:11px;}
+  
 
-.view:after {
-    content: "Não visto";
-    font-weight: 600
-}
 
 .vieweP.visto .view {
     background: var(--cor1);
-    color: var(--bodyB)
+    color: var(--bodyB);
+    width: auto;
+  box-sizing:border-box;
+    justify-content: center;
+  border-radius:50px;
+  padding:0 10px
 }
-
-
-.vieweP.visto .view:after {
-    content: "Assistido";
-}
-
 
 .vieweP.visto .view:before {
     content: "\e2e6";
 }
 
+  .vieweP.visto .view:after{content:"Visto"; margin-left:5px; font-size: 0.8em;font-weight:600}
+  
+  
+  .vieweP.visto .item h8{display:none}
+  
+    
 
-.vieweP.visto .item h8 {
-    display: none
-}
-
-.vieweP.visto .view {
-    width: 100%;
-    justify-content: center
-}
-
-
-
-.view:after {
-    content: "";
-}
-
-
-
+ .episodio h7,
+  .episodio h8{line-height:normal!important}
+ 
  .blogM {margin-bottom: 0px!important;}
 
 /*-----------------------------------------------------------------------------------*/
@@ -1297,7 +1348,8 @@ body.iframepg {
     display: none
 }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
+
 
     :root {
         --altura-capa: 500px;
@@ -1357,6 +1409,7 @@ body.iframepg {
         justify-content: left;
         padding: 0 0px 0 0px;
         order: 1;
+      width:calc(100% - 60px)
     }
 
     .namealt {
@@ -1369,9 +1422,8 @@ body.iframepg {
         margin: 10px 0 0 0;
         order: 3;
         opacity: 0.3 !important;
-        color: var(--linkC)
-    }
-
+        color: var(--linkC);
+       flex-basis: 100%;}
 
     .subtitle span {
         margin: 0;
@@ -1776,6 +1828,9 @@ body.iframepg {
     .item h8 {
         margin-left: 0
     }
+  
+  .episodio:last-child:after{right:-2px}
+  .episodio:first-child:after {left:-2px}
 
 
     .textB,
@@ -1792,10 +1847,14 @@ body.iframepg {
 
 
     .toTopB {
-        bottom: 50px !important
+        bottom: 10px !important
     }
 
 }
+  
+  @media screen and (max-width:700px){
+  .seasonN{display:none!important}
+  }
 
 
 @media (min-width: 1500px) and (max-width: 1800px) {
@@ -1816,10 +1875,6 @@ body.iframepg {
         top: 120px
     }
 
-    .listtemporadas {
-        width: 70% !important
-    }
-
     .barra {
         margin-top: 0px
     }
@@ -1838,11 +1893,6 @@ body.iframepg {
 
     .temporadas {
         max-width: 60%;
-    }
-
-
-    .listtemporadas {
-        width: 50% !important
     }
 
     .barra {
@@ -1875,10 +1925,6 @@ body.iframepg {
 
 
 @media (min-width: 1100px) and (max-width: 1300px) {
-    .listtemporadas {
-        width: 40% !important
-    }
-
     .barra {
         margin-top: 120px
     }
@@ -1901,7 +1947,7 @@ body.iframepg {
     }
 
     .temporadas {
-        max-width: 55%;
+        max-width: 65%;
         padding: 10px 50px 10px 50px;
     }
 
@@ -1910,17 +1956,21 @@ body.iframepg {
     }
 
     .filtrospesq {
-        width: 100%;
+        width: 40%;
     }
-
 
     .dadospesquisa input {
         width: 100%;
-        margin-left: 0
+        margin-left: 0; 
+    }
+  
+  .dadospesquisa{max-width:100%}
+    .listtemporadas {
+        width: 60%!important
     }
 
     .listtemporadas div {
-        width: auto;
+        width: 100%;
         max-width: unset
     }
 
@@ -1963,10 +2013,6 @@ body.iframepg {
         width: 100%
     }
 
-    .listeps {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
 
     .barra {
         right: 50px;
@@ -1975,7 +2021,44 @@ body.iframepg {
 
 
 }
+  
+  
+  @media (min-width: 1100px) and (max-width: 1800px) {
+      .detals main {
+        width: 100%;
+    }
+  }
+  
+  @media (min-width: 1100px) and (max-width: 1300px) {
+      .detals {flex-wrap: wrap;
+    }
+    .detals main{order:1;flex: 1 1 100%; }
+    #status{order:2}
+    
+    .listtemporadas span.clicked:before{display: none}
+  }
+  
+  
+  @media (min-width: 1100px) and (max-width: 1300px) {.detals h8 {font-size: 0.7em;}}
+  @media (min-width: 1300px) and (max-width: 1600px) {.detals h8 {font-size: 0.8em;}}
 
+  
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+    .temporadas {
+        max-width: 60%;
+    }}
+
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+.listeps {grid-template-columns: repeat(3, 1fr);}}
+
+
+@media (min-width: 1300px) and (max-width: 1600px) {
+.listeps {grid-template-columns: repeat(4, 1fr);}}
+  
+@media (min-width: 1600px) and (max-width: 1800px) {
+.listeps {grid-template-columns: repeat(5, 1fr);}}
 
 
 
@@ -2119,3 +2202,6 @@ body.iframepg {
     }
 
 }
+  
+  .ads{margin:0!important}
+  <
