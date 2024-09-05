@@ -159,7 +159,7 @@
     border: 1px solid rgba(255, 255, 255, 0);
 }
 
-.buttons a:hover:before {
+.buttons .Play:hover:before {
     animation: rotate 2s infinite linear
 }
 
