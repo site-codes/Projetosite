@@ -1,5 +1,6 @@
 
-//geral 01 js(outra parte no blogger)
+//geral 01 js(outra parte aqui no blogger)
+
 
 // TIPOS DE PAGE
 document.addEventListener("DOMContentLoaded", function () {
@@ -453,7 +454,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Foto de perfil ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 const fotos = document.querySelectorAll(".fotos img");
 const perfilImgs = document.querySelectorAll(".perfilimg img");
 
@@ -604,34 +604,6 @@ document.addEventListener("DOMContentLoaded", () => {
     item.setAttribute("data-counter", items.length - index);
   });
 });
-
-// imagens dos comentarios
-const imageUrls = [
-  "https://animangeek.com/wp-content/uploads/2023/08/Os-10-protagonistas-de-anime-mais-gentis-que-estao-sempre-alegres.webp",
-  "https://sm.ign.com/t/ign_br/screenshot/default/imagem-2023-12-15-163503393_5d5p.960.jpg",
-  "https://sm.ign.com/t/ign_br/screenshot/default/imagem-2023-12-15-163612387_sch3.960.jpg",
-  "https://sm.ign.com/t/ign_br/screenshot/default/imagem-2023-12-15-163554237_tmjq.960.jpg",
-];
-
-const listItems = document.querySelectorAll(".cmHl li");
-
-const style = document.createElement("style");
-style.type = "text/css";
-let cssRules = "";
-
-listItems.forEach((item, index) => {
-  const imageIndex = index % imageUrls.length;
-  const rule = `.cmHl li:nth-child(${
-    index + 1
-  }) .cmAv .im { background-image: url(${
-    imageUrls[imageIndex]
-  }) !important; }\n`;
-  cssRules += rule;
-});
-
-style.innerHTML = cssRules;
-document.head.appendChild(style);
-
 // abrir perfil e minilista ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function togglePerfilAndItemsE() {
@@ -703,6 +675,9 @@ searchInput.addEventListener("input", function () {
     }
   });
 });
+
+
+
 
 // Sons de click ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
