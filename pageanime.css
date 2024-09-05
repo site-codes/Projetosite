@@ -1871,11 +1871,6 @@ body.iframepg {
       padding: 10px 20px
   }
 
-  #lastepview:before {
-      content: "Temporada";
-      margin-right: 5px
-  }
-
 
 
   .toTopB {
