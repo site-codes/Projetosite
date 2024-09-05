@@ -390,7 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const listtemporadas = document.querySelector(".listtemporadas");
   const spanCount = listtemporadas.querySelectorAll("span").length;
 
-  const finalValue = spanCount - 1;
+  const finalValue = spanCount;
 
   seasonN.textContent = finalValue;
 });
