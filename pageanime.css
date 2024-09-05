@@ -153,6 +153,7 @@ border-radius:5px
   border: 1px solid rgba(255, 255, 255, 0);
 }
 
+  .buttons a:hover:before{animation: rotate 2s infinite linear}
 
 .lowinfos {
   display: block;
@@ -274,10 +275,67 @@ border-radius:5px
   top: -2px;
   left: -15px;
   width: calc(100% + 30px);
-  height: calc(100% + 4px);
+  height: 100%;
   border-radius: 50px;
   background: rgba(255, 255, 255, 0.1);
 }
+
+
+  .geners a{
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2px 15px;
+        border-radius: 50px;
+    display:flex;
+    position: relative
+  }
+  .geners a:after{content: attr(data-anime); font-size:13px; background: rgba(0,0,0, 0.6);padding:2px 20px; border-radius:10px; position: absolute; left:calc(100% + 10px); min-width:100%; pointer-events:none; transition: opacity: 0.3s ease; min-width:250px; max-width:500px; overflow: hidden;opacity:0;
+    text-overflow: ellipsis;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;}
+  
+  .geners a:hover:after{opacity:1}
+  
+  
+  
+  @media screen and (max-width: 1100px){
+    .geners a:after{display:none!important}
+  }
+  
+  @media screen and (min-width: 1600px){
+    .geners a:after{max-width:500px}
+  }
+  
+  @media screen and (min-width: 1400px) and (max-width:1600px){
+    .geners a:after{max-width:400px}
+  }
+  @media screen and (min-width: 1300px) and (max-width:1400px){
+    .geners a:after{max-width:300px}
+  }
+  @media screen and (min-width: 1100px) and (max-width:1300px){
+    .geners a:after{content:"Ver mais do anime"; width: auto; white-space: nowrap; min-width:unset; max-width:unset }
+  }
+  
+  .geners a:before{
+  content:"\f562";
+  font-family:"Material Symbols Outlined"}
+  
+  .geners a:hover{
+        background: rgba(255, 255, 255, 0.02);
+  color: var(--linkC)}
+  
+  .geners a:active{background: var(--linkB); color: var(--linkA)}
+ 
+  
+  .geners a:hover:before{
+    font-weight:800;
+  animation: rotate 0.6s forwards}
+  
+  @keyframes rotate{
+    0%{}
+    100%{transform: rotate(360deg)}
+  }
+
 
 #status {
   border-radius: 5px;
@@ -1073,6 +1131,9 @@ background:var(--bodyB);
 .episodio a:hover:before{opacity:0.85}
 .episodio a:hover:after{
   color: var(--cor1);}
+
+
+  .vieweP a:hover:after{animation: rotate 0.6s forwards}
 
 .vieweP.visto a h7{display:none}
 
