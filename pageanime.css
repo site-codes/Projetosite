@@ -1001,7 +1001,7 @@
 
 .dadospesquisa input {
    width:100%; 
-    padding:10px 20px
+    padding:10px 20px;
     border-radius: 999px;
     border: none;
     outline: none;
@@ -2007,10 +2007,11 @@ body.iframepg {
     }
 
     .filtrospesq {
-        width: calc(100% - 20px);
+        width: calc(100% - 20px)!important;
         margin-left: 0px;
         margin-top: 10px;
     }
+    .filtrospesq button{display: flex!important}
 
     .dadospesquisa input {
         border-radius: 10px;
