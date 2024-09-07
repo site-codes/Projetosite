@@ -1597,7 +1597,6 @@ body.iframepg {
     
 
 @media screen and (max-width: 1100px) {
-.geners h8{border:2px solid red}
 
     :root {
         --altura-capa: 500px;
@@ -1929,6 +1928,18 @@ body.iframepg {
         padding: 2px 15px;
         border-radius: 50px;
     }
+    .geners a:after{
+        min-width:unset!important; 
+        max-width:unset!important; 
+        opacity:1!important; 
+        position: relative!important; 
+        top:unset!important; 
+        left:unset!important; 
+        margin-left:10px; 
+        background: transparent!important; 
+        padding:0!important; 
+        content:"Ver mais do Anime"!important;
+        display: flex!important}
 
 
     .geners h8:before {
