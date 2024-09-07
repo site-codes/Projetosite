@@ -2019,9 +2019,6 @@ body.iframepg {
         width: 100%;
     }
 
-    .dadospesquisa button {
-        display: none !important
-    }
 
     .listtemporadas div {
         max-width: 100%;
@@ -2174,7 +2171,7 @@ body.iframepg {
 
       .dadospesquisa{gap:10px}
       .listtemporadas{width:100%!important}
-      .filtrospesq{ width: 100%!important; padding: 0 20px;}
+      .filtrospesq{ width: 100%!important; padding: 0}
       #Olep,
       #Nvep{display: flex!important; align-items: center}
 
