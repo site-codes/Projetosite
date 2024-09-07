@@ -1478,6 +1478,7 @@
 
 .pageanimeep.iframepg button {
     display: flex !important;
+    background: var(--bodyB)
 }
 
 .pageanimeep.iframepg .filtrospesq {
