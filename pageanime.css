@@ -1465,6 +1465,9 @@
     height: 130px !important
 }
 
+.pageanime.iframepg .Uep:after, 
+.pageanime.iframepg.Pep:after {display: none}
+
 .pageanime.iframepg {
     display: none
 }
@@ -1488,7 +1491,7 @@
 }
 
 .pageanimeep.iframepg input {
-    padding: 5px 25px !important;
+    padding: 10px 25px !important;
     border-radius: 50px;
     background: var(--bodyB)
 }
