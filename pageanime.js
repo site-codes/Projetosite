@@ -1,3 +1,20 @@
+  // DISPLAY NONE AO ADM CASO VALOR VAZIO
+function checkAndHideAdm() {
+  const h8 = document.querySelector('span.adm h8'); 
+  const admSpan = document.querySelector('span.adm');
+
+  if (!h8 || h8.textContent.trim() === '') {
+    admSpan.style.display = 'none';
+  } else {
+    admSpan.style.display = 'block'; 
+  }
+}
+
+checkAndHideAdm();
+
+  
+  
+  
 
   // BUTTONS FILTRO LISTA DE EPS PA
   document.addEventListener("DOMContentLoaded", function () {
