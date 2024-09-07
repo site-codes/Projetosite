@@ -1488,7 +1488,7 @@
 }
 
 .pageanimeep.iframepg input {
-    padding: 15px 25px !important;
+    padding: 5px 25px !important;
     border-radius: 50px;
     background: var(--bodyB)
 }
