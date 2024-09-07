@@ -1031,7 +1031,7 @@
     
      #Nvep.active:after{content:"\f7af";}
      #Olep{transform: rotate(180deg)}
-    #Olep.active{transform: rotate(0deg)}
+    #Olep.active:after{transform: rotate(0deg)}
     
     
     .filtrospesq button.active:before{opacity:0.3}
