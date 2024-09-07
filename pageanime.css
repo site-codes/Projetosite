@@ -2118,6 +2118,12 @@ body.iframepg {
 }
 
 
+@media screen and (max-width:1100px) {
+  .cate{ display: flex!important; justify-content: center!important; min-width:auto!important;}
+  .cate:before{max-width:100%!important;right:10px; width:auto!important}
+}
+  
+
 @media (min-width: 1500px) and (max-width: 1800px) {
     .listeps {
         grid-template-columns: repeat(4, 1fr);
