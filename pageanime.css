@@ -327,7 +327,6 @@
 
 @media screen and (max-width: 1100px) {
     .geners a:after {
-        display: none !important
     }
 }
 
