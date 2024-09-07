@@ -1466,7 +1466,7 @@
 }
 
 .pageanime.iframepg .Uep:after, 
-.pageanime.iframepg.Pep:after {display: none}
+.pageanime.iframepg .Pep:after {display: none}
 
 .pageanime.iframepg {
     display: none
