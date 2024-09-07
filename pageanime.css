@@ -457,6 +457,18 @@
     }
 }
 
+    
+    
+    .descrition:before {
+        content: "\e244";
+        font-family: 'Material Icons Outlined';
+        font-size: 22px;
+        margin-right: 2px;
+        transform: scaleX(-1);
+        display: inline-flex
+    }
+    
+
 
 .descrition {
     opacity: 0.6;
@@ -464,12 +476,11 @@
     font-weight: 300;
     font-style: italic;
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     height: auto;
     overflow-y: auto;
-    direction: rtl;
     text-align: left;
-    padding-left: 10px;
+    padding:0 20px 0 0;
     order: 4
 }
 
@@ -971,21 +982,26 @@
     min-height: 700px;
 }
 
+
+
 .dadospesquisa {
     display: flex;
-    gap: 5px;
+    gap: 40px;
     width: auto;
     align-items: center;
     justify-content: left;
     margin-bottom: 20px;
 }
 
+
+
 .filtrospesq {
     margin-left: auto;
 }
 
 .dadospesquisa input {
-    padding: 10px 60px 10px 30px;
+   width:100%; 
+    padding:10px 20px
     border-radius: 999px;
     border: none;
     outline: none;
@@ -998,6 +1014,30 @@
 .dadospesquisa input::placeholder {
     color: rgba(255, 255, 255, 0.5)
 }
+
+
+    
+    .filtrospesq{display: flex; gap:10px;width:40%!important;}
+    .filtrospesq button{border-radius:50px; border:none; position: relative; width:60px; overflow:hidden;
+    background: var(--contentB);color: var(--linkC); pointer-events: auto; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.6s}
+    
+    .filtrospesq button:before{content:""; opacity:0;background: var(--linkD); height:100%; width:100%; top:0; left:0; position: absolute;}
+    .filtrospesq button.active:before{opacity:0.03}
+    
+    .filtrospesq button:after{
+    font-family: 'Material Symbols Outlined'; font-size:20px; opacity:0.6}
+    #Olep:after{content:"\e16d";}
+    #Nvep:after{content:"\f1c5";}
+    
+     #Nvep.active:after{content:"\f7af";}
+     #Olep{transform: rotate(180deg)}
+    #Olep.active{transform: rotate(0deg)}
+    
+    
+    .filtrospesq button.active:before{opacity:0.3}
+    .filtrospesq button:hover{opacity:0.7}
+    
+
 
 #scrollLeft,
 #scrollRight {
@@ -1122,6 +1162,26 @@
     position: relative
 }
 
+    .Uep:after,
+    .Pep:after{
+    content: "Comece Por Aqui";
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--linkA);
+    font-weight: 600;
+    padding: 0px 10px !important;
+    height: unset !important;
+    line-height: unset !important;
+    border-radius: 0 10px 10px 0px;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    font-size: 12px !important;
+    border-left: 5px solid var(--linkB);
+      z-index: 3;display: flex!important}
+    
+  .Uep:after{
+    content: "Último Ep.";
+}
 
 
 .vieweP {
@@ -1847,15 +1907,6 @@ body.iframepg {
         margin-top: 30px;
     }
 
-    .descrition:before {
-        content: "\e244";
-        font-family: 'Material Icons Outlined';
-        font-size: 22px;
-        margin-right: 5px;
-        transform: scaleX(-1);
-        display: inline-flex
-    }
-
     .geners {
         display: flex;
         width: 100%;
@@ -1875,6 +1926,14 @@ body.iframepg {
     .geners h8:before {
         display: none
     }
+
+    
+    @media screen and (min-width:1100px) and (max-width:1300px){ .geners h8:nth-child(n+4){display:none}}
+    @media screen and (min-width:1300px) and (max-width:1600px){ .geners h8:nth-child(n+5){display:none}}
+    @media screen and (min-width:1300px) and (max-width:1800px){ .geners h8:nth-child(n+8){display:none}}
+    @media screen and (min-width:1800px){.geners h8:nth-child(n+9){display:none}}
+    
+    
 
     .buttons {
         margin-top: 50px;
@@ -2110,6 +2169,15 @@ body.iframepg {
     .descrition {
         max-width: 80%;
     }
+    
+
+      .dadospesquisa{gap:10px}
+      .listtemporadas{width:100%!important}
+      .filtrospesq{ width: 100%!important; padding: 0 20px;}
+      #Olep,
+      #Nvep{display: flex!important; align-items: center}
+
+
 
 }
 
@@ -2148,6 +2216,8 @@ body.iframepg {
     .filtrospesq {
         width: 40%;
     }
+
+    
 
     .dadospesquisa input {
         width: 100%;
