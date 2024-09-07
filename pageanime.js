@@ -1,4 +1,37 @@
 
+  // BUTTONS FILTRO LISTA DE EPS PA
+  document.addEventListener("DOMContentLoaded", function () {
+    const temporadas = document.querySelector(".temporadas");
+    const OlepButton = document.getElementById("Olep");
+    const NvepButton = document.getElementById("Nvep");
+    const listeps = document.querySelector(".listeps");
+
+    OlepButton.onclick = function () {
+      // Alternar a classe .active apenas para o OlepButton
+      OlepButton.classList.toggle("active");
+
+      temporadas.classList.toggle("Olep");
+
+      const items = Array.from(listeps.querySelectorAll("main")); 
+      items.forEach(item => listeps.removeChild(item)); 
+      items.reverse().forEach(item => listeps.appendChild(item));
+    };
+
+    NvepButton.onclick = function () {
+      // Alternar a classe .active apenas para o NvepButton
+      NvepButton.classList.toggle("active");
+
+      temporadas.classList.toggle("Nvep");
+
+      const episodios = document.querySelectorAll(".episodio");
+      episodios.forEach(episodio => {
+        const vieweP = episodio.querySelector(".vieweP");
+        if (vieweP && vieweP.classList.contains("visto")) {
+          episodio.style.display = temporadas.classList.contains("Nvep") ? "none" : "";
+        }
+      });
+    };
+  });
 
       
       // O CONST DE IMAGENS ESTA NA POSTAGEM DO ANIME
