@@ -2036,11 +2036,15 @@ body.iframepg {
         width: 100%;
     }
 
+.listtemporadas{justify-content: center!important;padding:0 10px;}
 
     .listtemporadas div {
         max-width: 100%;
     }
-
+    
+#scrollRight {
+    margin-right: 0!important;
+}
     .listtemporadas span {
         min-width: 50px;
         height: 50px;
