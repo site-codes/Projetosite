@@ -25,20 +25,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// ANIMES CLICADODS
-
+// ANIMES QUANTIDADE 
 document.addEventListener("DOMContentLoaded", function () {
   var blogPts = document.querySelector("#Blog1 .blogPts");
   var totalaNime = document.getElementById("totalaNime");
 
   function atualizarContagemNtry() {
+    // Seleciona todos os elementos .ntry
     var ntryItems = blogPts.querySelectorAll(".ntry");
-    var quantidade = ntryItems.length;
-    totalaNime.textContent = "(" + quantidade + ")";
+    // Calcula a quantidade total de .ntry
+    var quantidadeTotal = ntryItems.length;
+
+    // Conta quantos desses elementos têm a classe .noList
+    var ntryComNoList = blogPts.querySelectorAll(".ntry.noList").length;
+
+    // Calcula o valor final
+    var quantidadeFinal = quantidadeTotal - ntryComNoList;
+
+    // Atualiza o texto com o valor final
+    totalaNime.textContent = "(" + quantidadeFinal + ")";
   }
 
   atualizarContagemNtry();
 });
+
 
 
 
