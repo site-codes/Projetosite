@@ -25,6 +25,22 @@ checkAndHideAdm();
     
   
   
+  // NO link href nos Eps
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll('.linkep');
+  
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    
+    if (!href || href === '#') {
+      const episodio = link.closest('.episodio');
+      if (episodio) {
+        episodio.classList.add('no');
+      }
+    }
+  });
+});
+  
 
   // BUTTONS FILTRO LISTA DE EPS PA
   document.addEventListener("DOMContentLoaded", function () {
