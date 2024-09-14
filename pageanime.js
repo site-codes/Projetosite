@@ -448,11 +448,21 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const seasonN = document.getElementById("seasonN");
   const listtemporadas = document.querySelector(".listtemporadas");
-  const spanCount = listtemporadas.querySelectorAll("span").length;
+  const allSpans = listtemporadas.querySelectorAll("span");
+  
+  // Contar o número total de spans
+  let spanCount = allSpans.length;
+  
+  // Verificar se algum dos spans possui a classe .sesp
+  const hasSpecialSpan = Array.from(allSpans).some(span => span.classList.contains("sesp"));
 
-  const finalValue = spanCount;
-
-  seasonN.textContent = finalValue;
+  // Subtrair 1 se houver um span com a classe .sesp
+  if (hasSpecialSpan) {
+    spanCount -= 1;
+  }
+  
+  // Exibir o resultado
+  seasonN.textContent = spanCount;
 });
 
   
