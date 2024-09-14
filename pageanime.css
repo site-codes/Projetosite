@@ -975,6 +975,31 @@
 
 
 /*------ TEMPORADAS --------------------------------------------------------------------------------------------*/
+  
+    @media (min-width: 1100px) and (max-width: 1300px) {
+    .barra {
+        max-width: 35%!important;
+    }
+      
+          .temporadas {
+            max-width: 60%!important;}
+          .listeps {
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+}
+    
+    
+    @media (min-width: 1300px) and (max-width: 1500px) {
+      .listeps {
+        grid-template-columns: repeat(3, 1fr)!important;
+    }
+    }
+    @media (min-width: 1500px) and (max-width: 1800px) {
+      .listeps {
+        grid-template-columns: repeat(4, 1fr)!important;
+    }
+    }
+
 .temporadas {
     padding: 10px 100px 10px 100px;
     font-family: var(--fontH);
@@ -1152,6 +1177,15 @@
     transform: unset
 }
 
+.episodio.no .vieweP{pointer-events:none}
+    .episodio.no .item{display:none}
+    .noLInk:before{content:"Ep Indisponivel"}
+    .episodio:hover .noLInk:before{content:"Em breve"}
+    .episodio .noLInk{display:none}
+    .episodio.no .epNumbers{background: rgba(0,0,0,0.5);}
+    .episodio.no .noLInk{display:flex;margin-top:5px; border-radius:50px; color:var(--linkC); background: rgba(255,255,255,0.2); justify-content:center; border:none; font-size:14px; padding: 5px 0}
+    
+    .sesp.clicked:before {display:none}
 
 .episodio {
     background: var(--contentB);
