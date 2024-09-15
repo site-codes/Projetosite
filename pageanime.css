@@ -2315,8 +2315,7 @@ body.iframepg {
     }
 
     .detals main {
-        width: 70%;
-        overflow: auto
+        overflow: auto!important
     }
 
     .detals main::-webkit-scrollbar {
