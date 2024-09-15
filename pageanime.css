@@ -1945,7 +1945,7 @@ body.iframepg {
     .descrition {
         overflow: unset;
         justify-content: space-between;
-        padding: 0 10px;
+        padding: 0px;
         direction: unset;
         height: unset;
         text-overflow: unset;
