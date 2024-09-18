@@ -6,7 +6,7 @@ document.head.appendChild(link);
 
 // Cria e adiciona o script para o JavaScript
 var script = document.createElement('script');
-script.src = 'https://site-codes.github.io/Projetosite/pageanime.js';
+script.src = 'https://abrir.site/animepagejs';
 document.head.appendChild(script);
   
   
