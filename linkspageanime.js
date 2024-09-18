@@ -1,6 +1,6 @@
 // Cria e adiciona o link para o CSS
 var link = document.createElement('link');
-link.href = 'https://site-codes.github.io/Projetosite/pageanime.css';
+link.href = 'https://abrir.link/animepage';
 link.rel = 'stylesheet';
 document.head.appendChild(link);
 
