@@ -1,11 +1,2 @@
-   // Cria e adiciona o link para o CSS
-   var link = document.createElement('link');
-   link.href = 'https://site-codes.github.io/Projetosite/pageanime.css';
-   link.rel = 'stylesheet';
-   document.head.appendChild(link);
-   
-   // Cria e adiciona o script para o JavaScript
-   var script = document.createElement('script');
-   script.src = 'https://site-codes.github.io/Projetosite/pageanime.js';
-   document.head.appendChild(script);
-     
+eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 0=2.6(\'0\');0.15=\'5://4-8.7.10/13/12.14\';0.16=\'17\';2.11.9(0);3 1=2.6(\'1\');1.18=\'5://4-8.7.10/13/12.19\';2.11.9(1);',10,20,'link|script|document|var|site|https|createElement|github|codes|appendChild|io|head|pageanime|Projetosite|css|href|rel|stylesheet|src|js'.split('|'),0,{}))
+
