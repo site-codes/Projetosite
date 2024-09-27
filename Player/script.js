@@ -2,7 +2,7 @@
 
 // Adicionar o script final
 const scriptJs = document.createElement('script');
-scriptJs.src = 'scriptFinalVersion.js';
+scriptJs.src = '/Player/scriptFinalVersion.js';
 document.body.appendChild(scriptJs);
 
 // Adicionar o link para a fonte do Google
