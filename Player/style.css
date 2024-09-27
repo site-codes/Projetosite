@@ -277,10 +277,10 @@ button:focus {
     width: 100%;
     height: 100%;
     background: rgb(24, 27, 35, 0.6);
-    display: none;
     transition: flex 1s;
     z-index: 3;
-    opacity: 0;
+    opacity: 0;    
+    display: none;
     
   }
   
@@ -313,9 +313,19 @@ button:focus {
   }
   
   .viewmode main{
-    margin-bottom:10px
+    margin-bottom:10px;
+    width:100%;
+    display: flex;
+    gap:10px;
+  }
+  .observation{
+    flex-direction: column;
+    overflow: auto;
   }
   
+  .observation::-webkit-scrollbar{
+    display:none
+  }
   .viewmode p {
     margin: 0;
     font-weight: 900;
@@ -352,7 +362,7 @@ button:focus {
   
   .comandos {
     margin-top: 20px !important;
-    display: none
+    display: flex
   }
   
   .viewmode span {
@@ -361,7 +371,7 @@ button:focus {
     box-sizing: border-box;
     background: #181b23;
     opacity: 0.6;
-    display: none;
+    display: flex;
     align-items: center;
     font-size: 12px;
   }
@@ -847,15 +857,18 @@ button:focus {
 }
 
 .viewmode div {
-  width: auto;
+  width: 40%;
   padding: 20px;
   align-items: center !important;
-  display: flex
+  display: flex;
 }
 
 .viewmode p {
   font-size: 12px;
   font-weight: 400
+}
+.viewmode main{
+    flex-direction: column
 }
 
 .viewmode button {
@@ -864,9 +877,13 @@ button:focus {
   width: 100%;
   margin: 0;
   margin-bottom: 15px;
-  display: block !important;
-  font-size: 10px !important
+  font-size: 12px !important
 }
+
+.viewmode .observation{
+    display:none;
+}
+
 
 
 .medp {
