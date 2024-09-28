@@ -1,12 +1,4 @@
-#Campo-Ads04,
-#HTML38 {
-    margin: 0
-}
 
-#Campo-Ads05,
-#HTML45 {
-    display: none
-}
 
 /*------ WALLPAPER --------------------------------------------------------------------------------------------*/
 #modal {
@@ -1570,11 +1562,11 @@
     min-width: 80px;
     padding: 5px 10px
 }
-
-
 .pageanimeep.iframepg .vieweP {
     min-height: unset !important
-}
+}  
+.pageanimeep.iframepg .vieweP.visto .view {background: var(--cor1);}
+ .pageanimeep.iframepg .view{background: var(--linkD)}
 
 .pageanimeep.iframepg .sinopseN {
     -webkit-line-clamp: 2;
@@ -1590,13 +1582,7 @@
     font-weight: 700 !important;
 }
 
-.pageanimeep.iframepg .epNN:before {
-    display: none
-}
 
-.pageanimeep.iframepg .epNN:after {
-    display: none
-}
 
 #footer,
 .navbar-calendar,
@@ -1608,6 +1594,8 @@
 
 
 
+body.iframepg #addons-widget,
+body.iframepg .post-related,
 body.iframepg footer,
 body.iframepg #header,
 body.iframepg #comment,
@@ -2546,11 +2534,3 @@ body.iframepg {
 
 }
 
-.ads {
-    margin: 0 !important
-}
-
-.pDesc,
-.movielist{
-    display:none
-}
