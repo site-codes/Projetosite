@@ -1,4 +1,79 @@
-  // DISPLAY NONE AO ADM CASO VALOR VAZIO
+
+
+// BUTTONS FILTRO LISTA DE EPS PA
+document.addEventListener("DOMContentLoaded", function () {
+    const OlepButton = document.getElementById("Olep");
+    const NvepButton = document.getElementById("Nvep");
+
+    OlepButton.onclick = function () {
+        OlepButton.classList.toggle("active");
+        const listaEps = document.querySelectorAll(".listeps");
+
+        listaEps.forEach(listeps => {
+            const items = Array.from(listeps.querySelectorAll("main"));
+            items.forEach(item => listeps.removeChild(item)); // Remove todos os itens
+
+            items.reverse().forEach(item => listeps.appendChild(item)); // Reordena e adiciona novamente
+        });
+    };
+
+    NvepButton.onclick = function () {
+        // Alternar a classe .active apenas para o NvepButton
+        NvepButton.classList.toggle("active");
+
+        const episodios = document.querySelectorAll(".episodio");
+        episodios.forEach(episodio => {
+            const vieweP = episodio.querySelector(".vieweP");
+            if (vieweP && vieweP.classList.contains("visto")) {
+                // Verifica se o NvepButton está ativo e aplica display: none
+                if (NvepButton.classList.contains("active")) {
+                    episodio.style.display = "none";
+                } else {
+                    episodio.style.display = ""; // Retorna ao padrão se não estiver ativo
+                }
+            }
+        });
+    };
+});
+
+
+
+  
+   
+  // ATUALIZAR CAPA CONFORME CLICA NO BUTTON DE SEASON
+ function altcapa(event) {
+            const span = event.target;
+            const imgUrl = span.getAttribute('data-capa');
+            if (imgUrl) {
+                document.querySelector('.imagem-capa').src = imgUrl;
+            }
+        }
+  
+        
+
+      // SUBSTITUIR TERMOS
+const sinopseElements = document.querySelectorAll('.sinopseN');
+const description = document.getElementById('description');
+
+if (description) {
+  sinopseElements.forEach(sinopse => {
+    if (sinopse.innerHTML.trim() === '') {
+      sinopse.innerHTML = description.innerHTML;
+    }
+  });
+}
+      const tituloElements = document.querySelectorAll('.tituloN');
+
+tituloElements.forEach(titulo => {
+  if (!titulo.getAttribute('data-name').trim()) {
+    titulo.setAttribute('data-name', 'Sem Título');
+  }
+});
+  
+  
+  
+  
+    // DISPLAY NONE AO ADM CASO VALOR VAZIO
 function checkAndHideAdm() {
   const h8 = document.querySelector('span.adm h8'); 
   const admSpan = document.querySelector('span.adm');
@@ -40,41 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-  
-
-  // BUTTONS FILTRO LISTA DE EPS PA
-  document.addEventListener("DOMContentLoaded", function () {
-    const temporadas = document.querySelector(".temporadas");
-    const OlepButton = document.getElementById("Olep");
-    const NvepButton = document.getElementById("Nvep");
-    const listeps = document.querySelector(".listeps");
-
-    OlepButton.onclick = function () {
-      // Alternar a classe .active apenas para o OlepButton
-      OlepButton.classList.toggle("active");
-
-      temporadas.classList.toggle("Olep");
-
-      const items = Array.from(listeps.querySelectorAll("main")); 
-      items.forEach(item => listeps.removeChild(item)); 
-      items.reverse().forEach(item => listeps.appendChild(item));
-    };
-
-    NvepButton.onclick = function () {
-      // Alternar a classe .active apenas para o NvepButton
-      NvepButton.classList.toggle("active");
-
-      temporadas.classList.toggle("Nvep");
-
-      const episodios = document.querySelectorAll(".episodio");
-      episodios.forEach(episodio => {
-        const vieweP = episodio.querySelector(".vieweP");
-        if (vieweP && vieweP.classList.contains("visto")) {
-          episodio.style.display = temporadas.classList.contains("Nvep") ? "none" : "";
-        }
-      });
-    };
-  });
 
       
       // O CONST DE IMAGENS ESTA NA POSTAGEM DO ANIME
