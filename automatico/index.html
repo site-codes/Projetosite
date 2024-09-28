@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=section, initial-scale=1.0" />
+    <title>Document</title>    
+    <link href="..\automatico\style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+  </head>
+  <body>
+    <span id="mensagem">Code Copiadao; Cole em sua postagem!!</span>
+    <div class="code">
+      <span class="close" onclick="closeCode()"></span>
+      <div>
+        <h8>Code</h8>
+        <button onclick="copyCode()"></button>
+        <button onclick="expandCode()"></button>
+      </div>
+      <pre id="seasonContent"></pre>
+    </div>
+    <section class="topo">
+      <input type="text" id="searchBar" placeholder="Pesquisar animes..." oninput="filterAnimes()"/>
+      <div class="menuinfos">
+        <div id="total-count">Total de Animes: 0</div>
+        <div id="page-info"></div>
+        <span class="inputs">
+              <label class="custom-radio">
+                  <input type="radio" name="especiais" value="sim" id="sim" />
+                  <span class="radio-indicator"></span>
+              </label>
+              <label class="custom-radio">
+                  <input type="radio" name="especiais" value="nao" id="nao" />
+                  <span class="radio-indicator"></span>
+              </label>
+        </span>
+      </div>
+      <div id="pagination-controls" class="buttonsPage"></div>
+    </section>
+
+    <div id="episodeModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close" onclick="closeEps()"></span>
+        <h2 class="titleList">Lista de Episódios</h2>
+        <div id="episodeList"></div>
+      </div>
+    </div>
+    
+
+ <section class="container">
+         <!--<div id="episodes">
+        <div class="modal-content">
+          <span class="close" onclick="closeEps()"></span>
+          <div id="episode-list"></div>
+        </div>
+      </div>-->
+      
+      <section class="section01 modal">
+        <span id="closeModal" class="close"></span>
+        <div id="codeG">
+          <div class="buttons">
+            <button onclick="verCode(event)">Ver Code</button>
+            <button onclick="copyCode(event)">Copiar</button>
+            <button onclick="openEpsIndex(event)">Lista de Episódios</button>
+
+            
+          </div>
+
+          
+          <div class="group gresp">
+              <span class="imgC">
+                <img id="animePreview" src=""/>
+              </span>        
+              <span class="subgroup responsive">
+                <div class="quest">
+                  <span>Nome</span>
+                  <input type="text" id="animeTitle" name="animeTitle" required />
+                </div>
+                <div class="quest">
+                  <span>Nome Original</span>
+                  <input type="text" id="animeTitleJapanese" name="animeTitleJapanese" onchange="updateSeasonContent()" required />
+                </div>
+              </span>
+              <span class="subgroup res">
+                <div class="quest">
+                  <span>Status</span>
+                  <input type="text" id="animeStatus" name="animeStatus" onchange="updateSeasonContent()" placeholder="'Em Pausa', 'Lançamento' ou 'Completo'" required />
+                </div>
+                <div class="quest">
+                  <span>Estação</span>
+                  <input type="text" id="animeStation" name="animeStation" onchange="updateSeasonContent()" placeholder="Ex: Primavera" required />
+                </div>
+              </span>
+            </div>
+            
+            <div class="quest">
+              <span>Tipo</span>
+              <div>
+                <span class="subAudio">
+                  <input type="radio" value="Legendado" id="Legendado" name="audio" onclick="updateSub(this.value)" checked/>
+                </span>
+                <span class="subAudio dub">
+                  <input type="radio" value="Dublado" id="Dublado" name="audio" onclick="updateSub(this.value)"/>
+                </span>
+                <input type="text" id="animeDubbedOrSubbed" onchange="updateSeasonContent()" name="animeDubbedOrSubbed" required />
+              </div>
+            </div>
+
+  
+            <div class="quest">
+              <span>Link Page</span>
+              <input type="text" id="linkPage" onchange="updateSeasonContent()" required />
+            </div>
+        
+            <div class="quest link">
+              <span>Wallpapers</span>
+              <input type="text" id="linkcapa01" onchange="updateSeasonContent()" placeholder="Link 01" name="linkcapa01" required/> 
+              <input type="text" id="linkcapa02" onchange="updateSeasonContent()" placeholder="Link 02" name="linkcapa02" required/> 
+              <input type="text" id="linkcapa03" onchange="updateSeasonContent()" placeholder="Link 03" name="linkcapa03" required/> 
+              <input type="text" id="linkcapa04" onchange="updateSeasonContent()" placeholder="Link 04" name="linkcapa04" required/> 
+              <input type="text" id="linkcapa05" onchange="updateSeasonContent()" placeholder="Link 05" name="linkcapa05" required/>
+            </div>
+       
+            <div class="quest">
+              <span>Capa Anime</span>
+              <input type="text" id="animeCover" onchange="updateSeasonContent()" name="animeCover"/>
+            </div>
+            
+            <div class="quest">
+              <span>Todas as Capas</span>
+              <textarea id="animeCapasTotais" name="animeCapasTotais" onchange="updateSeasonContent()" required></textarea>
+            </div>
+            
+            <div class="quest">
+              <span>Trailer</span>
+              <input type="text" id="animeTrailerLink" onchange="updateSeasonContent()" name="animeTrailerLink" required/>
+              <input type="text" id="linkconvert" onchange="updateSeasonContent()" style="display:none" required/>
+            </div>
+            
+            <div class="quest" style="display:none">
+              <span>Id</span>
+              <input type="text" id="idUnico" onchange="updateSeasonContent()" required />
+            </div>
+      
+            <div class="group wrap">
+              <div class="quest re">
+                <span>Nota</span>
+                <input type="number" id="animeRating" onchange="updateSeasonContent()" name="animeRating" step="0.1" required />
+              </div>
+              <div class="quest">
+                <span>Minutos</span>
+                <input type="text" id="animeAverageRuntime" onchange="updateSeasonContent()" name="animeAverageRuntime" required/>
+              </div>
+              <div class="quest">
+                <span>Estudio</span>
+                <input type="text" id="animeStudio" onchange="updateSeasonContent()" name="animeStudio" placeholder="Ex: WIT Studio" required />
+              </div>
+            </div>
+      
+            <div class="quest">
+              <span>Site</span>
+              <div>
+                <span class="tipo">
+                  <input type="radio" value="Tmdb" id="Tmdb" name="notaSite" onclick="updateSite(this.value)" checked/>
+                </span>
+                <span class="tipo">
+                  <input type="radio" value="MyNimeList" id="MyNimeList" name="notaSite" onclick="updateSite(this.value)"/>
+                </span>
+                <input type="text" id="site" onchange="updateSeasonContent()" name="site" required/>
+              </div>
+            </div>
+
+            <div class="group wrap">
+            <div class="quest">
+              <span>Temporadas</span>
+              <input type="text" id="seasons" name="seasons" onchange="updateSeasonContent()" />
+            </div>
+            
+            <div class="quest">
+              <span>Episódios</span>
+              <input type="text" id="animeEpisodes" name="animeEpisodes" onchange="updateSeasonContent()" />
+            </div>
+            </div>
+      
+            <div class="quest" style="display: none">
+              <span>Ano de Lançamento</span>
+              <input type="text" id="animeReleaseDate" onchange="updateSeasonContent()" name="animeReleaseDate" required />
+              <input type="number" id="animeReleaseYear" onchange="updateSeasonContent()" name="animeReleaseYear" required />
+            </div>
+            
+            <div class="quest">
+              <span>Gêneros</span>
+              <input type="text" id="animeGenres" onchange="updateSeasonContent()" name="animeGenres" required />
+            </div>
+            
+            <div class="quest">
+              <span>Sinopse</span>
+              <textarea id="animeOverview" name="animeOverview" onchange="updateSeasonContent()" required></textarea>
+            </div>
+      
+            <div class="quest">
+              <span>Adm</span>
+              <input type="text" id="animeAdm" onchange="updateSeasonContent()" name="animeAdm" required />
+            </div>
+        
+        </div>
+      </section>
+  
+      <section class="section02">
+        <main class="itemsbody">
+          <div id="anime-container"></div>
+          <div id="pagination"></div>
+          <div id="animeList"></div>
+          <div id="pagination-simple-controls" class="buttonsPage"></div>
+        </main>
+      </section>
+    </section>
+    
+    <script src="..\automatico\script.js"></script>
+    <script src="..\automatico\outros.jS"></script>
+  </body>
+</html>
