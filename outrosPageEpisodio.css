@@ -13,3 +13,18 @@ footer,
     display: none!important
 }
   
+
+.toTopB {
+    bottom: 20px;
+    right: 22px
+}
+
+  
+  
+  @media screen and (max-width:1100px){
+.toTopB {
+    bottom: 80px!important;
+  }
+  }
+  
+  
