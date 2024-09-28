@@ -189,7 +189,7 @@ window.onresize = resizeIframe;
 let link = document.createElement('link');
 link.type = 'text/css';
 link.rel = 'stylesheet';
-link.href = 'https://site-codes.github.io/Projetosite/pageepisodio.css';
+link.href = 'https://site-codes.github.io/Projetosite/pageEpisodio.css';
 
 document.querySelector('head').appendChild(link);
 
