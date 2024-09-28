@@ -1471,7 +1471,7 @@
 
 /*-----------------------------------------------------------------------------------*/
 /*Modo iframe*/
-@media screen and (min-width:1500px){
+@media screen and (min-width:800px){
     
 .pageanimeep.iframepg {
     background: var(--contentB);
