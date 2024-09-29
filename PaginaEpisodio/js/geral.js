@@ -1,1 +1,188 @@
-const _0x1e46af=_0x3443;(function(_0x49d70b,_0x8d5b4){const _0x4f4860=_0x3443,_0x4ae7f2=_0x49d70b();while(!![]){try{const _0x31de87=parseInt(_0x4f4860(0x152))/0x1+-parseInt(_0x4f4860(0x187))/0x2+-parseInt(_0x4f4860(0x180))/0x3+-parseInt(_0x4f4860(0x164))/0x4+-parseInt(_0x4f4860(0x18f))/0x5+-parseInt(_0x4f4860(0x15e))/0x6+parseInt(_0x4f4860(0x15b))/0x7*(parseInt(_0x4f4860(0x182))/0x8);if(_0x31de87===_0x8d5b4)break;else _0x4ae7f2['push'](_0x4ae7f2['shift']());}catch(_0xb83eed){_0x4ae7f2['push'](_0x4ae7f2['shift']());}}}(_0x1997,0xe2b5a));function addDays(_0x1db565,_0x2048d0){const _0x1dd5f5=_0x3443,_0x35c05b=new Date(_0x1db565);return _0x35c05b[_0x1dd5f5(0x169)](_0x35c05b[_0x1dd5f5(0x161)]()+_0x2048d0),_0x35c05b;}function formatDate(_0x83fa5c){const _0x470573=_0x3443,_0x31cce0=String(_0x83fa5c[_0x470573(0x161)]())[_0x470573(0x162)](0x2,'0'),_0x58cdd2=String(_0x83fa5c['getMonth']()+0x1)['padStart'](0x2,'0'),_0x5cbd51=_0x83fa5c[_0x470573(0x15c)]();return _0x31cce0+'/'+_0x58cdd2+'/'+_0x5cbd51;}function calculateTimeRemaining(_0x47d039,_0x1d849d){const _0xa6dc9b=_0x3443,_0x452070=_0x1d849d-_0x47d039,_0x550b6=Math['floor'](_0x452070/(0x3e8*0x3c*0x3c*0x18)),_0x17bc9f=Math[_0xa6dc9b(0x14e)](_0x452070%(0x3e8*0x3c*0x3c*0x18)/(0x3e8*0x3c*0x3c)),_0x17139c=Math[_0xa6dc9b(0x14e)](_0x452070%(0x3e8*0x3c*0x3c)/(0x3e8*0x3c)),_0x179452=Math[_0xa6dc9b(0x14e)](_0x452070%(0x3e8*0x3c)/0x3e8);return{'diffDays':_0x550b6,'diffHours':_0x17bc9f,'diffMinutes':_0x17139c,'diffSeconds':_0x179452};}function updateCountdown(){const _0x5e2bfc=_0x3443,_0x511934=document[_0x5e2bfc(0x16d)]('datepost')[_0x5e2bfc(0x16f)][_0x5e2bfc(0x178)](),[_0x15e6df,_0x2862ad,_0x44bb95]=_0x511934[_0x5e2bfc(0x179)]('/')[_0x5e2bfc(0x155)](Number),_0x20d31d=new Date(_0x44bb95,_0x2862ad-0x1,_0x15e6df),_0x5473f3=addDays(_0x20d31d,0x7),_0x560829=formatDate(_0x5473f3),_0x25720b=new Date(),{diffDays:_0x42bc4d,diffHours:_0x244735,diffMinutes:_0x440f2e,diffSeconds:_0x487738}=calculateTimeRemaining(_0x25720b,_0x5473f3),_0x4b1fea=document[_0x5e2bfc(0x174)](_0x5e2bfc(0x158));if(_0x5473f3<_0x25720b)_0x4b1fea['setAttribute']('data-next',''),_0x4b1fea[_0x5e2bfc(0x16f)]=_0x5e2bfc(0x18c);else{let _0x325f51='';_0x42bc4d>0x0&&(_0x325f51+=_0x42bc4d+_0x5e2bfc(0x173)),_0x325f51+=_0x244735+_0x5e2bfc(0x189)+_0x440f2e+_0x5e2bfc(0x153)+_0x487738+'s',_0x4b1fea['setAttribute']('data-next',_0x560829),window[_0x5e2bfc(0x183)]<0x2bc?_0x4b1fea[_0x5e2bfc(0x16f)]=_0x5e2bfc(0x156)+_0x325f51:_0x4b1fea[_0x5e2bfc(0x16f)]=_0x5e2bfc(0x181)+_0x560829+'\x20('+_0x325f51+')';}}setInterval(updateCountdown,0x3e8),updateCountdown(),window[_0x1e46af(0x17e)]('resize',updateCountdown),document['addEventListener'](_0x1e46af(0x186),function(){const _0x3b6cfd=_0x1e46af,_0x3c965f=document[_0x3b6cfd(0x174)](_0x3b6cfd(0x15f))['innerText'],_0x5cca4f=document[_0x3b6cfd(0x174)](_0x3b6cfd(0x184)),_0x28b981=document[_0x3b6cfd(0x174)](_0x3b6cfd(0x15d)),_0x4a4eeb=document[_0x3b6cfd(0x174)](_0x3b6cfd(0x170)),_0x3d67a9=document[_0x3b6cfd(0x174)](_0x3b6cfd(0x18a));function _0x425002(_0xa41a4a,_0x581445){const _0x13d4ad=_0x3b6cfd,_0x236790=new Date(_0xa41a4a);return _0x236790[_0x13d4ad(0x169)](_0x236790[_0x13d4ad(0x161)]()+_0x581445),_0x236790;}function _0x316feb(_0xa85eb1){const _0x269968=_0x3b6cfd,_0x5e1aa5=('0'+_0xa85eb1[_0x269968(0x161)]())[_0x269968(0x17f)](-0x2),_0x31c018=('0'+(_0xa85eb1[_0x269968(0x166)]()+0x1))[_0x269968(0x17f)](-0x2),_0x281114=_0xa85eb1[_0x269968(0x15c)]();return _0x5e1aa5+'/'+_0x31c018+'/'+_0x281114;}function _0x1763f4(_0x10fb26){const _0x58be85=_0x3b6cfd,_0x40fed6=new Date(),_0x4d887c=_0x10fb26-_0x40fed6,_0x18c4a5=Math['floor'](_0x4d887c/(0x3e8*0x3c*0x3c*0x18)),_0x32840d=Math[_0x58be85(0x14e)](_0x4d887c%(0x3e8*0x3c*0x3c*0x18)/(0x3e8*0x3c*0x3c));return _0x18c4a5+_0x58be85(0x188)+_0x32840d+'h';}function _0x2cd50b(_0x183ad6){const _0x5f2951=new Date();return _0x5f2951>=_0x183ad6;}const _0x34c1ce=new Date(_0x3c965f[_0x3b6cfd(0x179)]('/')['reverse']()[_0x3b6cfd(0x15a)]('-')),_0x4d2f8e=_0x425002(_0x34c1ce,0x7),_0x1a2c67=_0x316feb(_0x4d2f8e);_0x5cca4f[_0x3b6cfd(0x159)]=_0x1a2c67+'\x20(<h8\x20class=\x22cronometroepn\x22>'+_0x1763f4(_0x4d2f8e)+_0x3b6cfd(0x17d),_0x2cd50b(_0x4d2f8e)&&(_0x28b981['classList'][_0x3b6cfd(0x16e)](_0x3b6cfd(0x18e)),_0x4a4eeb[_0x3b6cfd(0x17c)][_0x3b6cfd(0x16e)](_0x3b6cfd(0x18e)),_0x3d67a9['classList'][_0x3b6cfd(0x16e)]('offdunger')),setInterval(function(){const _0x39c9f5=_0x3b6cfd;document[_0x39c9f5(0x174)]('.cronometroepn')[_0x39c9f5(0x16f)]=_0x1763f4(_0x4d2f8e),_0x2cd50b(_0x4d2f8e)&&(_0x28b981[_0x39c9f5(0x17c)][_0x39c9f5(0x16e)](_0x39c9f5(0x18e)),_0x4a4eeb[_0x39c9f5(0x17c)][_0x39c9f5(0x16e)](_0x39c9f5(0x18e)),_0x3d67a9['classList']['add'](_0x39c9f5(0x18e)));},0x36ee80);}),document['querySelector'](_0x1e46af(0x163))[_0x1e46af(0x17e)](_0x1e46af(0x185),function(){const _0x34541b=_0x1e46af,_0x3f7353=document['getElementById'](_0x34541b(0x16a));_0x3f7353['classList'][_0x34541b(0x17a)](_0x34541b(0x160)),this[_0x34541b(0x17c)][_0x34541b(0x17a)](_0x34541b(0x160));}),document[_0x1e46af(0x16d)](_0x1e46af(0x16b))[_0x1e46af(0x17e)](_0x1e46af(0x185),function(){const _0x1363c0=_0x1e46af;this[_0x1363c0(0x17c)][_0x1363c0(0x17a)](_0x1363c0(0x16b));const _0x3d4b82=document[_0x1363c0(0x16d)]('playerpage');_0x3d4b82[_0x1363c0(0x17c)][_0x1363c0(0x17a)](_0x1363c0(0x16b)),document[_0x1363c0(0x16d)](_0x1363c0(0x176))[_0x1363c0(0x17c)][_0x1363c0(0x17a)](_0x1363c0(0x16b));const _0x255c58=document[_0x1363c0(0x16d)](_0x1363c0(0x172));this[_0x1363c0(0x17c)][_0x1363c0(0x16c)]('push')?_0x255c58[_0x1363c0(0x165)][_0x1363c0(0x175)]=_0x1363c0(0x14f):_0x255c58[_0x1363c0(0x165)][_0x1363c0(0x175)]='';});function resizeIframe(){const _0x1ee6b4=_0x1e46af;var _0x2ba9b4=document[_0x1ee6b4(0x16d)](_0x1ee6b4(0x176));_0x2ba9b4&&(_0x2ba9b4[_0x1ee6b4(0x165)]['height']=_0x2ba9b4['contentWindow'][_0x1ee6b4(0x18b)]['body'][_0x1ee6b4(0x17b)]+'px');}window[_0x1e46af(0x177)]=resizeIframe,window['onresize']=resizeIframe;let link=document[_0x1e46af(0x18d)]('link');function _0x3443(_0x35d514,_0xd3597b){const _0x1997fb=_0x1997();return _0x3443=function(_0x3443f1,_0x102fb6){_0x3443f1=_0x3443f1-0x14e;let _0x404d6d=_0x1997fb[_0x3443f1];return _0x404d6d;},_0x3443(_0x35d514,_0xd3597b);}link[_0x1e46af(0x190)]=_0x1e46af(0x157),link[_0x1e46af(0x168)]=_0x1e46af(0x171),link[_0x1e46af(0x167)]=_0x1e46af(0x150),document['querySelector'](_0x1e46af(0x151))[_0x1e46af(0x154)](link);function _0x1997(){const _0xf11bf2=['\x20minutos\x20e\x20','appendChild','map','Próx.\x20Ep.\x20em\x20','text/css','h7[data-next]','innerHTML','join','371DCMMYT','getFullYear','.nextepdate','100788UUmdPU','.dateep','expand','getDate','padStart','.expand','1508856kewQjU','style','getMonth','href','rel','setDate','playerpage','push','contains','getElementById','add','innerText','.comentareppg','stylesheet','comment','\x20dias,\x20','querySelector','display','iframeeps','onload','trim','split','toggle','scrollHeight','classList','</h8>)','addEventListener','slice','4087293OIuMWH','Próximo\x20Episódio\x20previsto\x20para\x20','374064cRPEFF','innerWidth','.nextepdate\x20span','click','DOMContentLoaded','75030MjOkki','\x20dias\x20e\x20','\x20horas\x20','.listepspgep','document','Próximo\x20Episódio\x20já\x20disponível','createElement','offdunger','6929930jcMGxd','type','floor','none','https://site-codes.github.io/Projetosite/pageEpisodio.css','head','1630372CkzXQz'];_0x1997=function(){return _0xf11bf2;};return _0x1997();}
+    
+     
+  // Page episodio ====================================================================
+  function addDays(date, days) {
+    const result = new Date(date);
+    result.setDate(result.getDate() + days);
+    return result;
+  }
+  
+  // Formatar data no formato dd/mm/yyyy
+  function formatDate(date) {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês começa do 0
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+  
+  // Função para calcular a diferença de tempo entre duas datas
+  function calculateTimeRemaining(date1, date2) {
+    const diffTime = date2 - date1;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    const diffHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const diffMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+    const diffSeconds = Math.floor((diffTime % (1000 * 60)) / 1000);
+    return { diffDays, diffHours, diffMinutes, diffSeconds };
+  }
+  
+  // Atualizar contagem regressiva
+  function updateCountdown() {
+    // Obter a data de #datepost
+    const datepost = document.getElementById('datepost').innerText.trim();
+    const [day, month, year] = datepost.split('/').map(Number);
+    const postDate = new Date(year, month - 1, day); // Criar objeto Date
+  
+    // Adicionar 7 dias
+    const nextDate = addDays(postDate, 7);
+  
+    // Formatar a nova data
+    const formattedNextDate = formatDate(nextDate);
+  
+    // Calcular o tempo restante
+    const currentDate = new Date();
+    const { diffDays, diffHours, diffMinutes, diffSeconds } = calculateTimeRemaining(currentDate, nextDate);
+  
+    // Atualizar data-next
+    const h7Element = document.querySelector('h7[data-next]');
+  
+    if (nextDate < currentDate) {
+      h7Element.setAttribute('data-next', '');
+      h7Element.innerText = 'Próximo Episódio já disponível';
+    } else {
+      let timeRemainingString = '';
+      if (diffDays > 0) {
+        timeRemainingString += `${diffDays} dias, `;
+      }
+      timeRemainingString += `${diffHours} horas ${diffMinutes} minutos e ${diffSeconds}s`;
+  
+      h7Element.setAttribute('data-next', formattedNextDate);
+  
+      if (window.innerWidth < 700) {
+        h7Element.innerText = `Próx. Ep. em ${timeRemainingString}`;
+      } else {
+        h7Element.innerText = `Próximo Episódio previsto para ${formattedNextDate} (${timeRemainingString})`;
+      }
+    }
+  }
+  
+  // Atualizar a contagem regressiva a cada segundo
+  setInterval(updateCountdown, 1000);
+  
+  // Inicializar a contagem regressiva
+  updateCountdown();
+  
+  // Adicionar um listener para a mudança de tamanho da janela
+  window.addEventListener('resize', updateCountdown);
+  
+
+
+
+    
+    
+    
+    
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    const dateep = document.querySelector('.dateep').innerText;
+    const nextepdateSpan = document.querySelector('.nextepdate span');
+    const nextepdateDiv = document.querySelector('.nextepdate');
+    const comentareppgDiv = document.querySelector('.comentareppg');
+    const listepspgepDiv = document.querySelector('.listepspgep');
+  
+    // Função para adicionar dias a uma data
+    function addDays(date, days) {
+      const result = new Date(date);
+      result.setDate(result.getDate() + days);
+      return result;
+    }
+  
+    // Função para formatar a data no formato DD/MM/YYYY
+    function formatDate(date) {
+      const day = ("0" + date.getDate()).slice(-2);
+      const month = ("0" + (date.getMonth() + 1)).slice(-2);
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+  
+    // Função para calcular a diferença em dias e horas
+    function calculateTimeDifference(futureDate) {
+      const now = new Date();
+      const timeDiff = futureDate - now;
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      return `${days} dias e ${hours}h`;
+    }
+  
+    // Função para verificar se a data atual é maior ou igual a uma data específica
+    function isDatePastOrEqual(date) {
+      const now = new Date();
+      return now >= date;
+    }
+  
+    // Converte a dataep para um objeto Date
+    const initialDate = new Date(dateep.split('/').reverse().join('-'));
+  
+    // Calcula a nova data adicionando 7 dias
+    const newDate = addDays(initialDate, 7);
+    const formattedNewDate = formatDate(newDate);
+  
+    // Atualiza o conteúdo do nextepdateSpan
+    nextepdateSpan.innerHTML = `${formattedNewDate} (<h8 class="cronometroepn">${calculateTimeDifference(newDate)}</h8>)`;
+  
+    // Verifica se a data atual é maior ou igual à data do nextepdateSpan
+    if (isDatePastOrEqual(newDate)) {
+      nextepdateDiv.classList.add('offdunger');
+      comentareppgDiv.classList.add('offdunger');
+      listepspgepDiv.classList.add('offdunger');
+    }
+  
+    // Atualiza o cronômetro a cada hora
+    setInterval(function() {
+      document.querySelector('.cronometroepn').innerText = calculateTimeDifference(newDate);
+      if (isDatePastOrEqual(newDate)) {
+        nextepdateDiv.classList.add('offdunger');
+        comentareppgDiv.classList.add('offdunger');
+        listepspgepDiv.classList.add('offdunger');
+      }
+    }, 3600000); // 3600000 ms = 1 hora
+  });
+
+  
+
+
+    // button expoandir
+  document.querySelector('.expand').addEventListener('click', function() {
+    const playerPage = document.getElementById('playerpage');
+    playerPage.classList.toggle('expand');
+    this.classList.toggle('expand');
+  });
+    
+// button dos eps mobile
+document.getElementById("push").addEventListener("click", function () {
+    this.classList.toggle("push"); 
+    const playerPage = document.getElementById('playerpage');
+    playerPage.classList.toggle('push');
+    document.getElementById("iframeeps").classList.toggle("push");
+
+    // Verifica se #push recebeu a classe .push
+    const comment = document.getElementById("comment");
+    if (this.classList.contains("push")) {
+        comment.style.display = "none";
+    } else {
+        comment.style.display = ""; 
+    }
+});
+
+
+
+//iframe para oculpar todo espaço
+function resizeIframe() {
+    var iframe = document.getElementById('iframeeps');
+    if (iframe) {
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+}
+
+window.onload = resizeIframe;
+window.onresize = resizeIframe;
+
