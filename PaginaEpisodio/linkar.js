@@ -1,8 +1,18 @@
 
+ // Verifica a chave
+        if (validateLicense(userLicenseKey)) {
+            const script = document.createElement('script');
+            script.src = 'https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.js';
+            document.body.appendChild(script);
 
-const scriptJs = document.createElement('script');
-scriptJs.src = 'https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.js';
-document.body.appendChild(scriptJs);
+            const script2 = document.createElement('script');
+            script2.src = 'https://site-codes.github.io/Projetosite/PaginaEpisodio/js/geral.js'; 
+            document.body.appendChild(script2);
+        } else {
+            alert("Chave de licença inválida!");
+        }
+
+
 
 const stylesheets = [
     'https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.css',
@@ -17,3 +27,9 @@ stylesheets.forEach(href => {
     style.rel = 'stylesheet';
     document.head.appendChild(style);
 });
+
+
+
+
+  
+       
