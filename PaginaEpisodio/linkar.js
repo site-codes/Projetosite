@@ -1,7 +1,7 @@
 
 
 const scriptJs = document.createElement('script');
-scriptJs.src = '../PaginaEpisodio/Player/geral.js';
+scriptJs.src = 'https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.js';
 document.body.appendChild(scriptJs);
 
 const stylesheets = [
