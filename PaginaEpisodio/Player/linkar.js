@@ -1,17 +1,1 @@
-const scriptJs = document.createElement('script');
-scriptJs.src = 'https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.js';
-document.body.appendChild(scriptJs);
-
-const stylesheets = [
-    'https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.css',
-    'https://site-codes.github.io/Projetosite/PaginaEpisodio/css/geral.css',
-    'https://site-codes.github.io/Projetosite/PaginaEpisodio/css/outros.css',
-    'https://site-codes.github.io/Projetosite/PaginaEpisodio/css/responsive.css'
-];
-
-stylesheets.forEach(href => {
-    const style = document.createElement('link');
-    style.href = href;
-    style.rel = 'stylesheet';
-    document.head.appendChild(style);
-});
+const _0x3b9692=_0x3004;(function(_0x49ff17,_0x1d347b){const _0x2a91f2=_0x3004,_0x366133=_0x49ff17();while(!![]){try{const _0x4de1f9=-parseInt(_0x2a91f2(0x1c7))/0x1+parseInt(_0x2a91f2(0x1c3))/0x2+-parseInt(_0x2a91f2(0x1c1))/0x3+parseInt(_0x2a91f2(0x1c0))/0x4+parseInt(_0x2a91f2(0x1c9))/0x5*(parseInt(_0x2a91f2(0x1c2))/0x6)+parseInt(_0x2a91f2(0x1be))/0x7+-parseInt(_0x2a91f2(0x1bf))/0x8;if(_0x4de1f9===_0x1d347b)break;else _0x366133['push'](_0x366133['shift']());}catch(_0x4f368b){_0x366133['push'](_0x366133['shift']());}}}(_0x618e,0x6cbf1));const scriptJs=document['createElement']('script');scriptJs['src']=_0x3b9692(0x1bd),document['body'][_0x3b9692(0x1bb)](scriptJs);function _0x618e(){const _0x323c9b=['createElement','https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.css','forEach','478525hEpjmM','https://site-codes.github.io/Projetosite/PaginaEpisodio/css/outros.css','2095KAtQqu','head','href','https://site-codes.github.io/Projetosite/PaginaEpisodio/css/geral.css','appendChild','rel','https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.js','5968480TJHqyW','6316872OHFsQL','15524LqTsDR','354633zodFhL','7590aqHmGE','890428EEWooh'];_0x618e=function(){return _0x323c9b;};return _0x618e();}const stylesheets=[_0x3b9692(0x1c5),_0x3b9692(0x1cc),_0x3b9692(0x1c8),'https://site-codes.github.io/Projetosite/PaginaEpisodio/css/responsive.css'];function _0x3004(_0x5b4101,_0x2bd054){const _0x618ef1=_0x618e();return _0x3004=function(_0x300465,_0xee9a72){_0x300465=_0x300465-0x1bb;let _0x356f4a=_0x618ef1[_0x300465];return _0x356f4a;},_0x3004(_0x5b4101,_0x2bd054);}stylesheets[_0x3b9692(0x1c6)](_0x2197e1=>{const _0x38234c=_0x3b9692,_0x4a84bc=document[_0x38234c(0x1c4)]('link');_0x4a84bc[_0x38234c(0x1cb)]=_0x2197e1,_0x4a84bc[_0x38234c(0x1bc)]='stylesheet',document[_0x38234c(0x1ca)][_0x38234c(0x1bb)](_0x4a84bc);});
