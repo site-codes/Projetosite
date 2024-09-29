@@ -1,8 +1,12 @@
+   const validLicenseKeysBase64 = [
+            "Q3JpYWRvIFBvciBJbnN0aW50byBQbGF5"
+        ]; 
 
+        function decodeBase64Keys(keys) {
+            return keys.map(key => atob(key)); 
+        }
 
-const obfuscatedKey = "Q3JpYWRvIFBvciBJbnN0aW50byBQbGF5"; 
-const licenseKey = atob(obfuscatedKey); 
-
-function checkLicense(userLicenseKey) {
-    return userLicenseKey === licenseKey;
-}
+        function validateLicense(key) {
+            const validLicenseKeys = decodeBase64Keys(validLicenseKeysBase64);
+            return validLicenseKeys.includes(key);
+        }
