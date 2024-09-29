@@ -1,8 +1,5 @@
 if (validateLicense(userLicenseKey)) {
-    document.body.style.border = "2px solid blue"; // Adiciona uma borda vermelha de 2px ao body
-
-
-    const scriptJs = document.createElement('script');
+  const scriptJs = document.createElement('script');
     scriptJs.src = 'https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.js';
     document.body.appendChild(scriptJs);
     
