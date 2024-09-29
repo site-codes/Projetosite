@@ -1,0 +1,196 @@
+
+@media (max-width: 1200px) {
+    .buttonslink a:nth-child(n + 2):after {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .wallpaperr {
+      display: none;
+    }
+  
+    #playerpage {
+      padding: 0;
+      flex-direction: column;
+    }
+  
+    #iframeeps {
+      border-radius: 20px 20px 0 0;
+    }
+  
+    .mains {
+      border-radius: 0;
+    }
+  
+    #playerpage.expand .be,
+    .be {
+      display: none !important;
+    }
+  
+    #playerpage.expand .mains {
+      margin-top: 0;
+    }
+  
+    #playerpage.expand #player,
+    #player {
+      height: unset;
+    }
+  
+    .buttonslink a:nth-child(1) {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .buttonslink a:nth-child(3):before,
+    .buttonslink a:nth-child(2):before {
+      margin: 0;
+    }
+  
+    .buttonslink a:nth-child(3):after,
+    .buttonslink a:nth-child(2):after {
+      display: none;
+    }
+  
+    .buttonslink a:nth-child(1):after {
+      content: "Mais do Anime" !important;
+    }
+  
+    #playerpage.expand .descritionep,
+    #playerpage.expand .main2 {
+      display: unset;
+    }
+  
+    .mainsb {
+      padding: 0 20px;
+    }
+  
+    .moreiep {
+      gap: 0;
+    }
+  
+    .nextepdate {
+      font-size: 12px;
+    }
+  
+    .moreiep a {
+      margin-left: 10px;
+      margin-right: 0;
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+    }
+  
+    .main1 .titleep {
+      font-size: 18px !important;
+    }
+  
+    .buttonslink a:before {
+      font-size: 18px;
+    }
+  
+    .main2 {
+      width: 100%;
+      max-width: unset;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  
+    #push {
+      position: fixed;
+      bottom: 20px !important;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      color: var(--linkA);
+      background: var(--linkB);
+      font-weight: 800;
+      border: none;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      transition: bottom 0.5s, width 0.5s;
+      z-index: 20 !important;
+    }
+  
+    #push:before {
+      content: "\e9b0";
+      font-family: "Material Symbols Outlined";
+      transition: transform 0.6s ease;
+    }
+  
+    #push:before {
+      animation: rotate 10s linear infinite;
+    }
+  
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+  
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  
+    #push.push:before {
+      animation: unset;
+    }
+  
+    #push.push:after {
+      content: "fechar lista de Episódios";
+      margin-left: 5px;
+    }
+  
+    #push.push {
+      bottom: 610px !important;
+      width: calc(100% - 30px);
+      font-weight: 500;
+    }
+  
+    #playerpage.push:before {
+      content: "";
+      background: rgb(5, 2, 8, 0.9);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 2;
+    }
+  
+    #iframeeps {
+      position: fixed;
+      bottom: -800px;
+      width: 100%;
+      max-height: 600px;
+      min-height: 600px;
+      margin: 0;
+      left: 0;
+      z-index: 2;
+      transition: bottom 0.5s;
+      overflow: hidden !important;
+    }
+  
+    #iframeeps.push {
+      bottom: 0;
+    }
+  }
+  
+  @media screen and (min-width: 400px) and (max-width: 1100px) {
+  }
+  
+  @media (max-width: 1100px) {
+    .buttonslink a:nth-child(1) {
+      width: auto !important;
+    }
+  }
+  
+  @media screen and (min-width: 1100px) and (max-width: 1500px) {
+    #playerpage {
+      padding: 120px 20px 60px 20px;
+    }
+  }
+  
