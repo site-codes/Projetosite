@@ -8855,7 +8855,13 @@ footer {
     }
 }
 
-@media screen and (min-width:800px) and (max-width:1100px) {
+
+@media screen and (max-width:800px) {
+  .bkmC {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+@media screen and (max-width:1100px) {
     .bkmC {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
