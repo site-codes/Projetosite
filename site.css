@@ -744,33 +744,6 @@ flex-direction: column;
 #HTML2 .pLbls{gap:5px; align-items: center;}
 #HTML2 .pLbls a{font-weight:unset;}
 
-#HTML2 .labelNota{position: relative; left:unset;top:unset;display: flex!important; background: transparent!important; font-size:2em!important;color: var(--cor3)!important;font-weight:700!important}
-#HTML2 .labelNota:before{margin-right:10px}
-#HTML2 .movie .labelFilmes{border-radius: 0 5px 5px 0; background: var(--linkD); border:none; color: var(--linkC); opacity:1;padding:2px 10px}
-#HTML2 .movie .listan h2:nth-child(2):after{content:"Filme"}
-
-#HTML2 .labelLançamento,
-#HTML2 .labelPausa,
-#HTML2 .labelCompleto{position: relative;display:unset; top:unset; left:unset;z-index:2; box-shadow: unset; order:1!important; border-radius: 0 5px 5px 0;padding:2px 10px}
-
-#HTML2 .labelE,
-#HTML2 .labelT{padding:2px 10px;}
-
-#HTML2 .labelE{order:3}
-#HTML2 .labelT{order:2}
-#HTML2 .labelE:after,
-#HTML2 .labelT:after{display:unset}
-
-
-#HTML2 .ntry:hover .labelT,
-#HTML2 .ntry:hover .labelE{border:none; color: var(--linkC); opacity:unset}
-
-#HTML2 .ntry .labelT{background:var(--linkB)}
-#HTML2 .ntry .labelE{background:var(--linkD)}
-
-
-#HTML2 .ntry:hover .labelT:before{display: unset}
-
 #HTML2 .pInf {display:none!important}
 
 
