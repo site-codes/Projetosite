@@ -1431,31 +1431,6 @@ font-family:unset
 }
 
 
-#HTML3 .categoriaEp {
-    display: flex;
-    margin-bottom: 5px;
-}
-
-.categoriaEp a:before {
-    display: none;
-    margin: 0
-}
-
-
-
-#HTML3 .categoriaEp a {
-display:none;}
-
-#HTML3 .categoriaEp a.labelDublado,
-#HTML3 .categoriaEp a.labelLegendado{
-display: flex!important;
-    font-size: .8em;
-    background: var(--linkD);
-    color: var(--linkC);
-    border-radius: 5px;
-    font-weight: 400;
-    padding: 2px 10px
-}
 
 #HTML3 .newep {
     position: absolute;
