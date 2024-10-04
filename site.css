@@ -2572,8 +2572,7 @@ gap:20px;
     color: var(--cor2)
 }
 
-:is(#HTML23, #HTML25, #HTML27) .pInf,
- :is(#HTML23, #HTML25, #HTML27) .pLbls a{display:none!important}
+:is(#HTML23, #HTML25, #HTML27) .pInf{display:none!important}
 
  :is(#HTML23, #HTML25, #HTML27) .ntry .pLbls a:nth-child(1){display:flex!important; color: var(--linkB); font-size:18px;font-weight:800}
 
@@ -7048,9 +7047,6 @@ margin:0}
         align-items: center;
         justify-content: center
     }
-
-    :is(#HTML23, #HTML25, #HTML27) .pLbls{background: var(--linkB);border-radius:5px}
-    :is(#HTML23, #HTML25, #HTML27) .pLbls a{font-size:12px!important; color: var(--linkA)!important}
 
 
     :is(#HTML23, #HTML25, #HTML27) .blogPg {
