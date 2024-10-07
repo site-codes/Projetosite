@@ -1,4 +1,5 @@
-   const validLicenseKeysBase64 = [
+  
+     const validLicenseKeysBase64 = [
             "Q3JpYWRvIFBvciBJbnN0aW50byBQbGF5"
         ]; 
 
@@ -11,16 +12,25 @@
             return validLicenseKeys.includes(key);
         }
 
- // Verifica a chave
+// URL Base64 codificada
+const base64Encoded = 'aHR0cHM6Ly9zaXRlLWNvZGVzLmdpdGh1Yi5pby9Qcm9qZXRvc2l0ZS9QYWdpbmFFcGlzb2Rpby8=';
+
+// Função para decodificar Base64
+function decodeBase64(base64Str) {
+    return atob(base64Str);
+}
+
+// Decodifica a URL e armazena na variável 'base'
+const base = decodeBase64(base64Encoded);
+
+// Verifica a chave
 if (validateLicense(userLicenseKey)) {
-    const base = "https://site-codes.github.io/Projetosite/PaginaEpisodio/";
-    
     const script1 = document.createElement('script');
     script1.src = `${base}Player/geral.js`;
     document.body.appendChild(script1);
 
     const script2 = document.createElement('script');
-    script2.src = `${base}js/geral.js`; 
+    script2.src = `${base}js/geral.js`;
     document.body.appendChild(script2);
 } else {
     alert("Chave de licença inválida!");
@@ -39,8 +49,3 @@ stylesheets.forEach(href => {
     style.rel = 'stylesheet';
     document.head.appendChild(style);
 });
-
-
-
-  
-       
