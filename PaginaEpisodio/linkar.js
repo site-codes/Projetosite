@@ -11,27 +11,26 @@
             return validLicenseKeys.includes(key);
         }
 
-  
  // Verifica a chave
-        if (validateLicense(userLicenseKey)) {
-            const script = document.createElement('script');
-            script.src = 'https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.js';
-            document.body.appendChild(script);
+if (validateLicense(userLicenseKey)) {
+    const base = "https://site-codes.github.io/Projetosite/PaginaEpisodio/";
+    
+    const script1 = document.createElement('script');
+    script1.src = `${base}Player/geral.js`;
+    document.body.appendChild(script1);
 
-            const script2 = document.createElement('script');
-            script2.src = 'https://site-codes.github.io/Projetosite/PaginaEpisodio/js/geral.js'; 
-            document.body.appendChild(script2);
-        } else {
-            alert("Chave de licença inválida!");
-        }
-
-
+    const script2 = document.createElement('script');
+    script2.src = `${base}js/geral.js`; 
+    document.body.appendChild(script2);
+} else {
+    alert("Chave de licença inválida!");
+}
 
 const stylesheets = [
-    'https://site-codes.github.io/Projetosite/PaginaEpisodio/Player/geral.css',
-    'https://site-codes.github.io/Projetosite/PaginaEpisodio/css/geral.css',
-    'https://site-codes.github.io/Projetosite/PaginaEpisodio/css/outros.css',
-    'https://site-codes.github.io/Projetosite/PaginaEpisodio/css/responsive.css'
+    `${base}Player/geral.css`,
+    `${base}css/geral.css`,
+    `${base}css/outros.css`,
+    `${base}css/responsive.css`
 ];
 
 stylesheets.forEach(href => {
@@ -40,7 +39,6 @@ stylesheets.forEach(href => {
     style.rel = 'stylesheet';
     document.head.appendChild(style);
 });
-
 
 
 
