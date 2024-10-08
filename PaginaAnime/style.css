@@ -1035,7 +1035,7 @@
     
     .filtrospesq{display: flex; gap:10px;width:40%!important;}
     .filtrospesq button{border-radius:50px; border:none; position: relative; width:60px; overflow:hidden;
-    background: var(--contentB);color: var(--linkC); pointer-events: auto; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.6s}
+    background: var(--contentB);color: var(--linkC); pointer-events: auto; cursor: pointer; display: flex; align-items: center; justify-content: center;}
     
     .filtrospesq button:before{content:""; opacity:0;background: var(--linkD); height:100%; width:100%; top:0; left:0; position: absolute;}
     .filtrospesq button.active:before{opacity:0.03}
@@ -1046,8 +1046,8 @@
     #Nvep:after{content:"\f1c5";}
     
      #Nvep.active:after{content:"\f7af";}
-     #Olep{transform: rotate(180deg)}
-    #Olep.active:after{transform: rotate(0deg)}
+  #Olep:after{transform: rotate(-180deg); transition: transform 0.6s; }
+    #Olep.active:after{transform: rotate(180deg);}
     
     
     .filtrospesq button.active:before{opacity:0.3}
@@ -1391,6 +1391,7 @@
 
 .view {
     margin-right: auto;
+  color: var(--linkC)
 }
 
 
@@ -1448,7 +1449,7 @@
 .vieweP.visto .view:after {
     content: "Visto";
     margin-left: 5px;
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 600
 }
 
@@ -2421,20 +2422,16 @@ body.iframepg {
 .pageanimeep.iframepg .listeps {
       gap:10px;
   overflow: auto;
-  height:700px
+  height:700px;
   }
+    .pageanimeep.iframepg .listeps.active {
+  display: flex; flex-direction: column
+    }
     
     .pageanimeep.iframepg .episodio {
         border-radius: 10px;
     }
    
-
-    
-    .pageanimeep.iframepg .vieweP  {
-       margin-left:160px;
-      min-height:unset!important;
-    }
-
  .pageanimeep.iframepg .episodio a {
         padding: 0;
         pointer-events: auto;
@@ -2443,14 +2440,23 @@ body.iframepg {
         top: 10px;
         width: 150px;  
         height: calc(100% - 20px);      
-   display:none
     }
+
 
     .pageanimeep.iframepg .item{
     margin-top:10px}
 .pageanimeep.iframepg .sinopseN {
     -webkit-line-clamp: 2;
 }
+     
+    .pageanimeep.iframepg .vieweP  {
+       margin-left:160px;
+      min-height:unset!important;
+    }
+
+
+   
   }
+
 
 
