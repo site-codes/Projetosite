@@ -86,18 +86,6 @@ if (!h8 || h8.textContent.trim() === '') {
 
 checkAndHideAdm();
 
-  
-// ATUALIZAR CAPA CONFORME CLICA NO BUTTON DE SEASON
-function altcapa(event) {
-          const span = event.target;
-          const imgUrl = span.getAttribute('data-capa');
-          if (imgUrl) {
-              document.querySelector('.imagem-capa').src = imgUrl;
-          }
-      }
-
-
-
 
 // NO link href nos Eps
 document.addEventListener("DOMContentLoaded", function () {
