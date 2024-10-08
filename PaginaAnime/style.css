@@ -2251,7 +2251,7 @@ body.iframepg {
 
 @media screen and (max-width: 400px){
     .listeps {
-        grid-template-columns: repeat(1, 1fr)!important;border:2px solid red
+        grid-template-columns: repeat(1, 1fr)!important;
     }
 }
 
