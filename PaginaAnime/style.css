@@ -1168,14 +1168,15 @@
     transform: unset
 }
 
+  .episodio.no .vieweP a:before{opacity:0.7}
 .episodio.no .vieweP{pointer-events:none}
     .episodio.no .item{display:none}
     .noLInk:before{content:"Ep Indisponivel"}
     .episodio:hover .noLInk:before{content:"Em breve"}
-    .episodio .noLInk{display:none}
     .episodio.no .epNumbers{background: rgba(0,0,0,0.5);}
     .episodio.no .noLInk{display:flex;margin-top:5px; border-radius:50px; color:var(--linkC); background: rgba(255,255,255,0.2); justify-content:center; border:none; font-size:14px; padding: 5px 0}
     
+
     .sesp.clicked:before {display:none}
 
 .episodio {
