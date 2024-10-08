@@ -65,12 +65,7 @@ function altcapa(event) {
 
   // Chama a função ao carregar a página ou ao exibir a seção
   checkTrailerLink();
-
-  // Função exemplo de playSoundSec (você pode substituí-la pela sua lógica)
-  function playSoundSec() {
-    console.log("Som tocado");
-  }
-     
+  
 
     // SUBSTITUIR TERMOS
 const sinopseElements = document.querySelectorAll('.sinopseN');
