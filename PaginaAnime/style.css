@@ -2408,7 +2408,7 @@ body.iframepg {
 }
 
 .pageanimeep.iframepg .listtemporadas span:last-child.clicked {
-    min-width: 80px;
+    min-width: unset;
     padding: 5px 10px
 }
 
