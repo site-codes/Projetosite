@@ -1336,7 +1336,7 @@
     text-overflow: ellipsis;
     margin-bottom: 10px
 }
-
+ .sinopseN:after{content:attr(data-sinopse)}
 .tituloN {
     font-weight: 600;
     margin-bottom: 5px
@@ -2457,7 +2457,8 @@ body.iframepg {
     }
 
 
-    .pageanime.iframe .noLInk{display:none}
+.pageanimeep.iframepg .noLInk{display:none!important}
+.pageanimeep.iframepg .episodio.no .noLInk{display:flex!important}
    
   }
 
