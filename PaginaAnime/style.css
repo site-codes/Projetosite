@@ -1167,11 +1167,10 @@
 #season-filmes .episodio:hover img {
     transform: unset
 }
-
-  .episodio.no .vieweP a:before{opacity:0.7}
+.episodio.no .vieweP a:before{opacity:0.7}
 .episodio.no .vieweP{pointer-events:none}
     .episodio.no .item{display:none}
-.noLInk{display:none}
+    .noLInk{display:none}
     .noLInk:before{content:"Ep Indisponivel"}
     .episodio:hover .noLInk:before{content:"Em breve"}
     .episodio.no .epNumbers{background: rgba(0,0,0,0.5);}
@@ -1336,7 +1335,7 @@
     text-overflow: ellipsis;
     margin-bottom: 10px
 }
- .sinopseN:after{content:attr(data-sinopse)}
+
 .tituloN {
     font-weight: 600;
     margin-bottom: 5px
@@ -2413,6 +2412,10 @@ body.iframepg {
     padding: 5px 10px
 }
 
+
+.pageanimeep.iframepg .noLInk{display:none!important}
+.pageanimeep.iframepg .episodio.no .noLInk{display:flex!important}
+
     @media screen and (min-width:800px){
 .pageanimeep.iframepg .listeps {
     grid-template-columns: repeat(3, 1fr);
@@ -2456,9 +2459,6 @@ body.iframepg {
       min-height:unset!important;
     }
 
-
-.pageanimeep.iframepg .noLInk{display:none!important}
-.pageanimeep.iframepg .episodio.no .noLInk{display:flex!important}
    
   }
 
