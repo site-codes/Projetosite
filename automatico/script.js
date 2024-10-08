@@ -814,7 +814,7 @@ const otherSeasonsHTML = sortedSeasons
     const clickedClass = index === 0 ? 'clicked' : ''; 
     const seasonClass = season.number === '00' ? 'sesp' : '';// Adiciona a classe ao primeiro span
     return `
-            <span class="${clickedClass}${seasonClass}" data-capa="${season.coverLink}" data-season="${season.number}">${season.number === "00" ? "Especiais" : season.number}</span>`;
+            <span class="${clickedClass}${seasonClass}" data-capa="${season.coverLink}" data-season="${season.number}" onclick="playSoundFour(), altcapa(event)">${season.number === "00" ? "Especiais" : season.number}</span>`;
   })
   .join("");
 
