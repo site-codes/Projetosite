@@ -48,7 +48,29 @@ function altcapa(event) {
           }
       }
 
-      
+ 
+// ADD DISPLAY NONE AO TRAILER
+  // Função para verificar o link do embed e ocultar o trailer se estiver vazio
+  function checkTrailerLink() {
+    const youtubeContainer = document.querySelector('.youtubeContainer');
+    const trailerLink = document.querySelector('.trailer');
+    const linkEmbed = youtubeContainer.getAttribute('data-link-embed');
+
+    if (!linkEmbed) {
+      trailerLink.style.display = 'none'; // Oculta o link se estiver vazio
+    } else {
+      trailerLink.style.display = 'block'; // Mostra o link caso contrário
+    }
+  }
+
+  // Chama a função ao carregar a página ou ao exibir a seção
+  checkTrailerLink();
+
+  // Função exemplo de playSoundSec (você pode substituí-la pela sua lógica)
+  function playSoundSec() {
+    console.log("Som tocado");
+  }
+     
 
     // SUBSTITUIR TERMOS
 const sinopseElements = document.querySelectorAll('.sinopseN');
