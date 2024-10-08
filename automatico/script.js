@@ -245,6 +245,15 @@ episodeData.episodes.forEach((episode, index) => {
     const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês começa em 0
     return `/${year}/${month}/`;
   };
+  // Função para formatar a data no formato "8 de out. de 2024"
+const formatBRDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('pt-BR', {
+    day: 'numeric',
+    month: 'short', // Mês abreviado
+    year: 'numeric',
+  });
+};
 
   const episodeDate = formatDate(episode.air_date);
   const previousEpisodeDate = index > 0 ? formatDate(episodeData.episodes[index - 1].air_date) : '';
@@ -438,9 +447,11 @@ Episodio, ${animeDubbedOrSubbed}, #${String(episode.episode_number).padStart(2, 
           - EpsDestaque01, 
           - EpsDestaque02, 
           - EpsDestaque03
+DATA DO EP:
+${formatBRDate(episode.air_date)}
 
 LINK DESSE EP:
-${episodeDate}${titleEpCustom}-t${String(seasonNumber).padStart(2, '0')}-episodio${String(episode.episode_number).padStart(2, '0')}-${tipoCustom}.html
+${episodeDate}${titleEpCustom}-t${String(seasonNumber).padStart(2, '0')}-episodio${String(episode.episode_number).padStart(2, '0')}-${tipoCustom}
 
 DESCRIÇÃO DE PESQUISA:
 Assistir Temporada ${String(seasonNumber).padStart(2, '0')} episódio ${String(episode.episode_number).padStart(2, '0')} de ${animeTitle} ${animeDubbedOrSubbed} em FULLHD online e gratis 
