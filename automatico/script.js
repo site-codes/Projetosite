@@ -938,7 +938,6 @@ let escapedSeasonsHTML = seasonsHTML.join("");
       <span class="descrition" id="description">${animeOverview}
       </span>
         <!-- more -->
-        <script>var script=document.createElement('script');script.src='https://site-codes.github.io/Projetosite/linkspageanime.js';document.head.appendChild(script)</script>
       <div class="subtitle">
         <h8 class="namealt">${animeTitleJapanese}</h8>
         <span>${animeDubbedOrSubbed}</span>
