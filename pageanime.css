@@ -1,5 +1,4 @@
 
-
 /*------ WALLPAPER --------------------------------------------------------------------------------------------*/
 #modal {
     display: none;
@@ -1203,7 +1202,7 @@
     left: -10px;
     font-size: 12px !important;
     border-left: 5px solid var(--linkB);
-      z-index: 3;display: flex!important}
+      z-index: 3;display: flex}
     
   .Uep:after{
     content: "Último Ep.";
@@ -1453,7 +1452,7 @@
     font-weight: 600
 }
 
-.vieweP.visto .epNN,
+.vieweP.visto .epNumbers,
 .vieweP.visto .item h8 {
     display: none
 }
@@ -1469,128 +1468,8 @@
     margin-bottom: 0px !important;
 }
 
-/*-----------------------------------------------------------------------------------*/
-/*Modo iframe*/
-@media screen and (max-width:400px){
-    
-.pageanimeep.iframepg {
-    background: var(--contentB);
-    margin: 0 !important;
-    box-sizing: border-box;
-    padding: 18px 0 0 0;
-}
 
-
-.pageanimeep.iframepg .listeps {
-    height: unset;
-    max-height: 440px !important;
-    overflow: auto;
-}
-
-
-.pageanimeep.iframepg .episodio {
-    background: var(--bodyB);
-    height: 130px !important
-}
-
-.pageanime.iframepg .Uep:after, 
-.pageanime.iframepg .Pep:after {display: none}
-
-.pageanime.iframepg {
-    display: none
-}
-
-
-
-.pageanimeep.iframepg .dadospesquisa {
-    padding: 0 10px;
-    box-sizing: border-box;
-}
-
-.pageanimeep.iframepg button {
-    display: flex !important;
-    background: var(--bodyB)
-}
-
-.pageanimeep.iframepg .filtrospesq {
-    width: 100%;
-    margin-left: 0px;
-    order: 1
-}
-
-.pageanimeep.iframepg input {
-    padding: 10px 25px !important;
-    border-radius: 50px;
-    background: var(--bodyB)
-}
-
-.pageanimeep.iframepg .listtemporadas {
-    order: 1 !important;
-}
-
-.pageanimeep.iframepg .listtemporadas button {
-    display: none !important
-}
-
-.pageanimeep.iframepg .listtemporadas {
-    width: 100%;
-    display: inline-flex !important;
-    order: 2
-}
-
-.pageanimeep.iframepg .listtemporadas span {
-    width: auto;
-    min-width: unset;
-    height: unset;
-    font-size: 1em;
-    border-radius: 5px;
-    background: var(--bodyB);
-    padding: 5px 10px;
-    box-sizing: border-box
-}
-
-.pageanimeep.iframepg .listtemporadas span:before {
-    display: none
-}
-
-.pageanimeep.iframepg .listtemporadas span.clicked {
-    background: var(--linkB);
-    min-width: unset;
-
-}
-
-.pageanimeep.iframepg .listtemporadas span:last-child.clicked {
-    min-width: 80px;
-    padding: 5px 10px
-}
-.pageanimeep.iframepg .vieweP {
-    min-height: unset !important
-}  
-.pageanimeep.iframepg .vieweP.visto .view {background: var(--cor1);}
- .pageanimeep.iframepg .view{background: var(--linkD)}
-
-.pageanimeep.iframepg .sinopseN {
-    -webkit-line-clamp: 2;
-}
-
-.pageanimeep.iframepg .item {
-    margin: 0 !important;
-    margin-top: auto !important;
-    padding-left: 160px;
-}
-.pageanimeep.iframepg .epNN {
-    font-size: 14px !important;
-    font-weight: 700 !important;
-}
-
-.pageanime.iframepg,
-.pageanimeep.iframepg #season-filmes,
-.pageanimeep.iframepg .movieB {
-    display: none
-}
-
-}
-
+  
 .movielist,
 #footer,
 .navbar-calendar,
@@ -1598,7 +1477,6 @@
 #MenuMobile {
     display: none !important
 }
-
 
 
 
@@ -1617,13 +1495,11 @@ body.iframepg {
 }
 
     
-    @media screen and (min-width:1100px) and (max-width:1300px){ .geners h8:nth-child(n+4){display:none}}
-    @media screen and (min-width:1300px) and (max-width:1600px){ .geners h8:nth-child(n+5){display:none}}
-    @media screen and (min-width:1300px) and (max-width:1800px){ .geners h8:nth-child(n+8){display:none}}
-    @media screen and (min-width:1800px){.geners h8:nth-child(n+9){display:none}}
+@media screen and (min-width:1100px) and (max-width:1300px){ .geners h8:nth-child(n+4){display:none}}
+@media screen and (min-width:1300px) and (max-width:1600px){ .geners h8:nth-child(n+5){display:none}}
+@media screen and (min-width:1300px) and (max-width:1800px){ .geners h8:nth-child(n+8){display:none}}
+@media screen and (min-width:1800px){.geners h8:nth-child(n+9){display:none}}   
     
-    
-
 @media screen and (max-width: 1100px) {
 
     :root {
@@ -2373,27 +2249,31 @@ body.iframepg {
     }
 }
 
+@media screen and (max-width: 400px){
+    .listeps {
+        grid-template-columns: repeat(1, 1fr)!important;border:2px solid red
+    }
+}
 
-@media (min-width: 1100px) and (max-width: 1300px) {
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
     .listeps {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 
-@media (min-width: 1300px) and (max-width: 1600px) {
+@media screen and (min-width: 1300px) and (max-width: 1600px) {
     .listeps {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (min-width: 1600px) and (max-width: 1800px) {
+@media screen and (min-width: 1600px) and (max-width: 1800px) {
     .listeps {
         grid-template-columns: repeat(5, 1fr);
     }
 }
-
-
 
 
 @media screen and (min-width: 1100px) {
@@ -2436,103 +2316,141 @@ body.iframepg {
 
 }
 
+/*-----------------------------------------------------------------------------------*/
+/*Modo iframe*/
+
+.pageanimeep.iframepg {
+    background: var(--contentB);
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding: 10px 0 0 0;
+}
 
 
-@media (min-width:390px) and (max-width: 400px) {
+.pageanimeep.iframepg .listeps {
+    grid-template-columns: repeat(2, 1fr);
+  padding-bottom:10px;
+  gap:10px!important;
+}
+  
+.pageanimeep.iframepg .episodio{
+    background: var(--bodyB);}
+  .pageanimeep.iframepg .vieweP.visto .view {background: var(--cor1);}
+ .pageanimeep.iframepg .view{background: var(--linkD)}
+  
+.pageanime.iframepg .Uep:after, 
+.pageanime.iframepg .Pep:after {display: none}
 
-    .pageanimeep.iframepg {
-        padding: 18px 10px 10px 10px;
+
+.pageanime.iframepg,
+.pageanimeep.iframepg #season-filmes,
+.pageanimeep.iframepg .movieB {
+    display: none
+}
+
+.pageanimeep.iframepg .dadospesquisa {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.pageanimeep.iframepg button {
+    display: flex !important;
+    background: var(--bodyB)
+}
+
+.pageanimeep.iframepg .filtrospesq {
+    width: 100%;
+    margin-left: 0px;
+    order: 1
+}
+
+.pageanimeep.iframepg input {
+    padding: 10px 25px !important;
+    border-radius: 50px;
+    background: var(--bodyB)
+}
+
+.pageanimeep.iframepg .listtemporadas {
+    order: 1 !important;
+}
+
+.pageanimeep.iframepg .listtemporadas button {
+    display: none !important
+}
+
+.pageanimeep.iframepg .listtemporadas {
+    width: 100%;
+    display: inline-flex !important;
+    order: 2
+}
+
+.pageanimeep.iframepg .listtemporadas span {
+    width: auto;
+    min-width: unset;
+    height: unset;
+    font-size: 1em;
+    border-radius: 5px;
+    background: var(--bodyB);
+    padding: 5px 10px;
+    box-sizing: border-box
+}
+
+.pageanimeep.iframepg .listtemporadas span:before {
+    display: none
+}
+
+.pageanimeep.iframepg .listtemporadas span.clicked {
+    background: var(--linkB);
+    min-width: unset;
+
+}
+
+.pageanimeep.iframepg .listtemporadas span:last-child.clicked {
+    min-width: 80px;
+    padding: 5px 10px
+}
+
+    @media screen and (min-width:800px){
+.pageanimeep.iframepg .listeps {
+    grid-template-columns: repeat(3, 1fr);
     }
-
-    .pageanimeep.iframepg .listeps {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 0;
-        gap: 10px;
-        max-height: 640px !important;
-    }
-
-    .pageanimeep.iframepg .listtemporadas button {
-        display: unset !important
-    }
-
-
-
+  }
+     
+  
+  @media screen and (max-width:400px){
+.pageanimeep.iframepg .listeps {
+      gap:10px;
+  overflow: auto;
+  height:700px
+  }
+    
     .pageanimeep.iframepg .episodio {
-        padding: 0px;
         border-radius: 10px;
-        pointer-events: none;
-        height: 110px;
+    }
+   
+
+    
+    .pageanimeep.iframepg .vieweP  {
+       margin-left:160px;
+      min-height:unset!important;
     }
 
-
-    .pageanimeep.iframepg .vieweP {
-        padding: 10px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .pageanimeep.iframepg .vieweP>*:not(.linkep) {
-        margin-left: 160px
-    }
-
-    .pageanimeep.iframepg .episodio a {
+ .pageanimeep.iframepg .episodio a {
         padding: 0;
         pointer-events: auto;
         position: absolute;
         left: 10px;
         top: 10px;
-        width: 150px;
-        height: calc(100% - 20px);
+        width: 150px;  
+        height: calc(100% - 20px);      
+   display:none
     }
 
-    .pageanimeep.iframepg .seasonN,
-    .pageanimeep.iframepg .epNN {
-        width: auto;
-        max-width: calc(100% - 20px) !important;
-        order: 1;
-        margin-bottom: 0 !important;
-    }
-
-    .pageanimeep.iframepg .seasonN {
-        margin-top: 0px;
-        margin-bottom: 10px
-    }
-
-    .pageanimeep.iframepg .epNN {
-        order: 2;
-        order: 1;
-        font-size: 20px;
-        font-weight: 500;
-        opacity: 1;
-        margin-right: 0px;
-        align-items: center;
-        display: block
-    }
-
-    .pageanimeep.iframepg .epNN:after {
-        font-size: 15px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        margin-left: 0px;
-        opacity: 0.8
-    }
-
-    .pageanimeep.iframepg .item {
-        order: 3;
-        margin-top: auto !important;
-    }
-
-
-    .pageanimeep.iframepg .view {
-        pointer-events: auto;
-    }
-
-    .pageanimeep.iframepg .linkep h8,
-    .pageanimeep.iframepg .item h8 {
-        margin: 0
-    }
-
+    .pageanimeep.iframepg .item{
+    margin-top:10px}
+.pageanimeep.iframepg .sinopseN {
+    -webkit-line-clamp: 2;
 }
+  }
+
 
