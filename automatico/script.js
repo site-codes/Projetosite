@@ -693,9 +693,7 @@ const animeEpisodes = document.getElementById('animeEpisodes').value;
         </div>
       </a>
       <h8 class="tituloN" data-numberT="${episode.episode_number}" data-name="${episode.name}"></h8>
-      <h8 class="sinopseN">
-      ${episode.overview}
-      </h8>
+      <h8 class="sinopseN" data-sinopse="${episode.overview}"></h8>
       <button class="noLInk"></button>
       <div class="item">
         <button class="view"></button>
