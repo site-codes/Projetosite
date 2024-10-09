@@ -974,7 +974,7 @@ let escapedSeasonsHTML = seasonsHTML.join("");
           ${imagescontainer.map((url) => `"${url}"`).join(',\n  ')}
         ];
       </script>
-      <script>document.write('<script src="' + linkBase + 'PaginaAnime/linkspageanimeCustom.js"><\/script>');</script>
+      <script>document.write('<script src="' + linkBase + 'PaginaAnime/linkspageanimeCustom.js"/>');</script>
       <div class="buttons">
         <div class="bA">
           <a href="" class="Play" target="_blank" onclick="playSoundSec()"><h8 id="nextviewep">Assistir Temporada 01 - Episódio 01</h8></a>
