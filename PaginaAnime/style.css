@@ -1335,6 +1335,7 @@
     text-overflow: ellipsis;
     margin-bottom: 10px
 }
+  .sinopseN:after{content:attr(data-sinopse)}
 
 .tituloN {
     font-weight: 600;
