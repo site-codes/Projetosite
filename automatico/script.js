@@ -304,7 +304,7 @@ const formatBRDate = (dateString) => {
   `;
 
 
-
+  const i = '\\';
       // Cria um contêiner para os inputs do episódio
       const inputContainer = document.createElement("div");
       inputContainer.classList.add("input-container");
@@ -432,7 +432,8 @@ const formatBRDate = (dateString) => {
 
   
   const userLicenseKey = "Criado Por Instinto Play"; // Copyright; Nao mexa aqui
-  document.write('<script src="' + linkBase + 'PaginaEpisodio/linkar.js"><\/script>');
+  
+  document.write('<script src="' + linkBase + 'PaginaEpisodio/linkar.js"><${i}/script>');
   </script>
 
 <!------------------------------------------------------------------------------------------------
@@ -974,7 +975,7 @@ let escapedSeasonsHTML = seasonsHTML.join("");
           ${imagescontainer.map((url) => `"${url}"`).join(',\n  ')}
         ];
       </script>
-      <script>document.write('<script src="' + episodeLink + 'PaginaEpisodio/linkar.js"><${i}/script>');</script>
+      <script>document.write('<script src="' + linkBase + 'PaginaAnime/linkspageanimeCustom.js"><${i}/script>');</script>
       <div class="buttons">
         <div class="bA">
           <a href="" class="Play" target="_blank" onclick="playSoundSec()"><h8 id="nextviewep">Assistir Temporada 01 - Episódio 01</h8></a>
