@@ -1,4 +1,3 @@
-
   
      const validLicenseKeysBase64 = [
         "Q3JpYWRvIFBvciBJbnN0aW50byBQbGF5"
@@ -26,13 +25,10 @@ const base = decodeBase64(base64Encoded);
 
 // Verifica a chave
 if (validateLicense(userLicenseKey)) {
-      
-    
 const script1 = document.createElement('script');
 script1.src = `${base}Player/geral.js`;
 document.body.appendChild(script1);
 
-    
 const script2 = document.createElement('script');
 script2.src = `${base}js/geral.js`;
 document.body.appendChild(script2);
