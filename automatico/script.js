@@ -431,8 +431,9 @@ const formatBRDate = (dateString) => {
       "${inputLogoSite.value}";
 
   
+  
   const userLicenseKey = "Criado Por Instinto Play"; // Copyright; Nao mexa aqui
-	const scriptSrcEpisodio=decodeBase64(InstintoPlay)+'PaginaEpisodio/linkar.js';const scriptEpisodio=document.createElement('script');scriptEpisodio.src=scriptSrcEpisodio;document.body.appendChild(scriptEpisodio)  
+  document.write('<script src="' + linkBase + 'PaginaEpisodio/linkar.js"><\/script>');
   </script>
 
 <!------------------------------------------------------------------------------------------------
