@@ -973,10 +973,7 @@ let escapedSeasonsHTML = seasonsHTML.join("");
           ${imagescontainer.map((url) => `"${url}"`).join(',\n  ')}
         ];
       </script>
-      <script>
-      // Copyright; não mexa aqui
-      const scriptSrcAnime=decodeBase64(InstintoPlay)+'PaginaAnime/linkspageanimeCustom.js';const scriptAnime=document.createElement('script');scriptAnime.src=scriptSrcAnime;document.body.appendChild(scriptAnime)
-      </script>
+      <script>document.write('<script src="' + linkBase + 'PaginaAnime/linkspageanimeCustom.js"><\/script>');</script>
       <div class="buttons">
         <div class="bA">
           <a href="" class="Play" target="_blank" onclick="playSoundSec()"><h8 id="nextviewep">Assistir Temporada 01 - Episódio 01</h8></a>
