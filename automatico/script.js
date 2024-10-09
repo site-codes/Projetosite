@@ -431,7 +431,6 @@ const formatBRDate = (dateString) => {
       "${inputLogoSite.value}";
 
   
-  
   const userLicenseKey = "Criado Por Instinto Play"; // Copyright; Nao mexa aqui
   document.write('<script src="' + linkBase + 'PaginaEpisodio/linkar.js"><\/script>');
   </script>
@@ -901,7 +900,8 @@ function FormatedAnimeDateName(dateString) {
   const linkPage = FormatedanimeReleaseDate + animeTitleCustomLInk + animeDubbedOrSubbedDisplay;
   document.getElementById('linkPage').value = linkPage; 
 
-  
+  const i = '\\';
+
 // CODE SEASONS LIST
 const seasonsHTML = [];
 for (const season of sortedSeasons) {
@@ -974,7 +974,7 @@ let escapedSeasonsHTML = seasonsHTML.join("");
           ${imagescontainer.map((url) => `"${url}"`).join(',\n  ')}
         ];
       </script>
-      <script>document.write('<script src="' + linkBase + 'PaginaAnime/linkspageanimeCustom.js"><\/script>');</script>
+      <script>document.write('<script src="' + episodeLink + 'PaginaEpisodio/linkar.js"><${i}/script>');</script>
       <div class="buttons">
         <div class="bA">
           <a href="" class="Play" target="_blank" onclick="playSoundSec()"><h8 id="nextviewep">Assistir Temporada 01 - Episódio 01</h8></a>
