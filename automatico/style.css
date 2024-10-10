@@ -657,11 +657,12 @@ textarea::-webkit-scrollbar {
   min-width:100px!important
 }
 
-  .mrg{
-    margin-right:120px;
-  }
 .tipo{
-  margin-right:80px;
+  margin-right:50px;
+}
+
+.mrg{
+  margin-right:150px;
 }
   .subAudio{
     margin-right:100px
@@ -676,7 +677,7 @@ textarea::-webkit-scrollbar {
   }
 
   #MyNimeList:after{
-    content:"MyNimeList";
+    content:"MyAnimeList";
     margin-left:20px
   }
 
