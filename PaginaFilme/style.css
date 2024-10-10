@@ -1,0 +1,2330 @@
+
+/*------ WALLPAPER --------------------------------------------------------------------------------------------*/
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center !important;
+}
+
+#modal img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto !important;
+    max-width: 80% !important;
+    max-height: 50%;
+    border-radius: 5px
+}
+
+
+.wid01 {
+    padding: 120px 100px 60px 100px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  background-image: none!important;
+    position: relative;
+    display: flex;
+    gap: 3em;
+    font-family: var(--fontH) !important;
+    transition: background-image 1s ease-in-out;
+}
+
+.wid01:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 250%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, var(--bodyB));
+    opacity: 1;
+}
+
+.wid01:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    background: linear-gradient(to bottom, var(--contentB), transparent);
+    opacity: 0.8;
+}
+
+.moreinf {
+    z-index: 1;
+    color: #a19595;
+}
+
+.capa {
+    min-width: 20em;
+    height: 32em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor:zoom-in
+}
+
+.capa img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.buttons {
+    margin-top: auto;
+    margin-bottom: 20px;
+    display: flex;
+    order: 6;
+}
+
+
+.bA {
+    align-items: center;
+    display: flex;
+    height: auto
+}
+
+#nextviewep {
+    color: var(--contentB)
+}
+
+
+.buttons a {
+    cursor: pointer;
+    width: auto;
+    font-size: 1em;
+    background: var(--linkB);
+    border: 1px solid rgba(255, 255, 255, 0);
+    color: var(--contentB);
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 10px 25px 10px 60px;
+    position: relative;
+    font-weight: 600
+}
+
+.buttons a:before {
+    content: "\e1c4";
+    font-size: 1.5em;
+    font-family: 'Material Symbols Outlined';
+    margin-right: 30px;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.buttons a:nth-child(2) {
+    margin-left: 20px;
+    padding: 10px 15px 10px 60px;
+    color: var(--linkC);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 400
+}
+
+.buttons a:nth-child(2):before {
+    content: "\e02c"
+}
+
+.buttons a:hover:nth-child(1) #nextviewep,
+.buttons a:hover:nth-child(1) {
+    color: var(--linkB)
+}
+
+.buttons a:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.buttons .Play:hover:before {
+    animation: rotate 2s infinite linear
+}
+
+.lowinfos {
+    display: block;
+    margin-left: 60px;
+    text-align: center;
+}
+
+
+.nota {
+    position: relative;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    font-size: 1.9em;
+    padding-top: 20px
+}
+
+.lowinfos h8 {
+    font-size: 0.7em;
+    opacity: 0.4;
+    font-weight: 400
+}
+
+.nota:before {
+    content: "\e838";
+    margin-right: 10px;
+    font-family: 'Material Symbols Outlined';
+    color: orange;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+
+
+/*------ INFORMAÇÕES --------------------------------------------------------------------------------------------*/
+.infos {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    color: var(--linkC);
+  
+}
+
+.titulos {
+    display: flex;
+    order: 2
+}
+
+#titleanime {
+    font-size: 2.3em;
+    font-weight: 800;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 70%;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    transition: all 0.3s ease;
+    white-space: normal;
+}
+
+
+.subtitle {
+    font-size: 1.1em;
+    margin-top: 10px;
+    order: 1;
+}
+
+
+.namealt {
+    opacity: 0.6 !important;
+    color: var(--cor2);
+    margin-right: 0px !important
+}
+
+.subtitle span {
+    margin-right: 30px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.4;
+    font-weight: 400;
+    color: var(--cor2)
+}
+
+
+
+.subtitle span:nth-child(2) {
+    margin-left: 50px
+}
+
+.subtitle span:nth-child(n+2):before {
+    content: "|";
+    margin-right: 30px;
+    display: flex;
+
+}
+
+.geners {
+    opacity: 0.6;
+    display: flex;
+    gap: 40px;
+    margin-top: 5px;
+    padding-left: 15px;
+    order: 5
+}
+
+.geners h8 {
+    font-size: 0.9em;
+    position: relative
+}
+
+.geners h8:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: 100%;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.geners a {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 15px;
+    border-radius: 50px;
+    display: flex;
+    position: relative
+}
+
+.geners a:after {
+    content: attr(data-anime);
+    font-size: 13px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2px 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: calc(100% + 10px);
+    min-width: 100%;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    min-width: 250px;
+    max-width: 500px;
+    overflow: hidden;
+    opacity: 0;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+.geners a:hover:after {
+    opacity: 1
+}
+          
+          
+      .staf{
+          display: flex;
+          width:100%;
+          gap:60px;
+        order:5;
+        margin-top:10px
+      }
+      .staf span{
+          display: block;
+          font-size:1em;
+        opacity:0.8;
+        font-weight:600;
+        position: relative
+      }
+    
+      .staf span:after{
+          content:attr(data-text);
+          font-size:12px;
+        opacity:0.6;
+        font-weight:400;
+        position: absolute;
+        bottom:-20px;
+        left:0
+      }
+    
+    .staf span div{
+    display: flex
+    }
+    
+      .staf span h8:after{
+    content:",";
+    margin-right:10px}
+    
+    .geners{
+    margin-top:50px!important;
+          margin-bottom:20px}
+        
+    
+      .Play:after{content:attr(data-text)}
+    
+  
+.geners a:before {
+    content: "\f562";
+    font-family: "Material Symbols Outlined"
+}
+
+.geners a:hover {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--linkC)
+}
+
+.geners a:active {
+    background: var(--linkB);
+    color: var(--linkA)
+}
+
+
+.geners a:hover:before {
+    font-weight: 800;
+    animation: rotate 0.6s forwards
+}
+
+@keyframes rotate {
+    0% {}
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+    
+  
+  .detals{
+   gap: 0px;
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    order:3;
+    flex-wrap:wrap;
+    width:100%;
+    position: relative;
+    align-items:center;
+}
+          
+          .detals div{position: relative;display: flex; gap:30px;}
+          .h8,
+          #rating{padding:2px 10px; background: var(--cor2);color: var(--linkA); border-radius:10px;}
+          
+          .h8{background: rgba(255,255,255, 0.05); color: var(--linkC);margin-left:10px; display:flex}
+          
+          
+          .detals .dets{margin-left:40px;}
+          .detals span{position: relative; display: flex; align-items:center; opacity:0.8;}
+          .detals .dets span:before{font-family:"Material Symbols Outlined";color: var(--cor2); font-size:20px; opacity:0.8; margin-right:10px}
+          .detals .dets span:nth-child(1):before{content:"\ea5d"}
+          .detals .dets span:nth-child(2):before{content:"\e01c"}
+          .detals .dets span:nth-child(3):before{content:"\f238"}
+          .detals .dets span:nth-child(4):before{content:"\e01c"}
+          .detals .dets span:nth-child(5):before{content:"\e430"}
+          .detals .dets span:nth-child(6):before{content:"\e7fd"}
+          
+          
+          .pmovie .dets span:after{padding:2px 10px; border-radius:5px; background:rgba(0,0,0,0.5);font-size:12px;position: absolute; top: -30px; left:30%; height:auto; white-space: nowrap;display:none}
+          .pmovie .dets span:hover:after{display: flex}
+          .pmovie .dets span:nth-child(1):after{content:"Duração"}
+          .pmovie .dets span:nth-child(2):after{content:"Tipo"}
+          .pmovie .dets span:nth-child(3):after{content:"Data de Lançamento"}
+          .pmovie .dets span:nth-child(4):after{content:"Estudio"}
+          .pmovie .dets span:nth-child(5):after{content:"Estação"}
+          .pmovie .dets span:nth-child(6):after{content:"Adm que fez upload"}
+          
+          
+          @media screen and (max-width:1100px){
+            .dets{overflow:auto; flex-basis: 100%;
+            margin-left:0!important;margin-top:20px;}
+            .dets::-webkit-scrollbar{display:none}
+            
+            .detals div{gap:10px}
+            .dets span{background: var(--contentB);font-size:12px; width:auto!important; min-width:120px; align-items: flex-end; justify-content:center; height:90px;display:flex; border-radius:20px;padding:10px}
+            
+            .dets span h8:before{flex-wrap:nowrap; position: absolute; top:10px; left:10px; width:calc(100% - 20px); border-radius:10px; background: var(--cor2); color: var(--linkA); text-align:center}
+            
+            .dets span:nth-child(1) h8:before{content:"Duração"}
+            .dets span:nth-child(2) h8:before{content:"Tipo"}
+            .dets span:nth-child(3) h8:before{content:"Data"}
+            .dets span:nth-child(4) h8:before{content:"Estúdio"}
+            .dets span:nth-child(5) h8:before{content:"Estação"}
+            .dets span:nth-child(6) h8:before{content:"Administrador"}
+            
+            .pmovie .dets span:hover:after{display: none}
+            
+            
+            
+            .staf{flex-direction: column; gap:20px}
+            .staf span{flex-wrap: wrap}
+            
+            .Play:after{content:"Baixar Filme"}
+            
+      .videosection{width:100%!important;padding:0 20px!important; margin: 0px!important; box-sizing: border-box}
+      #player{border-radius:20px!important;overflow: hidden; }
+
+          } 
+ 
+           
+          @media screen and (min-width:1100px) and (max-width:1800px){
+ 
+          .pmovie .dets span:nth-child(4),
+          .pmovie .dets span:nth-child(5),
+          .pmovie .dets span:nth-child(6){display:none}
+                .descrition {
+        max-width: 90%!important;
+        max-height: 120px!important;
+    }
+            
+          } 
+          @media screen and (min-width:1100px) and (max-width:1300px){
+ span[data-text="Produtores"] {
+    display: none;
+}
+
+          } 
+ 
+  
+  #status{position: absolute; display:none}
+  
+
+
+#status {
+    border-radius: 5px;
+    background: var(--cor2);
+    color: var(--linkA);
+    opacity: 1;
+    box-sizing: border-box;
+    position: relative;
+    white-space: nowrap;
+}
+
+#status.completo {
+    background: var(--cor1);
+    color: var(--linkA)
+}
+
+#status:after {
+    content: "Em Lançamento semanal ou uma pausa aguardando próxima parte";
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 1;
+    color: var(--cor2);
+    padding: 0px 20px;
+    height: auto !important;
+    line-height: unset !important;
+    border-radius: 5px;
+    position: absolute;
+    top: -35px;
+    left: 10px;
+    transition: display 0.6s;
+    display: none;
+    min-width: auto
+}
+
+#status:hover:after {
+    display: flex
+}
+
+#status.completo:after {
+    content: "Anime ou sua Ultima Temporada já foi concluida!";
+    background: rgba(0, 0, 0, 0.9);
+    color: var(--cor1);
+}
+
+
+#status.pausa {
+    background: var(--corB1);
+}
+
+#status.pausa:before {
+    content: "\f6b6" !important
+}
+
+#status.pausa:after {
+    content: "Anime aguarda uma continuação da temporada";
+    color: var(--corB1);
+}
+
+#status.completo:before {
+    content: "\e2e6" !important
+}
+
+          
+     .videosection{
+      width: calc(100% - 120px);
+      margin-left:60px;
+       padding: 0;
+       border-radius:20px!important; overflow:hidden
+      
+      }
+                 
+
+@media screen and (max-width: 1100px) {
+    .geners a:after {
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .geners a:after {
+        max-width: 500px
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width:1600px) {
+    .geners a:after {
+        max-width: 400px
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width:1400px) {
+    .geners a:after {
+        max-width: 300px
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width:1300px) {
+    .geners a:after {
+        content: "Ver mais do anime";
+        width: auto;
+        white-space: nowrap;
+        min-width: unset;
+        max-width: unset
+    }
+}
+
+
+@media screen and (min-width:1100px) {
+    .descrition {
+        max-height: 150px;
+    }
+}
+
+    
+    
+    .descrition:before {
+        content: "\e244";
+        font-family: 'Material Icons Outlined';
+        font-size: 22px;
+        margin-right: 2px;
+        transform: scaleX(-1);
+        display: inline-flex
+    }
+    
+
+
+.descrition {
+    opacity: 0.6;
+    font-size: 1em;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: auto;
+    overflow-y: auto;
+    text-align: left;
+    padding:0 20px 0 0;
+    order: 4
+}
+
+.descrition::-webkit-scrollbar {
+    width: 2px;
+}
+
+.descrition::-webkit-scrollbar-track {
+    background: var(--headC)
+        /*rgba(255,255,255,0.3); Cor do trilho */
+}
+
+.descrition::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+
+
+.line {
+    display: flex;
+    gap: 20px
+}
+
+
+
+.barra {
+    display: inline-block;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 20px;
+    position: absolute;
+    right: 60px;
+}
+
+
+.dadosepsp {
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 470px
+}
+
+.dadosepsp div {
+    width: 100%
+}
+
+
+.porceps {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+.historicoview {
+    font-size: 18px;
+    color: var(--linkC) !important
+}
+
+.porceps h3 {
+    font-size: 16px;
+    color: var(--linkC)
+}
+
+.epsvistos {
+    margin-left: auto;
+    background: var(--linkD);
+    margin-bottom: 8px;
+    padding: 2px 10px;
+    border-radius: 5px
+}
+
+.marked-count {
+    font-weight: 700
+}
+
+
+.epsvistos h8:last-child {
+    opacity: 0.6;
+    font-size: 12px
+}
+
+
+.epsvistos h8:last-child:before {
+    content: "/"
+}
+
+.epsvistos h8:last-child:after {
+    content: "Eps";
+    margin-left: 5px
+}
+
+
+.progress-bar {
+    width: calc(100% - 5px);
+    margin-left: 5px;
+    display: flex;
+    background: var(--headC);
+    border-radius: 5px;
+    height: 5px;
+    margin-bottom: 10px
+}
+
+.progress-fill {
+    width: 0;
+    height: 100%;
+    border-radius: 5px;
+    background: var(--linkB);
+    transition: width 0.5s;
+    position: relative
+}
+
+.progress-fill:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    height: 15px;
+    width: 15px;
+    border-radius: 10PX;
+    background: var(--linkB)
+}
+
+.textB {
+    padding: 20px 40px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px
+}
+
+
+
+.textB h2 {
+    margin-bottom: 0px
+}
+
+
+.textB,
+.dadosepsp {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+
+
+
+.textB button {
+    pointer-events: none
+}
+
+.textB button:before {
+    content: "\e70d";
+    font-family: 'Material Symbols Outlined'
+}
+
+
+#lastepview {
+    opacity: 0.6
+}
+
+
+.barra button {
+    border: none;
+    padding: 5px 10px;
+    background: var(--headC);
+    border-radius: 50%;
+    color: var(--linkC);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+}
+
+.barra button:before {
+    content: "\e836";
+    opacity: 0.6;
+    font-size: 2em;
+    font-family: 'Material Symbols Outlined'
+}
+
+
+
+#secep.studo:before {
+    content: "\e5ca"
+}
+
+#secep.studo {
+    background: var(--cor1)
+}
+
+
+.todasimgs {
+    margin-top: 20px;
+    width: 100%;
+    position: relative;
+    padding: 20px 40px;
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    height: 340px;
+  border:2px solid red
+}
+
+.todasimgs h8 {
+    opacity: 0.6;
+}
+
+.todasimgs button:before {
+    content: "\f86f" !important;
+}
+
+.listimagens::-webkit-scrollbar {
+    height: 8px;
+}
+
+.listimagens::-webkit-scrollbar-track {
+    background: var(--headC);
+    border-radius: 10px !important;
+    overflow: hidden
+}
+
+.listimagens::-webkit-scrollbar-thumb {
+    background: var(--linkD);
+    border-radius: 10px;
+}
+  
+  
+    .listimagens {
+        position: relative;
+        display:flex;
+      height:100%;
+      width:100%;
+  overflow:hidden!important;
+    }
+
+  @media screen and (min-width:1100px){
+.listimagens {
+    box-sizing: border-box;
+    width: calc(100% - 80px);
+    left: 40px;
+    height: calc(100% - 120px);
+    top: 100px;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px
+}
+  }
+
+
+.listimagens img {
+    width: auto;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 10px
+}
+
+
+.trailerA {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+}
+
+.trailerA:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.trailerA.ativo {
+    display: flex
+}
+
+.trailerA iframe {
+    width: 480px;
+    height: 320px;
+    border-radius: 20px;
+    z-index: 1;
+
+}
+  
+  
+
+/*------ TEMPORADAS --------------------------------------------------------------------------------------------*/
+  
+    @media (min-width: 1100px) and (max-width: 1300px) {
+    .barra {
+        max-width: 35%!important;
+    }
+      
+          .temporadas {
+            max-width: 60%!important;}
+          .listeps {
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+}
+    
+    
+    @media (min-width: 1300px) and (max-width: 1500px) {
+      .listeps {
+        grid-template-columns: repeat(3, 1fr)!important;
+    }
+    }
+    @media (min-width: 1500px) and (max-width: 1800px) {
+      .listeps {
+        grid-template-columns: repeat(4, 1fr)!important;
+    }
+    }
+
+.temporadas {
+    padding: 10px 100px 10px 100px;
+    font-family: var(--fontH);
+    max-width: 70%;
+    min-height: 700px;
+}
+
+
+
+.dadospesquisa {
+    display: flex;
+    gap: 40px;
+    width: auto;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+
+
+.filtrospesq {
+    margin-left: auto;
+}
+
+.dadospesquisa input {
+   width:100%; 
+    padding:10px 20px;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    background: var(--contentB);
+    color: white;
+    margin-left: auto;
+    box-sizing: border-box
+}
+
+.dadospesquisa input::placeholder {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+
+    
+    .filtrospesq{display: flex; gap:10px;width:40%!important;}
+    .filtrospesq button{border-radius:50px; border:none; position: relative; width:60px; overflow:hidden;
+    background: var(--contentB);color: var(--linkC); pointer-events: auto; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.6s}
+    
+    .filtrospesq button:before{content:""; opacity:0;background: var(--linkD); height:100%; width:100%; top:0; left:0; position: absolute;}
+    .filtrospesq button.active:before{opacity:0.03}
+    
+    .filtrospesq button:after{
+    font-family: 'Material Symbols Outlined'; font-size:20px; opacity:0.6}
+    #Olep:after{content:"\e16d";}
+    #Nvep:after{content:"\f1c5";}
+    
+     #Nvep.active:after{content:"\f7af";}
+     #Olep{transform: rotate(180deg)}
+    #Olep.active:after{transform: rotate(0deg)}
+    
+    
+    .filtrospesq button.active:before{opacity:0.3}
+    .filtrospesq button:hover{opacity:0.7}
+    
+
+
+#scrollLeft,
+#scrollRight {
+    cursor: pointer;
+    border-radius: 999px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--linkC);
+    border: none;
+    margin: 0;
+    font-size: 0.7em;
+    opacity: 0.6
+}
+
+#scrollLeft:hover,
+#scrollRight:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#scrollLeft:before {
+    content: "\e5e0";
+    font-family: 'Material Symbols Outlined'
+}
+
+#scrollRight:before {
+    content: "\e5e1";
+    font-family: 'Material Symbols Outlined'
+}
+
+#scrollLeft {
+    margin-right: 5px
+}
+
+#scrollRight {
+    margin-left: 5px;
+    margin-right: auto
+}
+
+
+.listtemporadas {
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+}
+
+.listtemporadas div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 710px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.listtemporadas div::-webkit-scrollbar {
+    display: none
+}
+
+.listtemporadas span {
+    border-radius: 5px;
+    padding: 5px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--linkC);
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.listtemporadas span:hover:not(.listtemporadas span.clicked) {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.listtemporadas span.clicked {
+    background: var(--linkB);
+    border: 1px solid rgba(255, 255, 255, 0);
+    color: var(--linkA);
+    font-weight: 700
+}
+
+.listtemporadas .movieB.clicked:before {
+    display: none
+}
+
+.listtemporadas span.clicked:before {
+    content: "Temporada";
+    margin-right: 10px
+}
+
+.listeps {
+    display: none;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.listeps.active {
+    display: grid;
+}
+
+
+
+
+#season-filmes .episodio img {
+    max-height: 90%;
+    min-height: unset;
+}
+
+#season-filmes .episodio:hover img {
+    transform: unset
+}
+
+.episodio.no .vieweP{pointer-events:none}
+    .episodio.no .item{display:none}
+    .noLInk:before{content:"Ep Indisponivel"}
+    .episodio:hover .noLInk:before{content:"Em breve"}
+    .episodio .noLInk{display:none}
+    .episodio.no .epNumbers{background: rgba(0,0,0,0.5);}
+    .episodio.no .noLInk{display:flex;margin-top:5px; border-radius:50px; color:var(--linkC); background: rgba(255,255,255,0.2); justify-content:center; border:none; font-size:14px; padding: 5px 0}
+    
+    .sesp.clicked:before {display:none}
+
+.episodio {
+    background: var(--contentB);
+    color: var(--linkC);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    position: relative
+}
+
+    .Uep:after,
+    .Pep:after{
+    content: "Comece Por Aqui";
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--linkA);
+    font-weight: 600;
+    padding: 0px 10px !important;
+    height: unset !important;
+    line-height: unset !important;
+    border-radius: 0 10px 10px 0px;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    font-size: 12px !important;
+    border-left: 5px solid var(--linkB);
+      z-index: 3;display: flex!important}
+    
+  .Uep:after{
+    content: "Último Ep.";
+}
+
+
+.vieweP {
+    min-height: 100%;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column
+}
+
+.episodio a {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+.vieweP a:after,
+.vieweP a:before {
+    content: "";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bodyB);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s
+}
+
+.vieweP.visto .epNN {
+    display: none
+}
+
+.vieweP.visto a:before {
+    opacity: 0.95
+}
+
+.vieweP.visto a:after {
+    opacity: 1
+}
+
+
+.episodio a:hover:after {
+    opacity: 1
+}
+
+.episodio a:hover:before {
+    opacity: 0.85
+}
+
+.episodio a:hover:after {
+    color: var(--cor1);
+}
+
+
+.vieweP a:hover:after {
+    animation: rotate 0.6s forwards
+}
+
+.vieweP.visto a h7 {
+    display: none
+}
+
+
+.episodio a:after {
+    background: transparent;
+    font-size: 3em;
+    color: var(--linkB);
+    content: "\e037";
+    font-family: "Material Symbols Outlined"
+}
+
+.episodio a h7 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 10px !important;
+    border-radius: 10px;
+    font-size: 10px
+}
+
+.episodio a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.epNumbers {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    background: rgba(231, 90, 40, 0.8);
+    padding: 2px 10px;
+    border-radius: 10px
+}
+
+.epNN {
+    font-size: 15px;
+    color: var(--linkC);
+    font-weight: 800;
+}
+
+.epNN:before {
+    content: '#';
+}
+
+
+.sinopseN,
+.tituloN {
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px
+}
+
+.tituloN {
+    font-weight: 600;
+    margin-bottom: 5px
+}
+
+.tituloN:after {
+    content: attr(data-name)
+}
+
+.tituloN:before {
+    font-size: 14px;
+    content: attr(data-numberT) ".";
+    margin-right: 5px;
+    font-weight: 400;
+    opacity: 0.7
+}
+
+.sinopseN {
+    font-size: 13px;
+    opacity: 0.6;
+    -webkit-line-clamp: 3;
+    font-style: italic;
+}
+
+.sinopseN:before {
+    content: "\e244";
+    font-family: 'Material Icons Outlined';
+    display: inline-flex;
+    transform: rotate(180deg)
+}
+
+.item {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    gap: 5px;
+    margin-top: auto;
+    align-items: center;
+}
+
+
+.item span,
+.view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: var(--linkD);
+}
+
+.view {
+    margin-right: auto;
+}
+
+
+.view:before {
+    content: "\e8f5";
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.2em;
+}
+
+
+.item h8,
+.item span {
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0.6;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.item span:before {
+    content: "HD";
+}
+
+.seasonN:before {
+    display: none
+}
+
+
+.item h8 {
+    margin-right: 0;
+    border-radius: 50px;
+    padding: 5px 10px
+}
+
+.item span,
+.item h8 {
+    font-size: 11px;
+}
+
+
+
+.vieweP.visto .view {
+    background: var(--cor1);
+    color: var(--bodyB);
+    width: auto;
+    box-sizing: border-box;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 0 10px
+}
+
+.vieweP.visto .view:before {
+    content: "\e2e6";
+}
+
+.vieweP.visto .view:after {
+    content: "Visto";
+    margin-left: 5px;
+    font-size: 0.8em;
+    font-weight: 600
+}
+
+.vieweP.visto .epNN,
+.vieweP.visto .item h8 {
+    display: none
+}
+
+
+
+.episodio h7,
+.episodio h8 {
+    line-height: normal !important
+}
+
+.blogM {
+    margin-bottom: 0px !important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*Modo iframe*/
+
+.pageanimeep.iframepg {
+    background: var(--contentB);
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding: 18px 0 0 0;
+}
+
+
+.pageanimeep.iframepg .listeps {
+    height: unset;
+    max-height: 440px !important;
+    overflow: auto;
+}
+
+
+.pageanimeep.iframepg .episodio {
+    background: var(--bodyB);
+    height: 130px !important
+}
+
+.pageanime.iframepg .Uep:after, 
+.pageanime.iframepg .Pep:after {display: none}
+
+.pageanime.iframepg {
+    display: none
+}
+
+
+
+.pageanimeep.iframepg .dadospesquisa {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.pageanimeep.iframepg button {
+    display: flex !important;
+    background: var(--bodyB)
+}
+
+.pageanimeep.iframepg .filtrospesq {
+    width: 100%;
+    margin-left: 0px;
+    order: 1
+}
+
+.pageanimeep.iframepg input {
+    padding: 10px 25px !important;
+    border-radius: 50px;
+    background: var(--bodyB)
+}
+
+.pageanimeep.iframepg .listtemporadas {
+    order: 1 !important;
+}
+
+.pageanimeep.iframepg .listtemporadas button {
+    display: none !important
+}
+
+.pageanimeep.iframepg .listtemporadas {
+    width: 100%;
+    display: inline-flex !important;
+    order: 2
+}
+
+.pageanimeep.iframepg .listtemporadas span {
+    width: auto;
+    min-width: unset;
+    height: unset;
+    font-size: 1em;
+    border-radius: 5px;
+    background: var(--bodyB);
+    padding: 5px 10px;
+    box-sizing: border-box
+}
+
+.pageanimeep.iframepg .listtemporadas span:before {
+    display: none
+}
+
+.pageanimeep.iframepg .listtemporadas span.clicked {
+    background: var(--linkB);
+    min-width: unset;
+
+}
+
+.pageanimeep.iframepg .listtemporadas span:last-child.clicked {
+    min-width: 80px;
+    padding: 5px 10px
+}
+
+
+.pageanimeep.iframepg .vieweP {
+    min-height: unset !important
+}
+
+.pageanimeep.iframepg .sinopseN {
+    -webkit-line-clamp: 2;
+}
+
+.pageanimeep.iframepg .item {
+    margin: 0 !important;
+    margin-top: auto !important;
+    padding-left: 160px;
+}
+.pageanimeep.iframepg .epNN {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+
+.pageanimeep.iframepg .epNN:before {
+    display: none
+}
+
+.pageanimeep.iframepg .epNN:after {
+    display: none
+}
+
+#footer,
+.navbar-calendar,
+.search-container,
+#MenuMobile {
+    display: none !important
+}
+
+
+
+
+body.iframepg footer,
+body.iframepg #header,
+body.iframepg #comment,
+body.iframepg .pInf.ps,
+body.iframepg .pSh {
+    display: none !important
+}
+
+body.iframepg {
+    background: var(--contentB)
+}
+
+.pageanime.iframepg,
+.pageanimeep.iframepg #season-filmes,
+.pageanimeep.iframepg .movieB {
+    display: none
+}
+
+    
+    @media screen and (min-width:1100px) and (max-width:1300px){ .geners h8:nth-child(n+4){display:none}}
+    @media screen and (min-width:1300px) and (max-width:1600px){ .geners h8:nth-child(n+5){display:none}}
+    @media screen and (min-width:1300px) and (max-width:1800px){ .geners h8:nth-child(n+8){display:none}}
+    @media screen and (min-width:1800px){.geners h8:nth-child(n+9){display:none}}
+    
+    
+
+@media screen and (max-width: 1100px) {
+
+    :root {
+        --altura-capa: 500px;
+    }
+
+    .wid01 {
+        background-image: none !important;
+        padding: 0;
+        padding-top: 350px;
+        width: 100%;
+        flex-direction: column;
+     
+    }
+
+    .capa {
+        height: var(--altura-capa);
+        width: 100%;
+        position: absolute;
+        top: 0;
+
+    }
+
+    .wid01:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 700px;
+        top: -200px;
+        left: 0;
+        background: linear-gradient(to top, var(--bodyB), transparent);
+        opacity: 1;
+        z-index: 1;
+        pointer-events: none
+    }
+
+    .trailerA {
+        padding: 0 20px;
+        box-sizing: border-box
+    }
+
+
+    .infos {
+        padding: 0 10px;
+        z-index: 2
+    }
+
+    .subtitle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        padding: 0 0px 0 0px;
+        order: 1;
+        width: calc(100% - 60px)
+    }
+
+    .namealt {
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 10px 0 0 0;
+        order: 3;
+        opacity: 0.3 !important;
+        color: var(--linkC);
+        flex-basis: 100%;
+    }
+
+    .subtitle span {
+        margin: 0;
+        margin-left: 20px;
+        font-size: 16px
+    }
+
+
+    .subtitle span:nth-child(2) {
+        margin-left: 70px !important;
+    }
+
+    .subtitle span:nth-child(n+2) {
+        font-size: 12px;
+        color: var(--linkC)
+    }
+
+    .subtitle span:nth-child(n+2):before {
+        content: "";
+    }
+
+    .subtitle span:nth-child(n+3):before {
+        content: "|";
+        margin-right: 10px;
+        display: flex;
+
+    }
+
+
+
+    .titulos {
+        position: relative;
+        order: 2
+    }
+
+    #titleanime {
+        display: unset;
+        text-overflow: unset;
+        font-size: 25px;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .lowinfos {
+        position: absolute;
+        left: 0px;
+        margin: 0;
+        transform: translateY(-70px);
+    }
+
+
+    .lowinfos h8 {
+        display: none
+    }
+
+
+    .nota {
+        font-size: 1.5em;
+        padding-top: 0px
+    }
+
+
+    #status {
+        min-width: 100%;
+        order: 2;
+        margin-top: 0px;
+        border-radius: 0 5px 5px 0;
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--cor2);
+        border-left: 5px solid var(--cor2);
+        opacity: 1;
+        box-sizing: border-box;
+        position: relative;
+        padding: 5px 10px;
+        white-space: nowrap;
+    }
+
+    #status:before {
+        margin-right: 10px
+    }
+
+    #status.completo {
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--cor1);
+        border-left: 5px solid var(--cor1)
+    }
+
+
+    #status:after {
+        display: flex;
+        top: unset;
+        left: unset;
+        background: unset;
+        padding: unset;
+        position: relative;
+        margin-left: auto;
+        opacity: 0.2;
+        color: var(--linkC);
+        content: "Episódios em Lançamento"
+    }
+
+    #status.completo:after {
+        background: unset;
+        content: "Anime Finalizado"
+    }
+
+    #status.pausa {
+        border-color: var(--corB1);
+        color: var(--corB1);
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    #status.pausa:after {
+        color: var(--linkC);
+        content: "Aguardando Continuação"
+    }
+
+
+
+    .descrition {
+        overflow: unset;
+        justify-content: space-between;
+      text-align:unset;
+        padding: 0px;
+        direction: unset;
+        height: unset;
+        text-overflow: unset;
+        margin-top: 30px;
+    }
+
+    .geners {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0
+    }
+
+    .geners h8 {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2px 15px;
+        border-radius: 50px;
+    }
+    .geners a:after{
+        min-width:unset!important; 
+        max-width:unset!important; 
+        opacity:1!important; 
+        position: relative!important; 
+        top:unset!important; 
+        left:unset!important; 
+        margin-left:10px; 
+        background: transparent!important; 
+        padding:0!important; 
+        content:"Ver mais do Anime"!important;
+        display: flex!important}
+
+
+    .geners h8:before {
+        display: none
+    }
+
+    .buttons {
+        margin-top: 20px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    .buttons .bA {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+
+    .Play {
+        flex: 1;
+    }
+
+
+    .barra {
+        width: 100%;
+        justify-content: center;
+        position: relative;
+        margin: 20px 0 0 0;
+        padding: 0;
+        right: unset;
+    }
+
+    .todasimgs {
+        background: transparent;
+        padding: 0;
+        margin-top: 30px;
+        height: 100px;
+      display:none;
+      max-width:100%;
+      overflow:hidden
+    }
+
+
+    .todasimgs button,
+    .none{display:none}
+  
+  .listimagens{overflow:auto!important;
+  width:100%}
+
+    .temporadas {
+        color: var(--linkC);
+        max-width: 100%;
+        min-height: unset;
+        padding: 0 0px 0px 0px;
+        margin: 20px 0 0 0;
+        overflow: hidden
+    }
+
+
+    .dadospesquisa {
+        width: 100%;
+        gap:10px!important;
+        flex-direction: column;
+    }
+    
+
+    .filtrospesq {
+        width: calc(100% - 20px)!important;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .filtrospesq button{display: flex!important}
+
+    .dadospesquisa input {
+        border-radius: 10px;
+        margin-left: 0px;
+        width: 100%;
+    }
+
+.listtemporadas{justify-content: center!important;padding:0 10px;}
+
+    .listtemporadas div {
+        max-width: 100%;
+    }
+    
+#scrollRight {
+    margin-right: 0!important;
+}
+    .listtemporadas span {
+        min-width: 50px;
+        height: 50px;
+        font-size: 1em;
+        padding: 0;
+        display: flex;
+        border-radius: 50px;
+        justify-content: center;
+        align-items: center
+    }
+
+
+    .listtemporadas span:last-child {
+        margin-right: 10px
+    }
+
+    .listtemporadas span:first-child {
+        margin-left: 10px;
+    }
+
+    .listtemporadas span.clicked {
+        min-width: unset;
+        padding: 5px 20px;
+        box-sizing: border-box
+    }
+
+    .listtemporadas span:last-child {
+        min-width: unset;
+        padding: 5px 20px;
+        box-sizing: border-box
+    }
+
+    .episodio:after {display:none
+    }
+
+    .listeps {
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    .listeps::-webkit-scrollbar {
+        display: none
+    }
+
+    .epNN {
+        display: -webkit-box;
+    }
+
+    .epNN:after {
+        display: none
+    }
+
+    .item h8 {
+        margin-left: 0
+    }
+
+
+    .textB,
+    .dadosepsp {
+        min-width: unset;
+        padding: 10px 20px
+    }
+
+
+
+    .toTopB {
+        bottom: 10px !important
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .seasonN {
+        display: none !important
+    }
+}
+
+
+@media screen and (max-width:1100px) {
+  .cate{ display: flex!important; justify-content: center!important; min-width:auto!important;}
+  .cate:before{max-width:100%!important;right:10px; width:auto!important}
+}
+  
+
+@media (min-width: 1500px) and (max-width: 1800px) {
+    .listeps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .temporadas {
+        max-width: 68%;
+    }
+
+    .barra {
+        max-width: 30%;
+        margin-top: 120px
+    }
+
+    .pSh {
+        top: 120px
+    }
+
+    .barra {
+        margin-top: 0px
+    }
+
+
+}
+
+
+
+
+
+@media (min-width: 1300px) and (max-width: 1500px) {
+    .listeps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .temporadas {
+        max-width: 60%;
+    }
+
+    .barra {
+        margin-top: 120px
+    }
+
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1100px) {
+    .capa {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .temporadas {
+        width: 100%
+    }
+
+    .descrition {
+        max-width: 80%;
+    }
+    
+      .listtemporadas{width:100%!important}
+      .filtrospesq{ width: 100%!important; padding: 0}
+      #Olep,
+      #Nvep{display: flex!important; align-items: center}
+
+
+
+}
+
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+    .barra {
+        margin-top: 120px
+    }
+}
+
+
+
+@media (min-width: 1100px) and (max-width: 1500px) {
+    .pSh {
+        top: 400px
+    }
+
+}
+
+@media (min-width: 1100px) and (max-width: 1800px) {
+
+    .wid01 {
+        padding: 120px 50px 60px 50px;
+        box-sizing: border-box;
+    }
+
+    .temporadas {
+        max-width: 65%;
+        padding: 10px 50px 10px 50px;
+    }
+
+
+    .filtrospesq {
+        width: 40%;
+    }
+
+    
+
+    .dadospesquisa input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .dadospesquisa {
+        max-width: 100%
+    }
+
+    .listtemporadas {
+        width: 60% !important
+    }
+
+    .listtemporadas div {
+        width: 100%;
+        max-width: unset
+    }
+
+    .infos {
+        max-width: 70% !important;
+        padding: 0 20px;
+    }
+
+    #titleanime {
+        font-size: 1.8em;
+    }
+
+    .subtitle {
+        font-size: 13px
+    }
+
+    .subtitle span:nth-child(2) {
+        margin-left: 10px
+    }
+
+    .subtitle span:nth-child(n+2) {
+        margin-right: 10px
+    }
+
+    .subtitle span:nth-child(n+2):before {
+        margin-right: 10px;
+    }
+
+
+    .dadosepsp {
+        min-width: unset;
+        width: 100%
+    }
+
+
+    .barra {
+        right: 50px;
+        max-width: 40%;
+    }
+
+
+}
+
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+    .listtemporadas span.clicked:before {
+        display: none
+    }
+}
+
+
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+    .temporadas {
+        max-width: 60%;
+    }
+}
+
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+    .listeps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (min-width: 1300px) and (max-width: 1600px) {
+    .listeps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1800px) {
+    .listeps {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+
+
+@media screen and (min-width: 1100px) {
+    .descrition {
+        max-width: 80%;
+    }
+}
+
+
+@media screen and (min-width: 1100px) {
+    .capa {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .temporadas {
+        width: 100%;
+    }
+}
+
+
+
+
+@media (max-width: 550px) {
+    .listeps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 550px) and (max-width: 800px) {
+    .listeps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1100px) {
+    .listeps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+
+
+@media (min-width:390px) and (max-width: 400px) {
+
+    .pageanimeep.iframepg {
+        padding: 18px 10px 10px 10px;
+    }
+
+    .pageanimeep.iframepg .listeps {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+        gap: 10px;
+        max-height: 640px !important;
+    }
+
+    .pageanimeep.iframepg .listtemporadas button {
+        display: unset !important
+    }
+
+
+
+    .pageanimeep.iframepg .episodio {
+        padding: 0px;
+        border-radius: 10px;
+        pointer-events: none;
+        height: 110px;
+    }
+
+
+    .pageanimeep.iframepg .vieweP {
+        padding: 10px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pageanimeep.iframepg .vieweP>*:not(.linkep) {
+        margin-left: 160px
+    }
+
+    .pageanimeep.iframepg .episodio a {
+        padding: 0;
+        pointer-events: auto;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 150px;
+        height: calc(100% - 20px);
+    }
+
+    .pageanimeep.iframepg .seasonN,
+    .pageanimeep.iframepg .epNN {
+        width: auto;
+        max-width: calc(100% - 20px) !important;
+        order: 1;
+        margin-bottom: 0 !important;
+    }
+
+    .pageanimeep.iframepg .seasonN {
+        margin-top: 0px;
+        margin-bottom: 10px
+    }
+
+    .pageanimeep.iframepg .epNN {
+        order: 2;
+        order: 1;
+        font-size: 20px;
+        font-weight: 500;
+        opacity: 1;
+        margin-right: 0px;
+        align-items: center;
+        display: block
+    }
+
+    .pageanimeep.iframepg .epNN:after {
+        font-size: 15px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        margin-left: 0px;
+        opacity: 0.8
+    }
+
+    .pageanimeep.iframepg .item {
+        order: 3;
+        margin-top: auto !important;
+    }
+
+
+    .pageanimeep.iframepg .view {
+        pointer-events: auto;
+    }
+
+    .pageanimeep.iframepg .linkep h8,
+    .pageanimeep.iframepg .item h8 {
+        margin: 0
+    }
+
+}
+
+    
