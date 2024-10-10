@@ -686,7 +686,7 @@ const animeEpisodes = document.getElementById('animeEpisodes').value;
 <!----- ${seasonLabel} - Episodio ${episode.episode_number}/${animeEpisodes}----------------------------------->
 <main class="episodio items ${additionalClass}">
   <div class="vieweP" onclick="playSoundFour()" data-id="${totalEpisodesBeforeSeason + index + 1}">
-      <a href="${episode.air_date ? formatDate(new Date(episode.air_date)) : '/aa/mm/'}${animeTitleCustomLInk}-${seasonLabel}-episodio${episode.episode_number}-${animeDubbedOrSubbedFormatted}.html" target="_blank" class="linkep">
+      <a href="${episode.air_date ? formatDate(new Date(episode.air_date)) : '/aa/mm/'}${animeTitleCustomLInk}-${seasonLabel}-episodio${String(episode.episode_number).padStart(2, '0')}-${animeDubbedOrSubbedFormatted}.html" target="_blank" class="linkep">
         <img class="imgC" src="${imageSrc}"/>
         <h7>${episode.runtime || '24'} min</h7>
         <div class="epNumbers">
