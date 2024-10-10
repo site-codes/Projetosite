@@ -543,3 +543,50 @@ if (statusText === "Completo") {
   statusElement.classList.remove("pausa"); // Remove ambas as classes se o status não for "Completo" ou "Em Pausa"
 }
 });
+
+
+// TRAILER
+document.addEventListener("DOMContentLoaded", function () {
+  const youtubeContainer = document.querySelector(".youtubeContainer");
+  const trailerVideo = document.getElementById("trailerVideo");
+  const trailerLink = document.querySelector(".trailer");
+
+  const embedLink = youtubeContainer.getAttribute("data-link-embed");
+
+  // Verifica se o embedLink está vazio ou não contém a estrutura "https://www.youtube.com/embed/"
+  if (!embedLink || !embedLink.startsWith("https://www.youtube.com/embed/")) {
+    // Adiciona display: none à classe .trailer
+    trailerLink.style.display = "none";
+  } else {
+    // Define o link de incorporação se o embedLink for válido
+    trailerVideo.src = embedLink;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const trailerLink = document.querySelector(".trailer");
+  const trailerContent = document.querySelector(".trailerA");
+  const trailerVideo = document.getElementById("trailerVideo");
+  const originalSrc = trailerVideo.src;
+
+  function toggleActive() {
+    trailerContent.classList.toggle("ativo");
+
+    if (!trailerContent.classList.contains("ativo")) {
+      trailerVideo.src = "";
+      setTimeout(() => {
+        trailerVideo.src = originalSrc;
+      }, 0);
+    }
+  }
+
+  trailerLink?.addEventListener("click", function (event) {
+    event.preventDefault();
+    toggleActive();
+  });
+
+  trailerContent?.addEventListener("click", function () {
+    toggleActive();
+  });
+});
+
