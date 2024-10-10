@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Episódios</title>
+    <style>
+        .active {
+            background-color: #007BFF; /* Cor de fundo azul */
+            color: white; /* Texto branco */
+            border: 1px solid #0056b3; /* Borda mais escura */
+        }
+        .episodio {
+            margin: 10px 0; /* Espaçamento entre os episódios */
+            padding: 10px; /* Preenchimento interno */
+            border: 1px solid #ddd; /* Borda cinza */
+            border-radius: 5px; /* Bordas arredondadas */
+            background-color: #f9f9f9; /* Cor de fundo leve */
+        }
+        .hidden {
+            display: none; /* Esconde os elementos */
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Episódios</h1>
+
+    <div>
+        <button id="Olep">Ordenar por OLEP</button>
+        <button id="Nvep">Filtrar Vistos</button>
+    </div>
+
+    <div class="listeps">
+        <main class="episodio items">
+            <div class="vieweP" onclick="playSoundSec()" data-id="38">Episódio 1</div>
+        </main>
+        <main class="episodio items">
+            <div class="vieweP visto" onclick="playSoundSec()" data-id="39">Episódio 2 (Visto)</div>
+        </main>
+        <main class="episodio items">
+            <div class="vieweP" onclick="playSoundSec()" data-id="40">Episódio 3</div>
+        </main>
+        <main class="episodio items">
+            <div class="vieweP visto" onclick="playSoundSec()" data-id="41">Episódio 4 (Visto)</div>
+        </main>
+        <main class="episodio items">
+            <div class="vieweP" onclick="playSoundSec()" data-id="42">Episódio 5</div>
+        </main>
+    </div>    
+    
+    <div class="listeps"></div>
+        <main class="episodio items">
+            <div class="vieweP" onclick="playSoundSec()" data-id="38">Episódio 1</div>
+        </main>
+        <main class="episodio items">
+            <div class="vieweP visto" onclick="playSoundSec()" data-id="39">Episódio 2 (Visto)</div>
+        </main>
+        <main class="episodio items">
+            <div class="vieweP" onclick="playSoundSec()" data-id="40">Episódio 3</div>
+        </main>
+        <main class="episodio items">
+            <div class="vieweP visto" onclick="playSoundSec()" data-id="41">Episódio 4 (Visto)</div>
+        </main>
+        <main class="episodio items">
+            <div class="vieweP" onclick="playSoundSec()" data-id="42">Episódio 5</div>
+        </main>
+    </div>
+
+    <script>
+        // FUNÇÃO DE CONTROLE DE EPISÓDIOS
+        document.addEventListener("DOMContentLoaded", function () {
+            const OlepButton = document.getElementById("Olep");
+            const NvepButton = document.getElementById("Nvep");
+            const listeps = document.querySelector(".listeps");
+
+            OlepButton.onclick = function () {
+                // Alternar a classe .active apenas para o OlepButton
+                OlepButton.classList.toggle("active");
+                
+                const items = Array.from(listeps.querySelectorAll("main")); 
+                items.reverse().forEach(item => listeps.appendChild(item));
+            };
+
+            NvepButton.onclick = function () {
+                // Alternar a classe .active apenas para o NvepButton
+                NvepButton.classList.toggle("active");
+
+                const episodios = document.querySelectorAll(".episodio");
+                episodios.forEach(episodio => {
+                    const vieweP = episodio.querySelector(".vieweP");
+                    if (vieweP && vieweP.classList.contains("visto")) {
+                        episodio.style.display = NvepButton.classList.contains("active") ? "none" : "";
+                    }
+                });
+            };
+        });
+
+        function playSoundSec() {
+            // Função simulada para tocar som (pode ser substituída por funcionalidade real)
+            console.log('Som tocando...');
+        }
+    </script>
+</body>
+</html>

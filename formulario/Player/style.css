@@ -1,0 +1,1111 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+button:focus {
+  outline: none;
+}
+
+.video-container {
+  width: 100%;
+  padding-top:56.25%;
+  position: relative;
+  color:white;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+}
+@media screen and (min-width:700px){
+    .video-container{
+        padding:0;
+        height:600px
+    }
+}
+@media screen and (min-width:1100px){
+    .video-container{
+        height:700px
+    }
+}
+#leftdd,
+#rightdd{
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  opacity:1;
+  display: none;
+  align-items: center;
+  justify-content: center
+}
+#rightdd{
+  left:unset;
+  right:0
+}
+
+#leftdd:before,
+#rightdd:before{
+  display: none;
+  font-size:2em
+}
+#rightdd:before{
+  content: "+ 10s";
+}
+#leftdd:before{
+  content:"- 10s";
+}
+
+#leftdd.dd,
+#rightdd.dd{
+  background: rgba(255,255,255,0.2);
+  opacity:1;
+  display: flex
+}
+
+#leftdd.unlock,
+#rightdd.unlock,
+#leftdd.dd:before,
+#rightdd.dd:before{
+  display: flex
+}
+#leftdd.unlock,
+#rightdd.unlock{
+  width:40%
+}
+
+#video {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  border-radius:0!important;
+  position: absolute;
+  top:0;
+  left:0;
+    
+}
+
+#video.fill {
+  object-fit: contain !important;
+}
+
+
+#brilho {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.15);
+    pointer-events: none !important;
+    opacity: 0;
+    display: flex;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+  }
+  
+  .controlsplayer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  
+  
+  #pOP {
+    transition: right 1s ease;
+    position: absolute;
+    right: -200vh;
+    bottom: 120px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    background: rgba(76, 0, 255, 0.95);
+    border: 2px solid transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    font-family: "Pathway Extreme";
+  }
+  
+  #pOP:hover {
+    background: rgba(76, 0, 255, 0.75);
+  }
+  
+  #pOP:after {
+    content: "\eac9";
+    margin-left: 20px;
+    font-family: "Material Symbols Outlined"
+  }
+  
+  
+  #pOP.show {
+    opacity: 1;
+    right: 40px;
+  }
+  
+  
+
+.volubar,
+.container {
+  position: absolute;
+  height: calc(100% - 150px);
+  min-width: 10%;
+  padding: 0 10px;
+  top: 50px;
+  left: 0;
+  z-index: 1;
+}
+.volubar {
+  right: 0px;
+  left: unset;
+}
+
+#volnumb,
+.percentage {
+  font-size: 2em;
+  font-weight: 500; 
+  margin-top:auto;
+}
+
+.icvol,
+.icbr {
+  margin-top: 10px!important; 
+  margin-bottom:auto;
+}
+
+.icvol:after,
+.icbr:after {
+  content: "\e430";
+  font-size: 2em;
+  font-family: "Material Symbols Outlined";
+}
+
+.icbr.zerob:after {
+  content: "\eb76"
+}
+
+.icvol:after {
+  content: "\e405";
+  font-family: "Material Symbols Outlined"
+}
+
+.icvol.zerob:after {
+  content: "\e440"
+}
+
+#vol,
+#brilhop {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left:0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 0px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+#barbr,
+#barvol {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  top: unset;
+  width: 100%;
+  min-height: 100%!important;
+  background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.05), transparent);
+  border-radius: 0px;
+  z-index: 2;
+  opacity:0;
+}
+
+  
+.container:hover #barbr,
+.volubar:hover #barvol {
+  opacity: 1
+}
+
+
+#handlevol,
+#handle {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0;
+  width: 100% !important;
+  height: 100%!important;
+  background: none;
+  z-index: 2;
+}
+
+
+  
+.poster {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .capapause {
+    display: none !important
+  }
+  
+  .poster.pause .capapause {
+    display: flex !important
+  }
+  
+  .poster img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius:0!important
+  }
+  
+  
+  .viewmode {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(24, 27, 35, 0.6);
+    transition: flex 1s;
+    z-index: 3;
+    opacity: 0;    
+    display: none;
+    
+  }
+  
+  .viewmode.m {
+    display: flex;
+    opacity: 1
+  }
+  
+  .viewmode div {
+    width: 600px;
+    height: 100%;
+    background: #10131b;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 40px;
+    transform: translateX(-100vh);
+    box-sizing: border-box;
+    animation: slideIn 1s forwards;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .viewmode main{
+    margin-bottom:10px;
+    width:100%;
+    display: flex;
+    gap:10px;
+  }
+  .observation{
+    flex-direction: column;
+    overflow: auto;
+  }
+  
+  .observation::-webkit-scrollbar{
+    display:none
+  }
+  .viewmode p {
+    margin: 0;
+    font-weight: 900;
+  }
+  
+  .viewmode button {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin-inline: 5px;
+    background: #181b23;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Pathway Extreme";
+  }
+  
+  .viewmode button:nth-child(1) {
+    margin-left: 0 !important
+  }
+  
+  .viewmode button.p {
+    background-color: orange;
+  }
+  
+  .viewmode button:nth-child(2).p {
+    background-color: #0d66ac;
+  }
+  
+  .viewmode button:nth-child(3).p {
+    background-color: #089949
+  }
+  
+  
+  .comandos {
+    margin-top: 20px !important;
+    display: flex
+  }
+  
+  .viewmode span {
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #181b23;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .viewmode span:after {
+    content: attr(data-source);
+    margin-left: auto;
+    background: #10131b;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    opacity: 0.4;
+  }
+  
+  .topp {
+    justify-content: right;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logotl {
+    align-items: center;
+    display: none;
+  }
+  
+  .logotl img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  .titleepplayer {
+    margin: 0;
+    margin-right: auto;
+    font-size: 1.2em;
+    padding: 0;
+    max-width: 70%;
+    font-weight: 600;
+    display: none;align-items: center; 
+  }
+  
+  .titleepplayer:before {
+    content: "\e5c5";
+    font-family: "Material Symbols Outlined";
+    margin-right: 10px;
+    font-size:12px;
+    background: rgba(255, 255, 255,0.2);
+    padding: 0px;
+    border-radius: 999px;
+    min-width:25px;
+    height:25px;
+    text-align: center
+  }
+  
+  .titleepplayer p{
+    margin:0;
+    align-items: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
+  
+  .topp button {
+    color: white;
+    font-size: 1.7em;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer!important;
+    position: relative;
+    display: flex;
+    justify-content: center
+  }
+  
+  
+  .topp button:after {
+    position: absolute!important;
+    bottom: -30px!important;
+    width: auto;
+    font-size: 0.4em!important;
+    border-radius: 5px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    background: #181b23;
+   
+  }
+  #pular:hover:after{
+   content:"Pular(P)"
+  }
+  
+   .more:hover:after{
+    content:"Opções(O)"
+   }
+    
+  .block:hover:after{
+    content:"Ocultar(B)"
+   }
+  
+   .block.unlock:hover:after{
+     content:"Revelar(B)"
+    }
+   
+  
+  
+  
+  #pular:before {
+    content: "\e044";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  #pular:active {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .topp button:hover {
+    background: rgba(255, 255, 255, 0.01);
+  }
+  
+  
+  #block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    user-select: none !important;
+    border: none;
+    background: transparent;
+  }
+  
+  #block.unlock{
+    cursor: pointer;
+  }
+  
+  .block:before,
+  #more:before {
+    content: "\e018";
+    font-family: 'Material Symbols Outlined';
+  }
+  
+  
+  .block:before {
+    content: "\f656"
+  }
+  
+  .block.unlock:before {
+    content: "\e897"
+  }
+  
+  .block.unlock {
+    background: rgba(255, 255, 255, 0.02);
+    opacity: 0.1
+  }
+  
+  .block.unlock:hover {
+    opacity: 0.9
+  }
+  
+  .medp {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    pointer-events: none;
+  }
+  
+  .medp button {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: font-size 0.3s;
+  }
+  
+  #playpause {
+    font-size: 7.5em;
+  }
+  #playpause:active:before{
+    animation: fullcontrols-animation 0.6s forwards;
+  }
+  
+  #playpause:before {
+    content: "\e037";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  #playpause.pause:before {
+    content: "\e034";
+  }
+  
+  #lefttime:before {
+    content: "\e059";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  #righttime:before {
+    content: "\e056";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  #lefttime:hover,
+  #righttime:hover {
+    background: rgba(255, 255, 255, 0.04);
+  }
+  
+  #lefttime:active,
+  #righttime:active {
+    font-size: 6.5em;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  
+  
+  #playpause {
+    height: 150px;
+    width: 150px;
+  }
+  
+  .endp {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .endp h2 {
+    font-size: 1em;
+    color:white!important;
+  }
+  
+  .total-time {
+    margin-left: 20px
+  }
+  
+  .progressline {
+    display: flex;
+    gap: 20px;
+  }
+  
+  
+  .progress {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .progress #bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: orange !important;
+    border-radius: 10px 0 0 10px
+  }
+  
+  .handletimeline {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .progressline button {
+    border: none;
+    color: white;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    border-radius: 10px;
+  }
+  
+  .progressline button:hover:after {
+    position: absolute;
+    top: -55px;
+    width: auto;
+    font-size: 0.4em;
+    border-radius: 5px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    background: #181b23;
+  }
+  
+  #captureButton:hover:after {
+    content: "Printar(X)"
+  }
+  
+  #reiniciar:hover:after {
+    content: "Reiniciar(R)"
+  }
+  
+  #volume:hover:after {
+    content: "Volume(M)"
+  }
+  
+  .velocidade:hover:after {
+    content: "Velocidade(V)"
+  }
+  
+  #zoom:hover:after {
+    content: "Zoom(Z)"
+  }
+  #fullcontrols:hover:after {
+    content: "FullScreen(F)";
+    right:0px
+  }
+  
+  .download {
+    pointer-events: none
+  }
+  
+  .download:before {
+    content: "\f58b";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  .velocidade {
+    width: auto !important;
+    font-weight: 500;
+    font-family: "Pathway Extreme";
+    margin-right: auto;
+  }
+  
+  #zoom:before {
+    content: "\f1fa";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  #zoom.fill:before {
+    content: "\f1fb";
+  }
+  
+  #volume:before {
+    content: "\e050";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  #volume.vol:before {
+    content: "\e04f";
+  }
+  
+  #volume.vol:after {
+    content: "Mudo";
+    margin-left: 10px;
+  }
+  
+  #volume.vol {
+    width: auto !important;
+    position: relative;
+    top: unset
+  }
+  
+  #captureButton:before {
+    content: "\e439";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  #canvas {
+    position: absolute;
+    bottom: -100%;
+    left: 40px;
+    height: 200px;
+    width: 330px;
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: bottom 0.5s ease
+  }
+  
+  #canvas.print {
+    bottom: 160px;
+  }
+  
+  
+  #reiniciar:before {
+    content: "\f6b5";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  
+  #fullcontrols:hover:before {
+    animation: fullcontrols-animation 0.6s forwards;
+  }
+  
+  @keyframes fullcontrols-animation {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #fullcontrols:before {
+    content: "\e5d0";
+    font-family: "Material Symbols Outlined";
+  }
+  
+  .container,
+  .volubar,
+  .topp,
+  .lefttime,
+  .righttime,
+  .endp,
+  .progressline {
+    opacity: 0;
+    pointer-events:none;
+  }
+  
+  
+  .container.unlock,
+  .volubar.unlock,
+  .more.unlock,
+  .titleepplayer.unlock,
+  .logotl.unlock,
+  #pular.unlock,
+  .medp.unlock >*,
+  .endp.unlock,
+  .progressline.unlock {
+    opacity: 0 !important;
+    pointer-events: none!important;
+  }
+  
+  
+  
+  h2 {
+    margin: 0;
+    font-weight: 400;
+  }
+
+
+
+  
+  
+@media (max-width: 1100px){
+  
+.video-container.leftt:after,
+.video-container.rightt:after {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+
+  .controlsplayer{padding:10px 5px}
+  
+.topp p:before,
+.topp button {
+  font-size: 1.2em;
+}
+
+.topp button:after{
+  display: none
+}
+
+.viewmode div {
+  width: 40%;
+  padding: 20px;
+  align-items: center !important;
+  display: flex;
+}
+
+.viewmode p {
+  font-size: 12px;
+  font-weight: 400
+}
+.viewmode main{
+    flex-direction: column
+}
+
+.viewmode button {
+  border-radius: 50px;
+  padding: 5px 10px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 12px !important
+}
+
+.viewmode .observation{
+    display:none;
+}
+
+
+
+.medp {
+  gap: 40px
+}
+
+.medp button {
+  font-size: 2.5em;
+  width: 50px;
+  height: 50px
+}
+
+#lefttime:active,
+#righttime:active {
+  font-size: unset;
+}
+
+
+#playpause {
+  font-size: 4em;
+  width: 70px;
+  height: 70px
+}
+
+  .progress{align-items: center!important}
+
+  
+.endp h2 {
+  font-size: 12px;
+}
+
+  .total-time {margin-left:0px}
+  
+.progressline {
+  gap: 10px
+}
+
+.progressline button {
+  height: auto;
+  width: auto;
+  font-size: 1.2em
+}
+
+  
+
+#volnumb,
+.percentage {
+  font-size: 0.8em;
+}
+
+.icvol,
+.icbr {
+  margin-top: 0px!important;
+  font-size: 0.6em;
+}
+
+
+#pOP {
+  bottom: 70px;
+  padding: 5px 10px;
+  font-size: 10px !important
+}
+
+#pOP:after {
+  margin-left: 10px;
+}
+
+#pOP.show {
+  right: 15px;
+}
+
+.progressline button:hover:after{
+ display: none
+}
+
+
+
+#canvas {
+bottom:-100%;
+left: 40px;
+height: 40px;
+width: 80px;
+z-index: 10;
+border-radius: 5px;
+}
+
+#canvas.print {
+bottom: 160px; bottom: 70px;
+}
+
+
+
+}
+
+
+
+/*   full screen  */
+.full-screen .volubar,
+.full-screen .container {
+  top: 60px;
+  width: 150px;
+  height: calc(100% - 120px) !important;
+  min-width: unset;
+}
+
+
+.full-screen .viewmode span {
+  font-size: 1em !important;
+}
+
+
+.full-screen .logotl {
+  display: flex
+}
+
+.full-screen .titleepplayer {
+  max-width: 60%;
+  display: flex
+}
+
+.full-screen .titleepplayer p {
+  font-size: 1.2em !important
+}
+
+.full-screen .titleepplayer:before {
+  display: none
+}
+
+.full-screen .topp button {
+  font-size: 2em
+}
+
+.full-screen .medp {
+  gap: 60px
+}
+
+.full-screen .medp button {
+  height: 80px;
+  width: 80px;
+}
+
+.full-screen #playpause {
+  font-size: 8em;
+  height: 150px;
+  width: 150px;
+}
+
+.full-screen #lefttime,
+.full-screen #righttime {
+  font-size: 3.7em;
+}
+
+.full-screen #lefttime:active,
+.full-screen #righttime:active {
+  font-size: 4em;
+}
+
+.full-screen .progressline button {
+  font-size: 2em
+}
+
+
+.full-screen #pOP {
+  bottom: 130px;
+}
+
+.full-screen #fullcontrols:before {
+  content: "\e5d1";
+}
+
+
+@media (min-width: 1200px) {
+
+  .full-screen .viewmode .comandos,
+  .full-screen .viewmode span {
+    display: flex
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .full-screen .volubar,
+  .full-screen .container {
+    width: 80px;
+    bottom: 80px !important;
+    height: unset !important;
+  }
+
+
+  .full-screen #barbr,
+  .full-screen #barvol {
+    background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.1), transparent) !important;
+    border-radius: 0;
+    opacity: 1;
+
+  }
+
+
+  .full-screen #playpause {
+    font-size: 8em;
+    height: 130px;
+    width: 130px;
+  }
+
+  .full-screen #pOP {
+    font-size: 1em !important;
+    padding: 5px 20px;
+    bottom: 95px;
+  }
+
+  .full-screen #leftdd.unlock,
+  .full-screen #rightdd.unlock {
+    width: 30%;
+  }
+
+  .full-screen .download {
+    display: unset;
+  }
+  
+
+}
