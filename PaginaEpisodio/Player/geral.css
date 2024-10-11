@@ -394,8 +394,8 @@ button:focus {
 }
 
 .logotl img {
-  width: 50px;
-  height: auto;
+  width: auto;
+  height: 50px;
   object-fit: cover;
 }
 
