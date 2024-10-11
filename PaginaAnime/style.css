@@ -398,7 +398,7 @@
 }
 
 #status:after {
-    content: "Em Lançamento semanal ou uma pausa aguardando próxima parte";
+    content: "Episódios em Lançamento";
     font-size: 12px;
     background: rgba(0, 0, 0, 0.9);
     opacity: 1;
@@ -420,7 +420,7 @@
 }
 
 #status.completo:after {
-    content: "Anime ou sua Ultima Temporada já foi concluida!";
+    content: "Anime teve sua Ultima Temporada concluida!";
     background: rgba(0, 0, 0, 0.9);
     color: var(--cor1);
 }
@@ -435,7 +435,7 @@
 }
 
 #status.pausa:after {
-    content: "Anime aguarda uma continuação da temporada";
+    content: "Anime aguarda uma continuação da temporada/Nova parte";
     color: var(--corB1);
 }
 
