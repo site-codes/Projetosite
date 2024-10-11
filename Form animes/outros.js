@@ -62,5 +62,14 @@ NotaSite.forEach(radio => {
 });
 
 
+const input = document.getElementById('animeRating');
+input.addEventListener('input', function() {
+    let value = this.value;
+    value = value.replace(/,/g, '.');
+    value = value.replace(/[\/]/g, '');
+    this.value = value;
+});
+
+
 
 
