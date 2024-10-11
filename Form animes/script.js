@@ -1197,6 +1197,14 @@ data.genres
   .join(', ') || '';
   document.getElementById('animeRating').value =
   data.vote_average !== undefined ? data.vote_average.toFixed(1) : '6,0';
+    
+const input = document.getElementById('animeRating');
+input.addEventListener('input', function() {
+    let value = this.value;
+    value = value.replace(/,/g, '.');
+    value = value.replace(/[\/]/g, '');
+    this.value = value;
+});
   document.getElementById('animeStatus').value = {
       'Returning Series': 'Em Pausa',
       Ended: 'Completo',
