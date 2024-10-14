@@ -1,7 +1,7 @@
 let shouldLoadScript = false; // Inicializa como false até a validação
 
-const token = ''; 
-const nomeCliente = ''; 
+    const token = 'MatheusAdm12345678900987654321'; 
+    const nomeCliente = 'AdmMatheus';  
 const redirectUrl = 'https://instintoanimes.blogspot.com/2024/10/template-instinto-play-version-20.html';
 
 
