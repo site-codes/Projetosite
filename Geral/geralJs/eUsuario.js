@@ -1,3 +1,5 @@
+// Documentação para o uso do link
+// document.write('<script src="' + linkBase + 'Geral/geralJs/eUsuario.js"><\/script>');
 
 let shouldLoadScript = true; 
 
@@ -5,6 +7,9 @@ let shouldLoadScript = true;
 const base64sheet = btoa('https://docs.google.com/spreadsheets/d/e/');
 const sheetId = '2PACX-1vR4sMQF0QrrRUj6jtlU9VLNO4YUhtFd406nQAw5-i_JyDTon7TvJh2AupBHIyAOIdYQ_9U-jOgYWQsz';
 const sheetUrl = `${atob(base64sheet)}${sheetId}/pub?output=csv`;
+
+// Redirect URL
+const redirectUrl = 'https://instintoanimes.blogspot.com/2024/10/template-instinto-play-version-20.html'; 
 
 async function fetchTokensFromSheet() {
     const response = await fetch(sheetUrl);
@@ -84,4 +89,3 @@ window.onload = loadScript;
 if (shouldLoadScript) {
     document.write('<script src="https://site-codes.github.io/Projetosite/Geral/geralJs/linksKey.js"><\/script>');
 }
-
