@@ -1,18 +1,7 @@
-let shouldLoadScript = false; // Inicializa como false até a validação
 
-// Validação para garantir que todas as constantes estão presentes
-const token = 'MatheusAdm12345678900987654321'; 
-const nomeCliente = 'AdmMatheus'; 
-const redirectUrl = 'https://instintoanimes.blogspot.com/2024/10/template-instinto-play-version-20.html';
+let shouldLoadScript = true; 
 
-// Se qualquer uma das variáveis estiver ausente, o script não continua
-if (token && nomeCliente && redirectUrl) {
-    shouldLoadScript = true; // Só ativa se todos os valores estiverem definidos
-} else {
-    console.error('Token, nomeCliente ou redirectUrl não está definido.');
-}
-
-// Carregar as informações da planilha
+// Base URL for the spreadsheet in Base64
 const base64sheet = btoa('https://docs.google.com/spreadsheets/d/e/');
 const sheetId = '2PACX-1vR4sMQF0QrrRUj6jtlU9VLNO4YUhtFd406nQAw5-i_JyDTon7TvJh2AupBHIyAOIdYQ_9U-jOgYWQsz';
 const sheetUrl = `${atob(base64sheet)}${sheetId}/pub?output=csv`;
@@ -59,10 +48,8 @@ function parseDate(dateString) {
 }
 
 async function loadScript() {
-    if (!shouldLoadScript) return; // Se não estiver habilitado, não faz nada
-
     const validTokens = await fetchTokensFromSheet();
-    const userIP = await getUserIP();
+    const userIP = await getUserIP(); 
 
     const clientData = validTokens.find(entry => entry.token === token && entry.nomeCliente === nomeCliente);
     const isAdmin = clientData && clientData.user === 1; 
@@ -70,9 +57,10 @@ async function loadScript() {
     if (clientData) {
         const currentDate = new Date();
         const expirationDate = clientData.dataDeTermino !== 'Nunca' ? parseDate(clientData.dataDeTermino) : null; 
-
+        shouldLoadScript = true; 
+        
         if (isAdmin) {
-            // Lógica do Admin
+            // Adicione qualquer lógica específica para admin aqui
         } else {
             const storedIP = localStorage.getItem(`ipUsado_${token}`);
             
@@ -86,6 +74,7 @@ async function loadScript() {
             } 
         }
     } else {
+        shouldLoadScript = false;
         window.location.href = redirectUrl;
     }
 }
@@ -95,3 +84,4 @@ window.onload = loadScript;
 if (shouldLoadScript) {
     document.write('<script src="https://site-codes.github.io/Projetosite/Geral/geralJs/linksKey.js"><\/script>');
 }
+
