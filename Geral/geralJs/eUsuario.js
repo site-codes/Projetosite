@@ -1,15 +1,24 @@
-// Documentação para o uso do link
-// document.write('<script src="' + linkBase + 'Geral/geralJs/eUsuario.js"><\/script>');
 
-let shouldLoadScript = true; 
+let shouldLoadScript = false; 
 
-// Base URL for the spreadsheet in Base64
+const token = 'token2-1234567890'; 
+const nomeCliente = 'Cliente 2';
+// Constante Base64 da URL de redirecionamento
+const base64RedirectUrl = 'aHR0cHM6Ly9pbnN0aW50b2FuaW1lcy5ibG9nc3BvdC5jb20vMjAyNC8xMC90ZW1wbGF0ZS1pbnN0aW50by1wbGF5LXZlcnNpb24tMjAuaHRtbA==';
+
+// Decodificando a URL
+const redirectUrl = atob(base64RedirectUrl);
+// Se qualquer uma das variáveis estiver ausente, o script não continua
+if (token && nomeCliente && redirectUrl) {
+    shouldLoadScript = true; // Só ativa se todos os valores estiverem definidos
+} else {
+    console.error('Token, nomeCliente ou redirectUrl não está definido.');
+}
+
+// Carregar as informações da planilha
 const base64sheet = btoa('https://docs.google.com/spreadsheets/d/e/');
 const sheetId = '2PACX-1vR4sMQF0QrrRUj6jtlU9VLNO4YUhtFd406nQAw5-i_JyDTon7TvJh2AupBHIyAOIdYQ_9U-jOgYWQsz';
 const sheetUrl = `${atob(base64sheet)}${sheetId}/pub?output=csv`;
-
-// Redirect URL
-const redirectUrl = 'https://instintoanimes.blogspot.com/2024/10/template-instinto-play-version-20.html'; 
 
 async function fetchTokensFromSheet() {
     const response = await fetch(sheetUrl);
@@ -53,8 +62,10 @@ function parseDate(dateString) {
 }
 
 async function loadScript() {
+    if (!shouldLoadScript) return; // Se não estiver habilitado, não faz nada
+
     const validTokens = await fetchTokensFromSheet();
-    const userIP = await getUserIP(); 
+    const userIP = await getUserIP();
 
     const clientData = validTokens.find(entry => entry.token === token && entry.nomeCliente === nomeCliente);
     const isAdmin = clientData && clientData.user === 1; 
@@ -62,10 +73,9 @@ async function loadScript() {
     if (clientData) {
         const currentDate = new Date();
         const expirationDate = clientData.dataDeTermino !== 'Nunca' ? parseDate(clientData.dataDeTermino) : null; 
-        shouldLoadScript = true; 
-        
+
         if (isAdmin) {
-            // Adicione qualquer lógica específica para admin aqui
+            // Lógica do Admin
         } else {
             const storedIP = localStorage.getItem(`ipUsado_${token}`);
             
@@ -79,7 +89,6 @@ async function loadScript() {
             } 
         }
     } else {
-        shouldLoadScript = false;
         window.location.href = redirectUrl;
     }
 }
@@ -87,5 +96,5 @@ async function loadScript() {
 window.onload = loadScript;
 
 if (shouldLoadScript) {
-    document.write('<script src="https://site-codes.github.io/Projetosite/Geral/geralJs/linksKey.js"><\/script>');
+    document.write('<script src="' + linkBase + 'Geral/geralJs/linksKey.js"><\/script>');
 }
