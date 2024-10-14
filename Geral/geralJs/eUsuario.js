@@ -50,9 +50,6 @@ async function loadScript() {
     const validTokens = await fetchTokensFromSheet();
     const userIP = await getUserIP();
 
-    const token = 'MatheusAdm12345678900987654321'; 
-    const nomeCliente = 'AdmMatheus'; 
-
     const redirectUrl = 'https://instintoanimes.blogspot.com/2024/10/template-instinto-play-version-20.html'; 
 
     const clientData = validTokens.find(entry => entry.token === token && entry.nomeCliente === nomeCliente);
