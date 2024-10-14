@@ -1,15 +1,16 @@
 let shouldLoadScript = false; // Inicializa como false até a validação
 
-// Validação para garantir que todas as constantes estão presentes
+const token = ''; 
+const nomeCliente = ''; 
+const redirectUrl = 'https://instintoanimes.blogspot.com/2024/10/template-instinto-play-version-20.html';
+
 
 const redirectUrl = 'https://instintoanimes.blogspot.com/2024/10/template-instinto-play-version-20.html';
 
 // Se qualquer uma das variáveis estiver ausente, o script não continua
 if (token && nomeCliente && redirectUrl) {
-    shouldLoadScript = true; // Só ativa se todos os valores estiverem definidos
-} else {
-    console.error('Token, nomeCliente ou redirectUrl não está definido.');
-}
+    shouldLoadScript = true;
+} 
 
 // Carregar as informações da planilha
 const base64sheet = btoa('https://docs.google.com/spreadsheets/d/e/');
