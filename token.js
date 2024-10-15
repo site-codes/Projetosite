@@ -1,8 +1,8 @@
 const usuarios = [
-    { nome: "111", token: "1111", dataDeTermino: "2024-11-01",userType: 0 },
-    { nome: "22", token: "2222", dataDeTermino: "2026-10-15",userType: 0 },
-    { nome: "33", token: "3333", dataDeTermino: "2026-10-15",userType: 0 }, // Token válido
-    { nome: "adm", token: "adm", dataDeTermino: "2024-12-31",userType: 1 }
+    { nome: "111", token: "1111", dataDeTermino: "2024-11-01", userType: 0 },
+    { nome: "22", token: "2222", dataDeTermino: "2026-10-15", userType: 0 },
+    { nome: "33", token: "3333", dataDeTermino: "2026-10-15", userType: 0 },
+    { nome: "adm", token: "adm", dataDeTermino: "2024-12-31", userType: 1 }
 ];
 
 // Função para obter o IP do usuário usando uma API
@@ -28,6 +28,16 @@ function tokenEstaNaLista(token) {
     return usuarios.some(usuario => usuario.token === token);
 }
 
+// Função para verificar se um token já está sendo usado por outro IP
+function tokenJaUsadoPorOutroIP(token, ipUsuario) {
+    const tokenUsadoPorIp = localStorage.getItem(`tokenUsadoPorIp_${token}`);
+    return tokenUsadoPorIp && tokenUsadoPorIp !== ipUsuario;
+}
+
+// Função para salvar o IP do usuário que usou o token
+function salvarTokenUsadoPorIP(token, ipUsuario) {
+    localStorage.setItem(`tokenUsadoPorIp_${token}`, ipUsuario);
+}
 
 async function validarUsuario() {
     const ipUsuario = await obterIpUsuario(); // Obtendo o IP do usuário
@@ -67,29 +77,30 @@ async function validarUsuario() {
             return;
         }
 
-        // Função para verificar se um token ainda está na lista de usuários
-function tokenEstaNaLista(token) {
-    return usuarios.some(usuario => usuario.token === token);
-}
+        // Verifica se o token já está sendo usado por outro IP
+        if (tokenJaUsadoPorOutroIP(tokenInput, ipUsuario)) {
+            const ipEmUso = localStorage.getItem(`tokenUsadoPorIp_${tokenInput}`);
+            document.getElementById('status').textContent = `Este token já está sendo usado em outro IP: ${ipEmUso}`;
+            document.body.classList.remove('border-red');
+            return;
+        }
 
-// Adicione esta verificação logo após a linha que obtém o `tokenPessoalUsado`
-if (tokenPessoalUsado) {
-    // Verifica se o token armazenado ainda está na lista de usuários
-    if (!tokenEstaNaLista(tokenPessoalUsado)) {
-        localStorage.removeItem(`tokenPessoal_${ipUsuario}`); // Remove o token antigo
-        document.getElementById('status').textContent = "Token anterior foi removido. Você pode usar um novo token.";
-    } else if (tokenPessoalUsado !== tokenInput) {
-        document.getElementById('status').textContent = "Você já usou um token pessoal! Apenas um token pode ser utilizado por IP.";
-        document.body.classList.remove('border-red');
-        return;
-    }
-}
+        // Verifica se o token pessoal anterior está na lista de usuários
+        if (tokenPessoalUsado && !tokenEstaNaLista(tokenPessoalUsado)) {
+            localStorage.removeItem(`tokenPessoal_${ipUsuario}`);
+            document.getElementById('status').textContent = "Token anterior foi removido. Você pode usar um novo token.";
+        } else if (tokenPessoalUsado && tokenPessoalUsado !== tokenInput) {
+            document.getElementById('status').textContent = "Você já usou um token pessoal! Apenas um token pode ser utilizado por IP.";
+            document.body.classList.remove('border-red');
+            return;
+        }
 
         // Verifica se o token é válido
         if (isTokenValido(usuarioAtual.dataDeTermino)) {
             document.body.classList.add('border-red');
             document.getElementById('status').textContent = "Usuário válido! Borda vermelha adicionada.";
             localStorage.setItem(`tokenPessoal_${ipUsuario}`, tokenInput); // Armazena o token pessoal usado
+            salvarTokenUsadoPorIP(tokenInput, ipUsuario); // Salva o IP que está usando o token
         } else {
             document.getElementById('status').textContent = "Token pessoal expirado!";
             document.body.classList.remove('border-red');
@@ -99,8 +110,6 @@ if (tokenPessoalUsado) {
         document.getElementById('status').textContent = "Usuário inválido! Verifique o nome e o token.";
     }
 }
-
-
 
 // Chama a função de validação ao carregar a página
 validarUsuario();
