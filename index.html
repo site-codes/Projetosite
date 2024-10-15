@@ -20,15 +20,32 @@
 </head>
 <body>
     <h1>Validação de Usuários</h1>
+    
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+    <label for="token">Token:</label>
+    <input type="text" id="token" placeholder="Digite seu token" required>
+
+    <button id="validarBtn">Validar</button>
+
     <p id="status" class="message"></p> <!-- Elemento para exibir mensagens -->
 
     <script>
-// Definindo os valores do usuário
-const constUser = {
-    nomeInput: "11",    // Altere para testar
-    tokenInput: "1111"  // Altere para testar
-};
+        // Objeto para armazenar os valores do usuário
+        const constUser = {
+            nomeInput: "",
+            tokenInput: ""
+        };
 
+        // Função para capturar os valores dos inputs e validar
+        document.getElementById('validarBtn').addEventListener('click', () => {
+            constUser.nomeInput = document.getElementById('nome').value;
+            constUser.tokenInput = document.getElementById('token').value;
+
+            // Chama a função de verificação (definida no arquivo token.js)
+            verificarUsuario();
+        });
     </script>
     <script src="token.js"></script>
 </body>
