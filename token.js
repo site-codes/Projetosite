@@ -1,105 +1,102 @@
-// Função para verificar se a data de término é válida
-function isTokenValido(dataDeTermino) {
-    const dataAtual = new Date();
-    return new Date(dataDeTermino) > dataAtual; // Verifica se a data de término é maior que a data atual
-}
+// script.js
 
-// Array de usuários com níveis (0 = comum, 1 = adm) e IPs usados
-const usuarios = [
-    { nome: "11", token: "1111", dataDeTermino: "2024-11-01", nivel: 0, ipUsado: null }, // Usuário Comum
-    { nome: "22", token: "2222", dataDeTermino: "2026-10-15", nivel: 1, ipUsado: null }, // Administrador
-    { nome: "33", token: "3333", dataDeTermino: "2024-12-31", nivel: 0, ipUsado: null }  // Usuário Comum
+// Definindo os usuários com userIp
+const users = [
+    { 
+        name: 'João', 
+        token: 'abc123', 
+        expirationDate: '2024-12-31',
+        userIp: null // Pode ser null ou um IP específico
+    },
+    { 
+        name: 'Maria', 
+        token: 'xyz456', 
+        expirationDate: '2024-12-31',
+        userIp: null // Pode ser null ou um IP específico
+    },
+    {
+        name: 'adm', 
+        token: 'adm', 
+        expirationDate: null, // Token de administrador não tem data de término
+        userIp: null // Pode ser null ou um IP específico
+    }
 ];
 
-// Função para obter os valores de nome e token do usuário
-function obterDadosDoUsuario() {
-    const nomeInput = constUser.nomeInput; // Definido no HTML
-    const tokenInput = constUser.tokenInput; // Definido no HTML
-    return { nomeInput, tokenInput };
+// Função para gerar o hash
+function generateHash(name, token, ip) {
+    const data = name + token + ip;
+    return btoa(data); // Usando base64 como um exemplo simples de hashing
 }
 
-// Função para capturar o IP do usuário usando uma API pública
-async function obterIpUsuario() {
-    try {
-        const resposta = await fetch('https://api.ipify.org?format=json');
-        const dados = await resposta.json();
-        return dados.ip;
-    } catch (erro) {
-        console.error("Erro ao obter o IP do usuário:", erro);
-        return null;
-    }
+// Função para obter o IP do usuário
+async function getUserIP() {
+    const response = await fetch('https://api.ipify.org?format=json');
+    const data = await response.json();
+    return data.ip;
 }
 
-// Seleciona o elemento para exibir a mensagem
-const statusElement = document.getElementById('status');
-
-// Função para salvar o token e o IP no localStorage
-function salvarTokenEIP(token, ip) {
-    localStorage.setItem(`token_${token}`, ip);
+// Função para verificar se o usuário existe
+function userExists(name, token) {
+    return users.some(user => user.name === name && user.token === token);
 }
 
-// Função para verificar se o token e IP já estão salvos no localStorage
-function obterTokenEIP(token) {
-    return localStorage.getItem(`token_${token}`);
-}
+// Função para verificar o acesso usando o hash
+async function verifyAccess(inputHash) {
+    const userIP = await getUserIP(); // Obtendo o IP atual do usuário
 
-// Função para validar o usuário e exibir a mensagem no HTML
-async function verificarUsuario() {
-    const { nomeInput, tokenInput } = obterDadosDoUsuario();
-    const ipUsuario = await obterIpUsuario();
+    for (const user of users) {
+        const expectedHash = generateHash(user.name, user.token, userIP);
 
-    if (!ipUsuario) {
-        statusElement.textContent = "Erro ao capturar o IP do usuário.";
-        return;
-    }
-
-    // Verifica se o token já tem um IP salvo no localStorage
-    const ipSalvo = obterTokenEIP(tokenInput);
-
-    // Procura o usuário com nome e token válidos
-    const usuario = usuarios.find(usuario => 
-        usuario.nome === nomeInput && 
-        usuario.token === tokenInput &&
-        isTokenValido(usuario.dataDeTermino)
-    );
-
-    if (usuario) {
-        // Se o token já está associado a um IP diferente
-        if (ipSalvo && ipSalvo !== ipUsuario && usuario.nivel === 0) {
-            statusElement.textContent = "Este token já está em uso por outro IP!";
-            document.body.classList.remove('border-red');
-            return;
-        }
-
-        // Administrador pode acessar de qualquer IP
-        if (usuario.nivel === 1) {
-            document.body.classList.add('border-red');
-            statusElement.textContent = "Bem-vindo, Administrador!";
-            
-            // Salva o IP no localStorage (mesmo para administradores, por consistência)
-            salvarTokenEIP(usuario.token, ipUsuario);
-            statusElement.textContent += ` Você está logado com o IP ${ipUsuario}!`;
-        } else {
-            // Usuário comum
-            if (!ipSalvo || ipSalvo === ipUsuario) {
-                document.body.classList.add('border-red');
-                statusElement.textContent = "Bem-vindo, Usuário Comum!";
-                
-                // Associa o token ao IP atual se ainda não houver um IP salvo
-                usuario.ipUsado = ipUsuario;
-                salvarTokenEIP(usuario.token, ipUsuario);
-                statusElement.textContent += ` Você está logado com o IP ${ipUsuario}!`;
-            } else {
-                // Caso o token já esteja em uso por outro IP
-                statusElement.textContent = "Este token já está em uso por outro IP!";
-                document.body.classList.remove('border-red');
+        // Verifica se o hash fornecido corresponde ao hash esperado
+        if (expectedHash === inputHash) {
+            // Verifica a data de expiração do token
+            if (user.expirationDate) {
+                const currentDate = new Date();
+                const expirationDate = new Date(user.expirationDate);
+                if (currentDate > expirationDate) {
+                    return { message: 'Acesso negado: Token expirado.', values: { userIP }, user };
+                }
             }
+
+            // Verifica se o IP atual é o permitido
+            if (user.userIp && user.userIp !== userIP) {
+                return { message: 'Acesso negado: IP não autorizado.', values: { userIP }, user };
+            }
+
+            return { message: 'Acesso concedido!', hash: expectedHash, values: { userIP }, user };
         }
-    } else {
-        statusElement.textContent = "Usuário inválido ou token expirado! Verifique o nome e o token.";
-        document.body.classList.remove('border-red');
+    }
+
+    return { message: 'Acesso negado: Hash inválido.', values: { userIP } };
+}
+
+// Função principal para executar a verificação
+async function main() {
+    // Usando a constante inputHash do cliente
+    const inputHash = constUser.inputHash; // O valor do hash fornecido pelo cliente
+
+    const result = await verifyAccess(inputHash);
+    document.getElementById('result').innerText = result.message;
+
+    // Exibe o hash gerado
+    if (result.hash) {
+        document.getElementById('hashDisplay').innerText = `Hash gerado: ${result.hash}`;
+    }
+
+    // Exibe os valores usados na verificação
+    const valuesDisplay = `Valores utilizados para a verificação: 
+    IP: ${result.values.userIP}`;
+    document.getElementById('hashValues').innerText = valuesDisplay; // Exibe os valores
+    
+    // Exibe os valores combinados usados para gerar o hash
+    const combinedValues = `Valores usados para gerar o hash: ${inputHash}`;
+    document.getElementById('combinedValuesDisplay').innerText = combinedValues;
+
+    // Exibe o nome e o token usados para gerar o hash
+    if (result.user) {
+        const originalValues = `Nome: ${result.user.name}, Token: ${result.user.token}`;
+        document.getElementById('originalValuesDisplay').innerText = originalValues;
     }
 }
 
-// Chama a função para verificar o usuário ao carregar o script
-verificarUsuario();
+main();
