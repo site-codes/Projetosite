@@ -3,111 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Identificação</title>
+    <title>Gerador de Hash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Verificação de Acesso</h1>
-    <div id="result"></div>
-    <div id="hashDisplay"></div> <!-- Div para exibir o hash -->
-    <div id="hashValues"></div> <!-- Div para exibir os valores usados no hash -->
-    <div id="combinedValuesDisplay"></div> <!-- Div para exibir os valores combinados -->
-    <div id="originalValuesDisplay"></div> <!-- Div para exibir nome e token usados -->
-
+    <h1>Gerador de Hash</h1>
+    <input type="text" id="inputName" placeholder="Nome do Cliente" />
+    <input type="text" id="inputToken" placeholder="Token do Cliente" />
+    <button id="generateHashButton">Gerar Hash</button>
+    
+    <h2>Hash Gerado:</h2>
+    <div id="generatedHashDisplay"></div> <!-- Exibe o hash gerado -->
+    
+    <script src="token.js"></script> <!-- Inclui o arquivo JS -->
     <script>
-        // Função para gerar o hash
-        function generateHash(name, token, ip) {
-            const data = name + token + ip;
-            return btoa(data); // Usando base64 como um exemplo simples de hashing
-        }
+        document.getElementById('generateHashButton').addEventListener('click', async () => {
+            const name = document.getElementById('inputName').value;
+            const token = document.getElementById('inputToken').value;
 
-        // Definindo os usuários com userIp
-        const users = [
-            { 
-                name: 'João', 
-                token: 'abc123', 
-                expirationDate: '2024-12-31',
-                userIp: null // Pode ser null ou um IP específico
-            },
-            { 
-                name: 'Maria', 
-                token: 'xyz456', 
-                expirationDate: '2024-12-31',
-                userIp: null // Pode ser null ou um IP específico
-            },
-            {
-                name: 'adm', 
-                token: 'adm', 
-                expirationDate: null, // Token de administrador não tem data de término
-                userIp: null // Pode ser null ou um IP específico
+            // Verifica se o nome e o token existem na lista de usuários
+            if (!userExists(name, token)) {
+                document.getElementById('generatedHashDisplay').innerText = 'Nome ou token inválido!';
+                return; // Interrompe a execução se o usuário não existir
             }
-        ];
 
-        // Função para obter o IP do usuário
-        async function getUserIP() {
-            const response = await fetch('https://api.ipify.org?format=json');
-            const data = await response.json();
-            return data.ip;
-        }
-
-        // Função para verificar o acesso usando o hash
-        async function verifyAccess(inputHash) {
             const userIP = await getUserIP(); // Obtendo o IP atual do usuário
-            
-            for (const user of users) {
-                const expectedHash = generateHash(user.name, user.token, userIP);
-
-                // Verifica se o hash fornecido corresponde ao hash esperado
-                if (expectedHash === inputHash) {
-                    // Verifica a data de expiração do token
-                    if (user.expirationDate) {
-                        const currentDate = new Date();
-                        const expirationDate = new Date(user.expirationDate);
-                        if (currentDate > expirationDate) {
-                            return { message: 'Acesso negado: Token expirado.', values: { userIP }, user };
-                        }
-                    }
-
-                    // Verifica se o IP atual é o permitido
-                    if (user.userIp && user.userIp !== userIP) {
-                        return { message: 'Acesso negado: IP não autorizado.', values: { userIP }, user };
-                    }
-
-                    return { message: 'Acesso concedido!', hash: expectedHash, values: { userIP }, user };
-                }
-            }
-
-            return { message: 'Acesso negado: Hash inválido.', values: { userIP } };
-        }
-
-        // Função principal para executar a verificação
-        async function main() {
-            const inputHash = 'YWRtYWRtNDUuMjI4LjIzOC4yNTA='; // Preencha com o hash do cliente
-            
-            const result = await verifyAccess(inputHash);
-            document.getElementById('result').innerText = result.message;
+            const generatedHash = generateHash(name, token, userIP); // Gerando o hash
 
             // Exibe o hash gerado
-            if (result.hash) {
-                document.getElementById('hashDisplay').innerText = `Hash gerado: ${result.hash}`;
-            }
-
-            // Exibe os valores usados na verificação
-            const valuesDisplay = `Valores utilizados para a verificação: 
-            IP: ${result.values.userIP}`;
-            document.getElementById('hashValues').innerText = valuesDisplay; // Exibe os valores
-            
-            // Exibe os valores combinados usados para gerar o hash
-            const combinedValues = `Valores usados para gerar o hash: ${inputHash}`;
-            document.getElementById('combinedValuesDisplay').innerText = combinedValues;
-
-            // Exibe o nome e o token usados para gerar o hash
-            if (result.user) {
-                const originalValues = `Nome: ${result.user.name}, Token: ${result.user.token}`;
-                document.getElementById('originalValuesDisplay').innerText = originalValues;
-            }
-        }
-
-        main();
+            document.getElementById('generatedHashDisplay').innerText = generatedHash;
+        });
     </script>
 </body>
 </html>
