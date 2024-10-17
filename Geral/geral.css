@@ -2665,46 +2665,6 @@ display:flex
 }
 
 
-/* Banner 01 */
-#HTML2 .ntry:nth-child(1) .imgdu {
-  background-image: var(--banner01);
-}
-
-/* Banner 02 */
-#HTML2 .ntry:nth-child(2) .imgdu {
-  background-image: var(--banner02);
-}
-
-/* Banner 03 */
-#HTML2 .ntry:nth-child(3) .imgdu {
-  background-image: var(--banner03);
-}
-
-/* Banner 04 */
-#HTML2 .ntry:nth-child(4) .imgdu {
-  background-image: var(--banner04);
-}
-
-/* Banner 05 */
-#HTML2 .ntry:nth-child(5) .imgdu {
-  background-image: var(--banner05);
-}
-
-/* Banner 06 */
-#HTML2 .ntry:nth-child(6) .imgdu {
-  background-image: var(--banner06);
-}
-
-/* Banner 07 */
-#HTML2 .ntry:nth-child(7) .imgdu {
-  background-image: var(--banner07);
-}
-
-/* Banner 08 */
-#HTML2 .ntry:nth-child(8) .imgdu {
-  background-image: var(--banner08);
-}
-
 
 #HTML2 .ntry:hover .imgdu {
     opacity: 1;
