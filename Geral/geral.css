@@ -4728,7 +4728,7 @@ display: flex;opacity:0.6; flex-direction: column; height:100%; color: var(--lin
     display: none
 }
 
-#HTML1 {
+#HTML96 {
     background: var(--contentB);
     position: relative;
     border-radius: 20px;
@@ -4736,13 +4736,13 @@ display: flex;opacity:0.6; flex-direction: column; height:100%; color: var(--lin
     padding: 20px 20px 60px
 }
 
-#HTML1 .title {
+#HTML96 .title {
     font-size: 2em;
     margin: 0 0 10px 0;
     color: var(--linkC)
 }
 
-#HTML1 .title:after {
+#HTML96 .title:after {
     display: none
 }
 
