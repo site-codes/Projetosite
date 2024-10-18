@@ -10,6 +10,7 @@ async function getUserIP() {
     const response = await fetch('https://api.ipify.org?format=json');
     const data = await response.json();
     return data.ip;
+    
 }
 
 // Função para verificar se o usuário existe
@@ -26,14 +27,14 @@ function loadScript(scriptUrl) {
 }
 
 // Função para verificar o acesso usando o hash
-async function verifyAccess(inputHash) {
+async function verifyAccess(ChaveKey) {
     const userIP = await getUserIP();  
 
     for (const user of users) {
         const expectedHash = generateHash(user.name, user.token, userIP);
     
         // Verifica se o hash fornecido corresponde ao hash esperado
-        if (expectedHash === inputHash) {
+        if (expectedHash === ChaveKey) {
             
             // Verifica a data de expiração do token
             if (user.expirationDate) {
@@ -88,9 +89,9 @@ async function fetchUsersFromSheet() {
 // Chame a função fetchUsersFromSheet no início do main()
 async function main() {
     await fetchUsersFromSheet(); // Chama a função antes de verificar o acesso
-    const inputHash = constUser.inputHash; // O valor do hash fornecido pelo cliente
+    const ChaveKey = constUser.ChaveKey; // O valor do hash fornecido pelo cliente
 
-    const result = await verifyAccess(inputHash);
+    const result = await verifyAccess(ChaveKey);
     document.getElementById('result').innerText = result.message;
 
     // Exibe o hash gerado
@@ -104,7 +105,7 @@ async function main() {
     document.getElementById('hashValues').innerText = valuesDisplay; // Exibe os valores
     
     // Exibe os valores combinados usados para gerar o hash
-    const combinedValues = `Valores usados para gerar o hash: ${inputHash}`;
+    const combinedValues = `Valores usados para gerar o hash: ${ChaveKey}`;
     document.getElementById('combinedValuesDisplay').innerText = combinedValues;
 
     // Exibe o nome e o token usados para gerar o hash
