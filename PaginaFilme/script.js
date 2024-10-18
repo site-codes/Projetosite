@@ -7,7 +7,7 @@ const admSpan = document.querySelector('span.adm');
 if (!h8 || h8.textContent.trim() === '') {
   admSpan.style.display = 'none';
 } else {
-  admSpan.style.display = 'block'; 
+  admSpan.style.display = 'flex'; 
 }
 }
 
