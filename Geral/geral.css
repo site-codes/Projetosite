@@ -2040,7 +2040,7 @@ gap:10px;}
 .labelNota{font-weight:700;}
 .labelNota:before{content:"\e838";font-family:"Material Symbols Outlined"; margin-right:5px;font-variation-settings:'FILL' 1;}
 
-[id^="HTML"]:not(#HTML2):not(:is(#HTML22, #HTML24, #HTML26)) .ntry:hover .labelNota{display: flex!important; position: absolute; top:10px; left:unset!important;right:10px; font-size:25px!important; background: unset!important;color: yellow; z-index:99!important}
+[id^="HTML"]:not(#HTML2):not(:is(#HTML22, #HTML24, #HTML26)) .ntry:hover .labelNota{display: flex!important; position: absolute; top:10px; left:unset!important;right:10px; font-size:25px!important; background: unset!important;color: var(--cor3); z-index:99!important}
 /* label Filme*/
 .labelFilmes{order:1;background: var(--mobileM);color: var(--corB3);}
 
