@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Hash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de Hash</h1>
+    <input type="text" id="inputName" placeholder="Nome do Cliente" />
+    <input type="text" id="inputToken" placeholder="Token do Cliente" />
+    <button id="acessKey">Gerar Code</button>
+    
+    <div><h2 id="codeAcess"></h2></div>
+    <div id="gerarCode"></div> 
+
+    <script src="token.js"></script>
+    <script>
+        document.getElementById('acessKey').addEventListener('click', async () => {
+            const name = document.getElementById('inputName').value;
+            const token = document.getElementById('inputToken').value;
+
+            if (!userExists(name, token)) {
+                document.getElementById('gerarCode').innerText = 'Nome ou token inválido!\nPor favor, verifique suas credenciais com o Adm do instinto Play (Matheus).';
+return;
+            }
+
+            const userIP = await getUserIP(); 
+            const generatedHash = generateHash(name, token, userIP); 
+
+            // Exibe o hash gerado
+            document.getElementById('codeAcess').innerText = generatedHash;
+            document.getElementById('gerarCode').innerText = 'Cole esse acesso em Blogger > Layout > License key > constUser';
+        });
+    </script>
+</body>
+</html>
