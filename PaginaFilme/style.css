@@ -1,4 +1,5 @@
-  .Diretor:before{content:"\e7ef"!important}
+            .Play:after{content:attr(data-text)}
+              .Diretor:before{content:"\e7ef"!important}
   .Roteiro:before{content:"\e7ef"!important}
   .Produtores:before{content:"\f233"!important}
   
@@ -33,3 +34,76 @@
   
   
   #player{border-radius:20px; overflow:hidden}
+
+            
+            @media screen and (max-width:800px){
+              .Play:after{content:"Download"}
+            }
+            @media screen and (max-width:1100px){
+              
+                       
+              .pmovie{margin-top:20px;
+        flex-wrap: wrap;}
+            
+
+                      #mStatus{width:70%}
+
+              .dets{
+                flex-basis:100%;overflow:auto; gap:20px}
+     
+            .dets::-webkit-scrollbar{display:none}
+    
+            .dets span {
+        min-width: auto;
+        background: var(--bodyD)!important;
+        pointer-events: none;
+        border-radius: 5px;
+        height: 70px;
+        padding: 10px;
+              padding-top:40px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+              .dets span[data-text="estudio"]{min-width:120px}
+              
+    .dets span:before {
+        position: absolute;
+        top: 10px;
+        width: calc(100% - 20px);
+        left: 10px;
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--cor2);
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 10px !important;
+        font-size: 10px;
+        font-weight: 500;
+        border-radius: 5px;
+    }
+              .dets span:before{font-family:unset!important}
+          .dets span[data-text="time"]:before{content:"Duração"!important}
+        .dets span[data-text="sub"]:before{content:"Tipo"!important}
+         .dets span[data-text="date"]:before{content:"Lançamento"!important}
+         .dets span[data-text="estudio"]:before{content:"Estudio"!important}
+           .dets span[data-text="estaçao"]:before{content:"Estação"!important}
+         .dets span[data-text="adm"]:before{content:"Adm"!important}
+             
+                    .dets span h8{white-space:nowrap!important; display: flex; align-items: center}
+              
+              .dets span h8:before{font-family:"Material Symbols Outlined";
+              margin-right:10px;
+        font-size: 18px;color: var(--cor2);}
+
+            .dets span[data-text="time"] h8:before{content:"\ea5d"}
+           .dets span[data-text="sub"] h8:before{content:"\e01c"}
+           .dets span[data-text="date"] h8:before{content:"\f238"}
+           .dets span[data-text="estudio"] h8:before{content:"\e01c"}
+           .dets span[data-text="estaçao"] h8:before{content:"\e430"}
+           .dets span[data-text="adm"] h8:before{content:"\e7fd"}
+           
+              .temporadas{padding:0 10px}
+            }
