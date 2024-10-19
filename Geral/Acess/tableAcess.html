@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -38,17 +39,30 @@
 
     <script src="token.js"></script>
     <script>
-        document.getElementById('acessKey').addEventListener('click', async () => {
+  document.getElementById('acessKey').addEventListener('click', async () => {
+            await fetchUsersFromSheet(); // Atualiza a lista de usuários da planilha
+
             const name = document.getElementById('inputName').value;
             const token = document.getElementById('inputToken').value;
 
             if (!userExists(name, token)) {
                 document.getElementById('gerarCode').innerText = 'Nome ou token inválido!\nPor favor, verifique suas credenciais com o Adm do instinto Play (Matheus).';
-return;
+                return;
+            }
+
+            // Verifique se o token está expirado antes de gerar o hash
+            const user = users.find(user => user.name === name && user.token === token);
+            if (user && user.expirationDate) {
+                const currentDate = new Date();
+                const expirationDate = new Date(user.expirationDate);
+                if (currentDate > expirationDate) {
+                    document.getElementById('gerarCode').innerText = 'Token expirado!';
+                    return;
+                }
             }
 
             const userIP = await getUserIP(); 
-            const generatedHash = generateHash(name, token, userIP); 
+            const generatedHash = await generateHash(name, token, userIP); // Chama a função assíncrona
 
             // Exibe o hash gerado
             document.getElementById('codeAcess').innerText = generatedHash;
