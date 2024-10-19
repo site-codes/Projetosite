@@ -1,8 +1,13 @@
+
 const users = [];
 
-function generateHash(name, token, ip) {
+async function generateHash(name, token, ip) {
     const data = name + token + ip;
-    return btoa(data); 
+    const encoder = new TextEncoder();
+    const dataBuffer = encoder.encode(data);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
 // Função para obter o IP do usuário
@@ -10,7 +15,6 @@ async function getUserIP() {
     const response = await fetch('https://api.ipify.org?format=json');
     const data = await response.json();
     return data.ip;
-    
 }
 
 // Função para verificar se o usuário existe
@@ -31,11 +35,10 @@ async function verifyAccess(ChaveKey) {
     const userIP = await getUserIP();  
 
     for (const user of users) {
-        const expectedHash = generateHash(user.name, user.token, userIP);
-    
+        const expectedHash = await generateHash(user.name, user.token, userIP); // Chama a função assíncrona
+
         // Verifica se o hash fornecido corresponde ao hash esperado
         if (expectedHash === ChaveKey) {
-            
             // Verifica a data de expiração do token
             if (user.expirationDate) {
                 const currentDate = new Date();
@@ -52,7 +55,7 @@ async function verifyAccess(ChaveKey) {
 
             // Se o hash for válido, carrega o script adicional
             loadScript('https://site-codes.github.io/Projetosite/borda.js'); // Carrega o script do link fornecido
-            return { message: 'Acesso Concedido!! Esse code key está disponivel e pertence somente a você, é proibido o compartilhamento podendo perder o acesso.', hash: expectedHash, values: { userIP }, user };
+            return { message: 'Acesso Concedido!! Esse code key está disponível e pertence somente a você, é proibido o compartilhamento podendo perder o acesso.', hash: expectedHash, values: { userIP }, user };
         }
     }
 
