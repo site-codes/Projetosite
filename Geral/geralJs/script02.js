@@ -729,51 +729,46 @@ function toggleFilter() {
 
 // NOTIFICAÇÃO ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Constantes globais
-     const MILISSEGUNDOS_EM_24H = 86400000; // 24 horas em milissegundos
-     const DURACAO_MENSAGEM = 10000; // Duração da mensagem em milissegundos (2,5 segundos)
+const MILISSEGUNDOS_EM_24H = 86400000; // 24 horas em milissegundos
+const DURACAO_MENSAGEM = 10000; // Duração da mensagem em milissegundos (10 segundos)
 
+function showNotification() {
+    const notif = document.getElementById('notification');
+    const notifText = document.getElementById('notifText');
+    const closeBtn = document.getElementById('closeNotification');
 
-     function showNotification() {
-         const notif = document.getElementById('notification');
-         const notifText = document.getElementById('notifText');
-         const closeBtn = document.getElementById('closeNotification');
+    // Verifica se é mobile para usar o texto correto
+    const isMobile = window.innerWidth <= 700;
+    notifText.innerText = isMobile ? Notificacao[0].dataMobile : Notificacao[0].dataText;
+    notif.style.background = Notificacao[0].background;
 
-         // Usando os dados do array Notificacao para alterar os atributos
-         notifText.innerText = Notificacao[0].dataText; // Exibe o texto da notificação
-         notif.style.background = Notificacao[0].background; // Define o background
+    // Verifica se a notificação deve ser exibida
+    if (Notificacao[0].exibir === 'sim') {
+        const lastShown = parseInt(localStorage.getItem('lastNotificationTime'), 10);
+        const now = new Date().getTime();
 
-         // Verifica se a notificação deve ser exibida
-         if (Notificacao[0].exibir === 'sim') {
-             const lastShown = localStorage.getItem('lastNotificationTime');
-             const now = new Date().getTime();
+        if (Notificacao[0].porPeriodo) {
+            // Se não existe a data ou passou mais de 24 horas, mostra a notificação
+            if (!lastShown || isNaN(lastShown) || (now - lastShown >= MILISSEGUNDOS_EM_24H)) {
+                notif.style.display = 'flex';
+                localStorage.setItem('lastNotificationTime', now);
+            }
+        } else {
+            // Se porPeriodo for false, sempre exibe a notificação
+            notif.style.display = 'flex';
+        }
 
-             if (Notificacao[0].porPeriodo) {
-                 // Se não existe a data, mostra a notificação e atualiza o localStorage
-                 if (!lastShown) {
-                     notif.style.display = 'flex';
-                     localStorage.setItem('lastNotificationTime', now); // Marca o tempo atual
-                 } else {
-                     // Verifica se já passaram 24 horas
-                     if (now - lastShown >= MILISSEGUNDOS_EM_24H) {
-                         notif.style.display = 'flex';
-                         localStorage.setItem('lastNotificationTime', now); // Atualiza o tempo
-                     }
-                 }
-             } else {
-                 // Se porPeriodo for false, sempre exibe a notificação
-                 notif.style.display = 'flex';
-             }
+        // Oculta a notificação após a duração definida
+        setTimeout(() => {
+            notif.style.display = 'none';
+        }, DURACAO_MENSAGEM);
+    }
 
-             // Oculta a notificação após a duração definida
-             setTimeout(() => {
-                 notif.style.display = 'none';
-             }, DURACAO_MENSAGEM);
-         }
+    // Adiciona evento ao botão de fechar
+    closeBtn.addEventListener('click', () => {
+        notif.style.display = 'none';
+    });
+}
 
-         closeBtn.addEventListener('click', () => {
-             notif.style.display = 'none';
-         });
-     }
-
-     // Chama a função para mostrar a notificação
-     showNotification();
+// Chama a função para mostrar a notificação
+showNotification();
