@@ -4547,132 +4547,132 @@ display: flex;opacity:0.6; flex-direction: column; height:100%; color: var(--lin
 #Label00 li[aria-label="Suspense"] a:before { content: "\f894"; } /* Suspense */
 #Label00 li[aria-label="Terror"] a:before { content: "\f6e5"; } /* Terror */
 #Label00 li[aria-label="Ação"] {
-  background-image: var(--generoAcao);
-}
-
-#Label00 li[aria-label="Artes Marciais"] {
-  background-image: var(--generoArtesMarciais);
-}
-
-#Label00 li[aria-label="Aventura"] {
-  background-image: var(--generoAventura);
-}
-
-#Label00 li[aria-label="Comédia"] {
-  background-image: var(--generoComedia);
-}
-
-#Label00 li[aria-label="Corrida"] {
-  background-image: var(--generoCorrida);
-}
-
-#Label00 li[aria-label="Crime"] {
-  background-image: var(--generoCrime);
-}
-
-#Label00 li[aria-label="Drama"] {
-  background-image: var(--generoDrama);
-}
-
-#Label00 li[aria-label="Ecchi"] {
-  background-image: var(--generoEcchi);
-}
-
-#Label00 li[aria-label="Escolar"] {
-  background-image: var(--generoEscolar);
-}
-
-#Label00 li[aria-label="Esportes"] {
-  background-image: var(--generoEsportes);
-}
-
-#Label00 li[aria-label="Fantasia"] {
-  background-image: var(--generoFantasia);
-}
-
-#Label00 li[aria-label="Ficção Científica"] {
-  background-image: var(--generoFiccao);
-}
-
-#Label00 li[aria-label="Games"] {
-  background-image: var(--generoGames);
-}
-
-#Label00 li[aria-label="Gastronomia"] {
-  background-image: var(--generoGastronomia);
-}
-
-#Label00 li[aria-label="Harem"] {
-  background-image: var(--generoHarem);
-}
-
-#Label00 li[aria-label="Histórico"] {
-  background-image: var(--generoHistorico);
-}
-
-#Label00 li[aria-label="Isekai"] {
-  background-image: var(--generoIsekai);
-}
-
-#Label00 li[aria-label="Magia"] {
-  background-image: var(--generoMagia);
-}
-
-#Label00 li[aria-label="Militar"] {
-  background-image: var(--generoMilitar);
-}
-
-#Label00 li[aria-label="Mistério"] {
-  background-image: var(--generoMisterio);
-}
-
-#Label00 li[aria-label="Musical"] {
-  background-image: var(--generoMusical);
-}
-
-#Label00 li[aria-label="Psicológico"] {
-  background-image: var(--generoPsicologico);
-}
-
-#Label00 li[aria-label="Romance"] {
-  background-image: var(--generoRomance);
-}
-
-#Label00 li[aria-label="Shojo"] {
-  background-image: var(--generoShoujo);
-}
-
-#Label00 li[aria-label="Shonen"] {
-  background-image: var(--generoShonen);
-}
-
-#Label00 li[aria-label="Slice of Life"] {
-  background-image: var(--generoSliceOfLife);
-}
-
-#Label00 li[aria-label="Sobrenatural"] {
-  background-image: var(--generoSobrenatural);
-}
-
-#Label00 li[aria-label="Superpoderes"] {
-  background-image: var(--generoSuperPoderes);
-}
-
-#Label00 li[aria-label="Suspense"] {
-  background-image: var(--generoSuspense);
-}
-
-#Label00 li[aria-label="Terror"] {
-  background-image: var(--generoTerror);
-}
-
-#Label00 li[aria-label="Vampiros"] {
-  background-image: var(--generoVampiros);
-}
-
-#Label00 li[aria-label="Violência"] {
-  background-image: var(--generoViolencia);
-}
+    background-image: var(--Acao);
+  }
+  
+  #Label00 li[aria-label="Artes Marciais"] {
+    background-image: var(--ArtesMarciais);
+  }
+  
+  #Label00 li[aria-label="Aventura"] {
+    background-image: var(--Aventura);
+  }
+  
+  #Label00 li[aria-label="Comédia"] {
+    background-image: var(--Comedia);
+  }
+  
+  #Label00 li[aria-label="Corrida"] {
+    background-image: var(--Corrida);
+  }
+  
+  #Label00 li[aria-label="Crime"] {
+    background-image: var(--Crime);
+  }
+  
+  #Label00 li[aria-label="Drama"] {
+    background-image: var(--Drama);
+  }
+  
+  #Label00 li[aria-label="Ecchi"] {
+    background-image: var(--Ecchi);
+  }
+  
+  #Label00 li[aria-label="Escolar"] {
+    background-image: var(--Escolar);
+  }
+  
+  #Label00 li[aria-label="Esportes"] {
+    background-image: var(--Esportes);
+  }
+  
+  #Label00 li[aria-label="Fantasia"] {
+    background-image: var(--Fantasia);
+  }
+  
+  #Label00 li[aria-label="Ficção Científica"] {
+    background-image: var(--Ficcao);
+  }
+  
+  #Label00 li[aria-label="Games"] {
+    background-image: var(--Games);
+  }
+  
+  #Label00 li[aria-label="Gastronomia"] {
+    background-image: var(--Gastronomia);
+  }
+  
+  #Label00 li[aria-label="Harem"] {
+    background-image: var(--Harem);
+  }
+  
+  #Label00 li[aria-label="Histórico"] {
+    background-image: var(--Historico);
+  }
+  
+  #Label00 li[aria-label="Isekai"] {
+    background-image: var(--Isekai);
+  }
+  
+  #Label00 li[aria-label="Magia"] {
+    background-image: var(--Magia);
+  }
+  
+  #Label00 li[aria-label="Militar"] {
+    background-image: var(--Militar);
+  }
+  
+  #Label00 li[aria-label="Mistério"] {
+    background-image: var(--Misterio);
+  }
+  
+  #Label00 li[aria-label="Musical"] {
+    background-image: var(--Musical);
+  }
+  
+  #Label00 li[aria-label="Psicológico"] {
+    background-image: var(--Psicologico);
+  }
+  
+  #Label00 li[aria-label="Romance"] {
+    background-image: var(--Romance);
+  }
+  
+  #Label00 li[aria-label="Shojo"] {
+    background-image: var(--Shoujo);
+  }
+  
+  #Label00 li[aria-label="Shonen"] {
+    background-image: var(--Shonen);
+  }
+  
+  #Label00 li[aria-label="Slice of Life"] {
+    background-image: var(--SliceOfLife);
+  }
+  
+  #Label00 li[aria-label="Sobrenatural"] {
+    background-image: var(--Sobrenatural);
+  }
+  
+  #Label00 li[aria-label="Superpoderes"] {
+    background-image: var(--SuperPoderes);
+  }
+  
+  #Label00 li[aria-label="Suspense"] {
+    background-image: var(--Suspense);
+  }
+  
+  #Label00 li[aria-label="Terror"] {
+    background-image: var(--Terror);
+  }
+  
+  #Label00 li[aria-label="Vampiros"] {
+    background-image: var(--Vampiros);
+  }
+  
+  #Label00 li[aria-label="Violência"] {
+    background-image: var(--Violencia);
+  }
 
 
 #Label00 .lbR {
