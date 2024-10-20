@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,41 +31,31 @@
     <h1>Gerador de Hash</h1>
     <input type="text" id="inputName" placeholder="Nome do Cliente" />
     <input type="text" id="inputToken" placeholder="Token do Cliente" />
-    <button id="acessKey">Gerar Code</button>
+    <button id="gerarKeyButton">Gerar Hash</button>
     
-    <div><h2 id="codeAcess"></h2></div>
-    <div id="gerarCode"></div> 
-
-    <script src="./token.js"></script>
+    <h3 id="gerarKey"></h3> 
+    <h8 id="instruction"></h8> 
+    
+    <script src="https://projetosite-mu.vercel.app/Geral/Acess/token.js"></script> 
     <script>
-  document.getElementById('acessKey').addEventListener('click', async () => {
-            await fetchUsersFromSheet(); // Atualiza a lista de usuários da planilha
-
+      document.getElementById('gerarKeyButton').addEventListener('click', async () => {
             const name = document.getElementById('inputName').value;
             const token = document.getElementById('inputToken').value;
 
-            if (!userExists(name, token)) {
-                document.getElementById('gerarCode').innerText = 'Nome ou token inválido!\nPor favor, verifique suas credenciais com o Adm do instinto Play (Matheus).';
-                return;
-            }
-
-            // Verifique se o token está expirado antes de gerar o hash
+        
             const user = users.find(user => user.name === name && user.token === token);
-            if (user && user.expirationDate) {
-                const currentDate = new Date();
-                const expirationDate = new Date(user.expirationDate);
-                if (currentDate > expirationDate) {
-                    document.getElementById('gerarCode').innerText = 'Token expirado!';
-                    return;
-                }
+            if (!user || user.emUso === 1) {
+                document.getElementById('gerarKey').innerText = 'Nome/token inválido ou já em uso!';
+                document.getElementById('instruction').innerText = 'Se você adquiriu o template e esta com dificuldades, entre em contato com o dono ou acesse nosso site (https://instintoanimes.blogspot.com/)';
+                return; 
             }
 
             const userIP = await getUserIP(); 
-            const generatedHash = await generateHash(name, token, userIP); // Chama a função assíncrona
+            const generatedHash = await generateHash(name, token, userIP);
+            user.emUso = 1;
 
-            // Exibe o hash gerado
-            document.getElementById('codeAcess').innerText = generatedHash;
-            document.getElementById('gerarCode').innerText = 'Cole esse acesso em Blogger > Layout > License key > constUser';
+            document.getElementById('gerarKey').innerText = generatedHash;
+            document.getElementById('instruction').innerText = 'Cole esse acesso em Blogger > Layout > License key > constUser';
         });
     </script>
 </body>
